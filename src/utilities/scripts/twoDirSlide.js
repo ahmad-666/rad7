@@ -45,8 +45,27 @@ class TwoDirSlider{
         })
         this.btns.forEach(btn=>btn.addEventListener('click',this.changeSlide.bind(this))) ;
         this.dots.forEach(dot=>dot.addEventListener('click',this.changeSlide.bind(this))) ;
+        if(this.timer) this.initAutoSlider() ;   
+    }
+    initAutoSlider(){
+        this.autoSliderClear = setInterval(()=>{
+            this.autoSlider() ;
+        },this.timer) ;    
+    }
+    autoSlider(){
+        this.currIndex = this.currIndex+1<this.slidesNum?this.currIndex+1:0;
+        this.dotsHandler() ;
+        switch(this.dir){
+            case 'vertical': 
+                this.moveSlidesVertical('next') ;
+                break ;
+            case 'horizontal':
+                this.moveSlidesHorizontal('next') ;
+                break ; 
+        }
     }
     changeSlide(e){
+        clearInterval(this.autoSliderClear) ;
         let clickedElm = e.target ;
         let dir = null ;
         if(clickedElm.classList.contains('next')) {
@@ -72,6 +91,7 @@ class TwoDirSlider{
                 this.moveSlidesHorizontal(dir) ;
                 break ; 
         }
+        this.initAutoSlider() ;
     }
     dotsHandler(){
         this.dots.forEach(dot=>dot.classList.remove('active')) ;
@@ -138,4 +158,8 @@ class TwoDirSlider{
         }
     }
 }
+// import Slider from '../../utilities/scripts/twoDirSlide.js' ;
+// new Slider(document.querySelector('#twoDirSlider'),200,2000) ;
+//2000ms for auto timer and 200% for change each time ... pass null to timer if you dont 
+//want auto slider
 export default TwoDirSlider ;
