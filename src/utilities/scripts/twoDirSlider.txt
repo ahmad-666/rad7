@@ -1,0 +1,56 @@
+<div id="twoDirSlider">
+<!-- if we wan to use horizontal slider we must use : -->
+<!-- .sliderWrapper{    
+	@include flex(column,flex-start,flex-start,nowrap,"") ;
+	.slider{   
+		width: 100%;
+		height: 50%;
+	}
+} -->
+	<div class="sliderWrapper">
+		<i class="fas fa-angle-right btn prev center-y"></i>
+		<i class="fas fa-angle-left btn next center-y"></i>
+		<div class="slider right" data-dir="top">
+			<img class="slide" src="../assets/imgs/slide1.jpg" alt="slide1Img">
+			<div class="empty slide" id="empty1"></div>
+			<img class="slide" src="../assets/imgs/slide2.jpg" alt="slide21Img">
+			<div class="empty slide" id="empty2"></div>
+			<img class="slide" src="../assets/imgs/slide3.jpg" alt="slide3Img">
+			<div class="empty slide" id="empty3"></div>
+			<img class="slide" src="../assets/imgs/slide4.jpg" alt="slide4Img">
+		</div>
+		<div class="slider left" data-dir="bottom">
+			<!-- this is for last slide(reverse of above) -->
+			<div class="slide" data-color="white" data-bgColor="#263238" data-target="empty3">
+				<p class="name">??? ?????</p>
+				<p class="price">1.000.000 ?????</p>
+				<a href="product.html">????</a>
+			</div>
+			<div class="slide empty"></div>
+			<div class="slide" data-color="white" data-bgColor="#b0bec5" data-target="empty2">
+				<p class="name">??? ?????</p>
+				<p class="price">1.000.000 ?????</p>
+				<a href="product.html">????</a>
+			</div>
+			<div class="slide empty"></div>
+			<div class="slide" data-color="white" data-bgColor="#ef6c00" data-target="empty1">
+				<p class="name">??? ?????</p>
+				<p class="price">1.000.000 ?????</p>
+				<a href="product.html">????</a>
+			</div>    
+			<div class="slide empty"></div>
+			<!-- first we see this -->
+			<div class="slide" data-color="white" data-bgColor="#607d8b">
+				<p class="name">??? ?????</p>
+				<p class="price">1.000.000 ?????</p>
+				<a href="product.html">????</a>
+			</div>
+		</div>
+	</div>  
+	<div class="dots">
+		<span class="dot active"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+</div>
