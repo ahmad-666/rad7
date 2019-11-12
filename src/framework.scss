@@ -118,6 +118,18 @@
         top: 100%;
     }
 }
+.underlineHover{
+    //we need both .underline and .underlineHover
+    &::before{
+        transition: all .2s linear;
+        width: 0;
+    }
+    &:hover{
+        &::before{
+            width: 100% ;
+        }
+    }
+}
 //text effects--------------------------------------------
 //text effects--------------------------------------------
 //text effects--------------------------------------------

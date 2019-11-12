@@ -1,0 +1,112 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#topMenu{
+    width: 100%;
+    height: auto;
+    padding: .5em $dist2;
+    background-color: darken($darkBlue,8%);
+    display: flex;
+    @include flex(row,space-between,center,nowrap,"") ;
+    .right,.left{
+        width: auto;
+        height: auto;
+        display: flex;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        > * {
+            color: $textWhite;
+        }
+        &:last-child{margin-right: $dist2 * 2;}
+        .hoverEffect{
+            @include underlineHover(.1em,white) ;
+            &:hover{
+                color: darken(white,25%) ;
+            }
+        }
+        .basketHover{
+            &:hover{
+                @include shakeAnimation(.5s) ;
+            }
+        }
+    }
+    .right{
+        > * {
+            &:not(:first-child){
+                margin-right: $dist3 + 1em;
+            }
+        }  
+        .login{
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            i{font-size: $fontM;}
+            p{
+                margin-right: .5em;
+                font-size: $fontM;
+            }
+        }
+        .withBadge{
+            position: relative;
+            i{
+                font-size: $fontXL;
+                transform: translateY(.05em);
+            }
+            .badge{
+                z-index: 1;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                background-color: lighten($redColor2,5%);
+                position: absolute;
+                top: 0;
+                right: -1em;
+                text-align: center;
+                line-height: 1.7em;
+                font-size: $fontS;
+                color: white;
+            }
+        }
+        #searchForm{
+            .searchToggle{
+                font-size: $fontXL;
+                cursor: pointer;
+                transform: translateY(.05em);
+            }
+        }
+    }
+    .left{
+        > * {
+            &:not(:first-child){
+                margin-right: $dist3;
+            }
+        }  
+        a{
+            font-size: $fontM;
+        }
+    }
+}
+@include mediaQ(430px){
+    #topMenu{
+        .right,.left{
+            &:last-child{margin-right: $dist3;}
+        }
+        .right{
+            > * {
+                &:not(:first-child){
+                    margin-right: $dist3 - .5em;
+                }
+            }  
+        }
+        .left{
+            > * {
+                &:not(:first-child){
+                    margin-right: $dist3 - 1.5em;
+                }
+            }  
+        }
+    }
+}
+@include mediaQ(330px){
+    #topMenu{
+       font-size: 5.5px;
+    }
+}

@@ -8,6 +8,8 @@ let nav = document.querySelector('nav') ;
 let mobileNavWrapper = nav.querySelector('.bars') ;
 let mobileBars = mobileNavWrapper.querySelector('.fa-bars') ;
 let mobileNav = mobileNavWrapper.querySelector('ul.mobile') ;
+let mobileFullScreenTriggers = mobileNav.querySelectorAll('li.fullScreen .fullScreenTrigger');
+let mobileFullScreenCloses = document.querySelectorAll('.fullScreenMenu .close') ;
 mobileBars.addEventListener('click',toggleMobileNav) ;
 function toggleMobileNav(e){
    mobileNav.classList.toggle('show') ;
@@ -24,4 +26,17 @@ function mobileDocHandler(e){
       mobileNav.classList.remove('show') ;
       document.removeEventListener('click',mobileDocHandler) ;
    }
+}
+mobileFullScreenTriggers.forEach(fsTrigger => fsTrigger.addEventListener('click',openMobileFullScreen)) ;
+mobileFullScreenCloses.forEach(fsClose=>fsClose.addEventListener('click',closeMobileFullScreen)) ;
+function openMobileFullScreen(e){
+   let targetFsID = this.getAttribute('data-target') ;
+   let targetFs = document.querySelector(`#${targetFsID}`) ;
+   document.body.classList.add('disableScroll') ;
+   targetFs.classList.add('show') ;
+}
+function closeMobileFullScreen(e){
+   let fs = this.parentElement ;
+   document.body.classList.remove('disableScroll') ;
+   fs.classList.remove('show') ;
 }

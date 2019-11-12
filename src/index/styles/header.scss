@@ -1,0 +1,10 @@
+@import './topMenu.scss' ;
+@import './nav.scss' ;
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+}
+@include resizeTablet('header') ;
+@include resizeMobile('header') ;
