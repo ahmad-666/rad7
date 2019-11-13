@@ -1,0 +1,52 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#breadcrumb{
+    width: auto;
+    height: auto;
+    display: flex;
+    @include flex(row,flex-start,center,wrap,flex-start) ;
+    a.home{
+        z-index: 2;
+        width: auto;
+        height: auto;
+        margin-top: .5em;
+        transform: translateX(-1em);
+        i{
+            box-shadow: 0 -.1em .5em .1em $shadowColor;
+            display: inline-block ;
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            @include swapColor($primaryColor,white) ;
+            position: relative;
+            &::before{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%,-50%);
+                font-size: $fontL;
+            }
+        }
+    }
+    .wrapper{
+        width: auto;
+        height: auto;
+        display: flex;
+        @include flex(row,flex-start,center,wrap,flex-start) ;
+        a{  
+            &:nth-child(1){z-index: 1;}
+            &:nth-child(2){transform: translateX(1em);}
+            width: 12em;
+            height: auto;
+            padding: .3em $dist2 .2em $dist1;
+            font-size: $fontM;
+            border-top-left-radius: $dist2;
+            border-bottom-left-radius: $dist2;
+            box-shadow: 0 0 .5em .1em $shadowColor;
+            @include changeColor($textGrey,white,white,$primaryColor) ;
+            &:hover{border: none ;}
+        }
+    }
+    
+}

@@ -1,0 +1,144 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+footer{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #263238;
+    padding-bottom: $dist2;
+    margin-top: $sectionsDist;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    .top{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(row,center,center,nowrap,"") ;
+        position: relative;
+        .shape{
+            width: 20em;
+            height: 20em;
+            border-radius: 50%;    
+            position: absolute;
+        }
+        .shape.right{
+            background-color: #ffa726 ;
+            right: -10em;
+            top: -10em;
+        }
+        .shape.left{
+            border: .3em solid #ffa726 ;
+           top: -10em;
+           left: -10em ;
+        }
+        .namad{
+            max-width: calc(100% - (2 * 6em));
+            height: auto;
+            display: flex;
+            @include flex(row,flex-start,center,wrap,flex-start) ;
+            a{
+                width: auto;
+                height: auto;
+                margin: $dist1 $dist2;
+                img{
+                    width: 8em;
+                    height: 8em;
+                }
+            }
+        }
+
+    }
+    .bottom{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(row,space-around,flex-start,wrap,flex-start) ;
+        .col{
+            width: auto;
+            height: auto;
+            margin: $dist2 $dist3;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            color: lighten($textGrey,15%);
+            h4{
+                font-size: $fontM;
+                font-weight: 700;
+                color: white;
+            }
+            > *:not(h4){margin-top: $dist2 - .3em;}
+            a{    
+                color: inherit;   
+                transition: all .2s linear;
+                &:hover{
+                    color: $primaryColor;
+                }
+            }
+        }   
+        .col.about{
+            a{font-size: $fontM - .2em;}
+            .address{
+                width: auto;
+                height: auto;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                color: inherit;
+                i{
+                    font-size: $fontM;
+                }
+                p{
+                    font-size: $fontM - .2em ;
+                    margin-right: .5em;
+                }
+            }
+        }   
+        .col.more{
+            a{
+                font-size: $fontM - .2em;
+                margin-top: $dist2 - .55em;
+            }
+        }  
+        .col.contact{
+            > a {
+                font-size: $fontM - .2em;
+            }
+            .socials{
+                margin-top: $dist2 - .5em;
+                max-width: 25em;
+                height: auto;
+                color: inherit;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                p{
+                    font-size: $fontM - .2em;
+                    color: inherit;
+                }
+                .wrapper{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(row,flex-start,center,wrap,flex-start) ;
+                    a{
+                        margin: $dist1;
+                        width: auto;
+                        height: auto;
+                        i{
+                            width: 4em;
+                            height: 4em;
+                            border-radius: 50%;
+                            position: relative;
+                            @include swapColor(white,darken($blueColor1,10%)) ;
+                            &::before{
+                                position: absolute;
+                                top: 50%;
+                                right: 50%;
+                                transform: translate(50%,-50%);
+                                font-size: $fontL;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

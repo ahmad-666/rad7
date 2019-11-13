@@ -11,10 +11,8 @@ function ScrollArrows(wrapper){
 ScrollArrows.prototype.checkThreshold = function(e){
 	if(window.innerWidth>850) this.arrows.classList.remove('show') ;
     else{
-        let contentWidth = 0 ;
-        this.children.forEach(child => {
-            contentWidth += child.offsetWidth ;
-        })
+        let contentWidth = 0 ;  
+        this.children.forEach(child => contentWidth += child.offsetWidth) ;
         if(contentWidth>this.parent.offsetWidth) this.arrows.classList.add('show') ;
         else this.arrows.classList.remove('show') ;
     }
@@ -22,6 +20,4 @@ ScrollArrows.prototype.checkThreshold = function(e){
 //document.querySelectorAll('.scrollArrows').forEach(scrollArrow => {
 //    new ScrollArrows(scrollArrow)
 //})
-export default{
-	ScrollArrows
-}
+export default ScrollArrows

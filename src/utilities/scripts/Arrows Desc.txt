@@ -1,3 +1,4 @@
+<!-- **we need to add .child class to any child that its width is important for us -->
 <div class="wrapper scrollArrows">
 	<div class="arrows">
 		<i class="fas fa-angle-left"></i>

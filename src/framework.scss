@@ -11,14 +11,14 @@
 .shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
 .shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
 .containerStyle{
-    width: 95% ;
+    width: 90% ;
     height: auto;
-    margin: $dist3 auto 0 auto ;
+    margin: $sectionsDist auto 0 auto ;
     padding: $dist2  ;
     background-color: $bgColor ;
     box-shadow: 0 0 1em .01em $shadowColor ;
     border-radius: $dist2 ;
-    overflow: hidden;
+    // overflow: hidden;
 }
 .zoom{
     // <div class="img zoom">
@@ -180,7 +180,7 @@
         @include flex(row,flex-start,center,nowrap,"") ;
         position: absolute ;
         left: 0;
-        bottom: 105% ;
+        bottom: 100% ;
         i{
             font-size: $fontL ;
             color: $primaryColor ;

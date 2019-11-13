@@ -1,0 +1,27 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './breadcrumb.scss' ;
+@import '../../utilities/styles/productSlider.scss' ;
+#info{
+    width: 90%;
+    height: auto;
+    margin: $sectionsDist auto 0 auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    #productInfo{
+        width: 100%;
+        margin-top: $dist1;
+        display: flex;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .details{
+            width: 100%;
+            height: auto;
+        }
+        .productSlider{
+            flex-shrink: 0;
+            width: 35em;
+            margin-right: $dist3;
+        }
+    }
+}

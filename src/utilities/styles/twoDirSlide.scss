@@ -4,7 +4,7 @@
 #twoDirSlider{
     width: 90%;
     height: auto;
-    margin: $dist2 auto 0 auto;
+    margin: $sectionsDist auto 0 auto;
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
     .dots{
@@ -17,7 +17,7 @@
             width: 1.8em;
             height: 1.8em;
             border-radius: 50%;
-            background-color: lighten($textGrey,30%);
+            background-color: lighten($textGrey,25%);
             &:not(:first-child){margin-right: $dist2;}
             transition: all .2s linear;
             cursor: pointer;   
@@ -79,29 +79,5 @@
         .slider[data-dir="bottom"]{@include flex(column,flex-end,flex-start,nowrap,"") ;}
         .slider[data-dir="right"]{@include flex(row,flex-start,flex-start,nowrap,"") ;}
         .slider[data-dir="left"]{@include flex(row,flex-end,flex-start,nowrap,"") ;}
-        .left{
-            .slide{
-                display: flex;
-                @include flex(column,center,center,nowrap,"") ;
-                .name{
-                    font-size: $fontL + .2em;
-                    font-weight: 700;
-                }
-                .price{
-                    margin-top: $dist1;
-                    font-size: $fontM ;
-                }
-                a{
-                    width: auto;
-                    height: auto;
-                    border-radius: $dist2;
-                    font-size: $fontXL;
-                    padding: .3em $dist2 ;
-                    margin-top: $dist1;
-                    @include swapColor(white,lighten($greenColor1,0%)) ;
-                    @include pulse(lighten($greenColor1,0%)) ;
-                }
-            }
-        }
     }
 }

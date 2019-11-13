@@ -121,6 +121,5 @@ FixSlider.prototype.moveSlider = function(dir){
 //init productSlider------------------------------
 //init productSlider------------------------------
 //new ProductSlider(document.querySelector('.productSlider'),<fix-slider>) ;
-export default{
-	ProductSlider
-}
+export default ProductSlider ;
+
