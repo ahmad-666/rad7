@@ -41,6 +41,18 @@
         border: 1.2px solid $bgColor ;
     }
 }
+@mixin changeColor($color,$bgColor,$hoverColor,$hoverBgColor){
+    cursor: pointer;
+    transition: all .3s linear ;
+    color: $color ;
+    background-color: $bgColor ;
+    border: 1.2px solid transparent ;
+    &:hover{
+        color: $hoverColor ;
+        background-color: $hoverBgColor ;
+        border: 1.2px solid $hoverColor ;
+    }
+}
 @mixin pulse($color){
     position: relative ;
     &::before,&::after{
@@ -67,18 +79,6 @@
             opacity: 0;
             transform: translate(50%,-50%) scale(1.5) ;
         }
-    }
-}
-@mixin changeColor($color,$bgColor,$hoverColor,$hoverBgColor){
-    cursor: pointer;
-    transition: all .3s linear ;
-    color: $color ;
-    background-color: $bgColor ;
-    border: 1.2px solid transparent ;
-    &:hover{
-        color: $hoverColor ;
-        background-color: $hoverBgColor ;
-        border: 1.2px solid $hoverColor ;
     }
 }
 @mixin textBlur($textHeight,$bgHeight,$blur,$bgURL,$textColor){

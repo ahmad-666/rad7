@@ -1347,6 +1347,42 @@ form#searchForm {
         transform: translateY(0em);
     }
 }
+form#productInfo{
+    .inputWrapper.numberHandler {
+        width: auto;
+        height: auto;
+        // position: relative ;
+        display: flex;
+        @include flex(row, space-around, center, nowrap, "");
+        .increase,
+        .decrease,
+        input {
+            margin-right: $dist1;
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+        .increase,
+        .decrease {
+            font-size: $fontM;
+            cursor: pointer;
+            color: lighten($darkColor, 5%);
+            // color: darken($textGrey,15%) ;      
+        }
+        input {
+            width: 3em;
+            height: 2em;
+            text-align: center;
+            line-height: 2em;
+            color: $darkColor;
+            font-size: $fontM;
+            border: 1.2px solid lighten($textGrey, 20%);
+        }
+        input.error {
+            border: 1.2px solid lighten($redColor2, 5%);
+        }
+    }
+}
 @include mediaQ(900px){
     form#sample {
         font-size: 8px ;

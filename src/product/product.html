@@ -143,7 +143,7 @@
                     </ul>
                 </li>
                 <li class="logo">
-                    <a href="#!">
+                    <a href="index.html">
                         <p>راد هفت</p>
                         <img src="../assets/icons/logo.png" alt="logoImg">
                     </a>
@@ -230,9 +230,46 @@
                 <a href="product.html">نام محصول</a>
             </div>
         </div>
-        <form novalidate id="productInfo" name="productInfo" class="containerStyle" method="GET" action="#!" enctype="text/plain">
+        <form novalidate id="productInfo" name="productInfo" class="containerStyle" method="GET" action="#!"
+            enctype="text/plain">
             <div class="details">
-                <p>dasdsada</p>
+                <div class="row">
+                    <p class="btn small available">موجود</p>
+                    <p class="btn small notAvailable">ناموجود</p>
+                    <p class="name">نام محصول</p>
+                    <div class="discountWrapper">
+                        <p class="beforeDiscount">1.000.000تومان</p>
+                        <p class="discount">50%</p>
+                    </div>
+                    <p class="finalPrice">500.000تومان</p>
+                    <div class="score">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰ نظر)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="desc">
+                        توضیح محصول توضیح محصول توضیح محصول
+                        توضیح محصول توضیح محصول توضیح محصول
+                        توضیح محصول توضیح محصول توضیح محصول
+                        توضیح محصول توضیح محصول توضیح محصول
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="inputWrapper numberHandler">
+                        <i class="fas fa-plus increase"></i>
+                        <input type="number" id="quantity" name="quantity" data-min="1" data-max="10" data-step="1"
+                            value="1" required readonly>
+                        <i class="fas fa-minus decrease"></i>
+                    </div>
+                    <button type="button" class="btn mid addToBasket">خرید</button>
+                </div>
             </div>
             <div class="productSlider">
                 <div class="curr_wrapper">
@@ -323,6 +360,187 @@
             <div class="slide">
                 <img src="../assets/imgs/slide4.jpg" alt="slide4Alt">
             </div>
+        </div>
+    </div>
+    <div id="suggestions" class="containerStyle">
+        <h4>محصولات مشابه</h4>
+        <div class="products">
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <div class="discountWrapper">
+                            <p class="beforeDiscount">1.000.000تومان</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide1.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide2.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <div class="discountWrapper">
+                            <p class="beforeDiscount">1.000.000تومان</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide3.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <div class="discountWrapper">
+                            <p class="beforeDiscount">1.000.000تومان</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide4.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <div class="discountWrapper">
+                            <p class="beforeDiscount">1.000.000تومان</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide1.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>
+            <a href="product.html" class="product">
+                <div class="right">
+                    <p class="name">نام محصول</p>
+                    <div class="price">
+                        <div class="discountWrapper">
+                            <p class="beforeDiscount">1.000.000تومان</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="finalPrice">500.000تومان</p>
+                    </div>
+                    <div class="scores">
+                        <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>(۴۰نظر)</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="../assets/imgs/slide2.jpg" alt="productImg">
+                </div>
+                <div class="bar center-x">
+                    <i class="fas fa-couch"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </a>         
         </div>
     </div>
     <footer>

@@ -5,6 +5,7 @@ import '../utilities/styles/form.scss'
 import '../init.scss' ;
 import '../index/styles/header.scss' ;
 import '../product/styles/productInfo.scss' ;
+import '../product/styles/suggestions.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
 import '../index/scripts/topMenu' ;
