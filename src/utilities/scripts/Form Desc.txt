@@ -213,6 +213,8 @@
 			<span class="line"></span>
 		</div>
 		<div class="inputWrapper textarea">
+			<!-- style1 for with full border -->
+			<!-- style2 just border-bottom , need to use with autoExpand class -->
 			<textarea name="comment2" id="comment2" class="style2 labelHandler autoExpand validate" required></textarea>
 			<label for="comment2">
 				<i class="fas fa-comments"></i>

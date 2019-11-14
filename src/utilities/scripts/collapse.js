@@ -37,7 +37,7 @@ Collapse.prototype.toggleCollapse = function(e){
     }
 }
    
-//document.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
+//<#faq or parent of .collapse>.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
 //    all = [...all] ;
 //    let others = all.filter(elm =>elm!=withCollapse);
 //    let font = new FontFaceObserver('iranSans');

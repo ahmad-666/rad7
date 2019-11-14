@@ -89,6 +89,11 @@
     //         <h4> نام مقاله</h4>
     //     </div>
     // </div>
+    // .article{
+    //     width: 100%;
+    //     height: 35em + $dist2; //we should set height explicitly
+    //     @include textBlur(8em,35em + $dist2,8px,'../../assets/imgs/slide1.jpg',$textDark);
+    // }
     position: relative ;
     overflow: hidden;
     img{
@@ -98,18 +103,18 @@
         object-position: center center;
     }
     .title{
-        width: 100% ;
+        width: 200% ;
         height: $textHeight;
         padding: $dist1;
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: 50%;
+        transform: translateX(50%) ;
         overflow: hidden;
         .blur{
-            content: '';
             @include fullSize-abs ;
             filter: blur($blur);
-            @include bg($bgURL,bottom center,no-repeat,100% $bgHeight) ;
+            @include bg($bgURL,bottom center,no-repeat,50% $bgHeight) ;
         }
         h4{
             width: 100%;

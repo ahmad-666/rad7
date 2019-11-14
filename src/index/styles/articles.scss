@@ -1,0 +1,71 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#articles{
+    padding: $dist2;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $textDark ;
+    }
+    .showMore{
+        width: auto;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        color: lighten($textGrey,10%);
+        transition: all .2s linear;
+        &:hover{color: $primaryColor;}
+        p,i{font-size: $fontM;}
+        i{margin-right: .3em;}
+    }
+    .articles{
+        width: 100%;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .col{
+            width: 50%;
+            height: auto;
+            &:nth-child(1){
+                display: flex;
+                .article{
+                    width: 100%;
+                    height: 35em + $dist2;
+                    @include textBlur(8em,35em + $dist2,8px,'../../assets/imgs/slide1.jpg',$textDark);
+                }
+            }
+            &:nth-child(2){
+                margin-right: $dist2;
+                .row{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    @include flex(row,flex-start,flex-start,nowrap,"") ;
+                    &:nth-child(1){
+                        .article{
+                            &:nth-child(1){@include textBlur(4em,35em / 2,5px,'../../assets/imgs/slide2.jpg',$textDark)}
+                            &:nth-child(2){@include textBlur(4em,35em / 2,5px,'../../assets/imgs/slide3.jpg',$textDark)}
+                        }
+                    }
+                    &:nth-child(2){
+                        margin-top: $dist2;
+                        .article{
+                            &:nth-child(1){@include textBlur(4em,35em / 2,5px,'../../assets/imgs/slide4.jpg',$textDark);}
+                            &:nth-child(2){@include textBlur(4em,35em / 2,5px,'../../assets/imgs/slide1.jpg',$textDark);}
+                        }
+                    }
+                    .article{
+                        width: 50%;
+                        height: calc(35em / 2);
+                        &:nth-child(2){margin-right: $dist2;}
+                    }
+                }
+            }
+        }
+    }
+}

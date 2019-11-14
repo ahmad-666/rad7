@@ -8,6 +8,7 @@ import '../index/styles/twoDirSlider.scss' ;
 import '../index/styles/products.scss' ;
 import '../index/styles/discounts.scss' ;
 import '../index/styles/features.scss' ;
+import '../index/styles/articles.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
 import '../index/scripts/topMenu' ;

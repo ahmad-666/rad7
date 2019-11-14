@@ -1,17 +1,17 @@
 import FontFaceObserver from 'fontfaceobserver' ;
 import collapse from '../../utilities/scripts/collapse' ;
-document.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
+let nav = document.querySelector('nav') ;
+let mobileNavWrapper = nav.querySelector('.bars') ;
+let mobileBars = mobileNavWrapper.querySelector('.fa-bars') ;
+let mobileNav = mobileNavWrapper.querySelector('ul.mobile') ;
+let mobileFullScreenTriggers = mobileNav.querySelectorAll('li.fullScreen .fullScreenTrigger');
+let mobileFullScreenCloses = document.querySelectorAll('.fullScreenMenu .close') ; 
+mobileNav.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
     all = [...all] ;
     let others = all.filter(elm =>elm!=withCollapse);
     let font = new FontFaceObserver('iranSans');
     font.load().then(()=>new collapse.Collapse(withCollapse,others));
  }) ;
- let nav = document.querySelector('nav') ;
- let mobileNavWrapper = nav.querySelector('.bars') ;
- let mobileBars = mobileNavWrapper.querySelector('.fa-bars') ;
- let mobileNav = mobileNavWrapper.querySelector('ul.mobile') ;
- let mobileFullScreenTriggers = mobileNav.querySelectorAll('li.fullScreen .fullScreenTrigger');
- let mobileFullScreenCloses = document.querySelectorAll('.fullScreenMenu .close') ;
  mobileBars.addEventListener('click',toggleMobileNav) ;
  function toggleMobileNav(e){
     mobileNav.classList.toggle('show') ;
