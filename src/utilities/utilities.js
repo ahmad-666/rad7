@@ -101,6 +101,7 @@ Ellipse.prototype.checkThreshold = function(){
     if(this.parent.scrollHeight > threshold) {
         this.ellipse.style.display = 'block' ;
         this.parent.style.textAlign = 'justify' ;
+        this.parent.style.paddingLeft = '2em' ;
     }
     else{
         this.parent.style.textAlign = this.textAlign ;

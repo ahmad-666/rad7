@@ -1,0 +1,147 @@
+@import '../../colors.scss';
+@import '../../variables.scss';
+@import '../../mixins.scss';
+@import '../../article/styles/aside.scss' ;
+main {
+    width: 90%;
+    height: auto;
+    margin: $sectionsDist auto 0 auto;
+    display: flex;
+    @include flex(row, flex-start, flex-start, nowrap, "");
+    .wrapper {
+        width: 100%;
+        height: auto;
+        margin: $dist2 0 0 0;
+        display: flex;
+        @include flex(column, flex-start, flex-start, nowrap, "");
+        h4 {
+            font-size: $fontL;
+            color: $textDark;
+            font-weight: 700;
+        }
+        .articles {
+            width: 100%;
+            height: auto;
+            display: flex;
+            @include flex(row, flex-start, flex-start, wrap, flex-start);
+            margin-top: $dist1;
+            .article {
+                width: calc((100% - (4 * 3em)) / 4);
+                height: auto;
+                margin: $dist2 ;
+                border-radius: $dist2;
+                display: flex;
+                @include flex(column, flex-start, flex-start, nowrap, "");
+                transition: all .4s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    transform: translateY(-5%);
+                    .img {
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                }
+                .img {
+                    width: 100%;
+                    height: 20em;
+                    position: relative;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: $dist2;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: $dist2;
+                    }
+
+                    &::before {
+                        content: '';
+                        border-radius: $dist2;
+                        @include fullSize-abs;
+                        background-color: $blackFilter2;
+                        opacity: 1;
+                        transition: all .4s ease-in-out;
+                    }
+
+                    .content {
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                        right: 0;
+                        bottom: 5%;
+                        display: flex;
+                        @include flex(row, space-between, center, nowrap, "");
+                        padding: 0 $dist1;
+
+                        .writer {
+                            font-size: $fontM - .1em;
+                            color: $textWhite;
+                        }
+
+                        .comments {
+                            width: 5em;
+                            height: 5em;
+                            border-radius: 50%;
+                            background-color: $blackFilter2;
+                            border: 1.2px solid $textWhite;
+                            display: flex;
+                            @include flex(column, space-around, center, nowrap, "");
+
+                            i {
+                                font-size: $fontM;
+                                color: $textWhite;
+                            }
+
+                            span {
+                                font-size: $fontM - .2em;
+                                color: $textWhite;
+                            }
+                        }
+
+                    }
+                }
+                h4 {
+                    margin-top: $dist1;
+                    width: 100%;
+                    @include multiEllipse(3, $dist2 + .5em, $textDark);
+                    font-size: $fontM + .1em;
+                    color: $textDark;
+                }
+                .date {
+                    color: $textGrey;
+                    font-size: $fontM;
+                    // margin-top: $dist1 ;
+                }
+            }       
+        }
+        .pagination {
+            width: auto;
+            height: auto;
+            margin: $dist2 auto 0 auto;
+            display: flex;
+            @include flex(row,flex-start,center,wrap,flex-start) ;
+            a{
+                position: relative;
+                width: auto;
+                height: 2em;
+                padding: 0 $dist1;
+                font-size: $fontM;
+                border-radius: $dist1;   
+                margin: .3em;
+                @include swapColor($primaryColor,white) ;
+                border: 1px solid $primaryColor ;
+                &:first-child {line-height: 2em;}
+                &:last-child {line-height: 2em;}
+                &:not(:first-child):not(:last-child) {line-height: 2.2em;}
+            }
+            a.active{
+                color: white;
+                background-color: $primaryColor;
+                border: none ;
+            }
+            .dots {line-height: 2em !important;}
+        }
+    }
+}

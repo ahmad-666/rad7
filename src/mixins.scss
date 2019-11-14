@@ -11,12 +11,18 @@
     background-size: $size ;
 }
 @mixin multiEllipse($lineNum,$lineHeight,$ellipseColor){
+    // <h6>
+	//    <span class="ellipse" data-align="right">...</span>
+	//    عنوان مقاله
+    // </h6>
+    // h6{@include multiEllipse(3,$dist2,$textDark) ;}
+    // aside.querySelectorAll('.ellipse').forEach(ellipse=>new util.Ellipse(ellipse))    
     position: relative ;
     overflow: hidden;
     line-height: $lineHeight;
     max-height: $lineNum * $lineHeight ;
     text-align: justify; //we should not use text-align:center here  
-    padding-left: 2em;
+    // padding-left: 2em;
     padding-right: 0 ;
     .ellipse{
         color: $ellipseColor ; 

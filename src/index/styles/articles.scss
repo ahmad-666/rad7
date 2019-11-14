@@ -14,9 +14,11 @@
         width: auto;
         height: auto;
         margin-top: $dist2;
+        margin-left:0; 
+        margin-right:auto;
         display: flex;
         @include flex(row,flex-start,center,nowrap,"") ;
-        color: lighten($textGrey,10%);
+        color: lighten($textGrey,0%);
         transition: all .2s linear;
         &:hover{color: $primaryColor;}
         p,i{font-size: $fontM;}
