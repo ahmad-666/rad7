@@ -1,1 +1,371 @@
-<script type="text/javascript" src="report.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link href="report.css" rel="stylesheet"></head>
+<body class="bg">
+    <header>
+        <div id="topMenu">
+            <div class="right">
+                <a href="login.html" class="login hoverEffect">
+                    <i class="fas fa-user"></i>
+                    <p>ورود/ثبت نام</p>
+                </a>
+                <a href="basket.html" class="withBadge basketHover">
+                    <span class="badge">10</span>
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
+                <form novalidate id="searchForm" name="searchForm" method="GET" action="#!" enctype="text/plain">
+                    <i class="fas fa-search searchToggle"></i>
+                    <div class="inputWrapper withSubmit">
+                        <input type="text" id="search" name="search" class="validate" placeholder="نام کالا" required>
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="msg">
+                            <i class="fas fa-caret-up"></i>
+                            <p>باید مقداری را وارد کنید</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="left">
+                <a href="rules.html" class="hoverEffect">قوانین</a>
+                <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
+                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
+            </div>
+        </div>
+        <nav class="shadowBellow">
+            <ul class="desktop">
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۱</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۲</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۳</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۴</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۵</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="logo">
+                    <a href="index.html">
+                        <p>راد هفت</p>
+                        <img src="assets/imgs/logo.png" alt="logoImg">
+                    </a>
+                </li>
+                <li class="bars">
+                    <i class="fas fa-bars"></i>
+                    <ul class="mobile shadowBlurL fadeIn">
+                        <li class="logo">
+                            <a href="#!">
+                                <img src="assets/imgs/logo.png" alt="logoImg">
+                                <p>راد هفت</p>
+                            </a>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۱</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۲</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۳</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۴</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۵</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="report" class="containerStyle">
+        <div class="contact">
+            <h4>ارتباط با ما</h4>
+            <div class="wrapper">
+                <div class="item">
+                    <div class="title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>آدرس</p>
+                    </div>
+                    <p class="txt">مشهد-سیدرضی ۵۷-پلاک ۲۸۸</p>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <i class="fas fa-phone"></i>
+                        <p>تلفن</p>
+                    </div>
+                    <p class="txt">051-38670000</p>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <i class="fas fa-envelope"></i>
+                        <p>ایمیل</p>
+                    </div>
+                    <p class="txt">somethin@gmail.com</p>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <i class="fas fa-clock"></i>
+                        <p>ساعت کاری</p>
+                    </div>
+                    <p class="txt">شنبه تا پنجشنبه - از ساعت ۱۰ الی ۱۷</p>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <h4>رادهفت را در شبکه های اجتماعی دنبال کنید</h4>
+            <div class="wrapper">
+                <a href="#!">
+                    <i class="fab fa-telegram-plane shadowS"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-whatsapp shadowS"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram shadowS"></i>
+                </a>
+            </div>
+        </div>
+        <form novalidate id="admin" name="admin" enctype="text/plain" method="GET" action="#!">
+            <h4>ارتباط با مدیر</h4>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="inputWrapper text">
+                        <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                        <label for="name">
+                            <i class="fas fa-user icon"></i>
+                            <p>نام و نام خانوادگی</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                    </div>
+                    <div class="inputWrapper text">
+                        <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+                        <label for="email">
+                            <i class="fas fa-envelope icon"></i>
+                            <p>پست الکترونیکی</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>ایمیل صحیح وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputWrapper textarea">
+                    <textarea name="reportContent" id="reportContent" class="style1 labelHandler validate" required></textarea>
+                    <label for="reportContent">
+                        <i class="fas fa-comments"></i>
+                        <p>نظر خود را وارد نمایید</p>
+                    </label>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn mid">ارسال</button>
+        </form>
+    </div>
+    <footer>
+        <div class="top">
+            <div class="shape right"></div>
+            <div class="namad">
+                <a href="#!">
+                    <img src="assets/imgs/namad.png" alt="namadAlt">
+                </a>
+                <a href="#!">
+                    <img src="assets/imgs/namad.png" alt="namadAlt">
+                </a>
+            </div>
+            <div class="shape left"></div>
+        </div>
+        <div class="bottom">
+            <div class="col about">
+                <h4>درباره راد هفت</h4>
+                <a href="about.html">درباره ما</a>
+                <div class="address">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>سیدرضی ۵۷ - پلاک ۲۸۸</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-phone"></i>
+                    <p>051-38670000</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-envelope"></i>
+                    <p>something@gmail.com</p>
+                </div>
+            </div>
+            <div class="col more">
+                <h4>مطالب بیشتر</h4>
+                <a href="rules.html">قوانین</a>
+                <a href="faq.html">سوالات متداول</a>
+                <a href="guide.html">راهنمای خرید</a>
+                <a href="articles.html">وبلاگ</a>
+                <a href="app.html">آموزش نصب اپلیکشین</a>
+            </div>
+            <div class="col contact">
+                <h4>تماس با ما</h4>
+                <a href="report.html">ثبت شکایات</a>
+                <div class="socials">
+                    <p>راد هفت را در شبکه های اجتماعی دنبال کنید</p>
+                    <div class="wrapper">
+                        <a href="#!" class="social">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="report.js"></script></body>
+</html>
