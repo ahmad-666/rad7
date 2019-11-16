@@ -1,8 +1,10 @@
 import FontFaceObserver from 'fontfaceobserver' ;
 import collapse from '../../utilities/scripts/collapse.js' ;
+//variables----------------------------------------------
 let filtersWrapper = document.querySelector('#filtersWrapper') ;
 let currFiltersWrapper = filtersWrapper.querySelector('.currFilters') ;
 let filtersForm = filtersWrapper.querySelector('form#filters') ;
+//collapse----------------------------------------------
 filtersForm.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
    all = [...all] ;
    let others = all.filter(elm =>elm!=withCollapse);
@@ -11,3 +13,4 @@ filtersForm.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
 });
 //for solve conflicts of click event on label and click event on .collapseTrigger
 filtersForm.querySelectorAll('label').forEach(label=>label.addEventListener('click',(e)=>e.stopPropagation()))
+//filters handlers----------------------------------------------
