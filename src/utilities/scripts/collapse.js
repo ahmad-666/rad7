@@ -43,6 +43,13 @@ Collapse.prototype.toggleCollapse = function(e){
 //    let font = new FontFaceObserver('iranSans');
 //    font.load().then(()=>new Collapse(withCollapse,others));
 //})
+// when we click on label we click on specific form element too and also 
+//     trigger click event too
+// if we have : 
+// 	.collapseTrigger 
+//         label 
+//     //when we click on label we also trigger click .collapseTrigger too 
+//     we need to add .stopPropagation() inside both click event to prevent any conflicts
 export default{
 	Collapse
 }

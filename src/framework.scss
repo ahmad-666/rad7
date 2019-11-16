@@ -203,6 +203,7 @@
 //others-------------------------------------------
 @include hiddenShow('.modal') ;
 .collapseTrigger{cursor: pointer;}
+// we should not use height:auto .collapse again in other files
 .collapse{height: auto;}
 .collapse.close{
     opacity: 0;
