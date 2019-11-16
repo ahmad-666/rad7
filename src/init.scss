@@ -1,5 +1,7 @@
-@import './fonts.scss' ;
+@import './variables.scss' ;
 @import './colors.scss' ;
+@import './mixins.scss' ;
+@import './fonts.scss' ;
 *{
     box-sizing: border-box ;
     padding: 0;
@@ -47,3 +49,9 @@ input[type='number']::-webkit-inner-spin-button {
     appearance: none;
 }
 input[type=number] {-moz-appearance:textfield;}
+.mobileFixFlexFixer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+}

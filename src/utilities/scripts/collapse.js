@@ -9,6 +9,7 @@ function Collapse(wrapper,others){
     this.trigger.addEventListener('click',this.toggleCollapse.bind(this)) ;
 }
 Collapse.prototype.toggleCollapse = function(e){
+    e.stopPropagation();
     this.targetHeight = this.collapse.scrollHeight;
     this.collapse.classList.add('addTransition') ;
     this.collapse.classList.toggle('open') ;
@@ -36,7 +37,6 @@ Collapse.prototype.toggleCollapse = function(e){
         this.icon.classList.toggle('fa-times') ;
     }
 }
-   
 //<#faq or parent of .collapse>.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
 //    all = [...all] ;
 //    let others = all.filter(elm =>elm!=withCollapse);

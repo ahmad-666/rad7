@@ -1,0 +1,60 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#filterProductsWrapper{
+    #filtersWrapper{
+        .mobileFixFlexFixer{
+            form#filters{
+                width: 100%;
+                height: auto;
+                margin-top: $dist3;
+                border-radius: $dist2;
+                background-color: darken($darkColor2,2%);
+                border: .2em solid $textWhite ;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                .filtersWrapper{
+                    width: 100%;
+                    height: auto;
+                    padding: $dist2 $dist1;
+                    &:not(:last-child){border-bottom: .1em solid darken($textGrey,10%);}
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    h4{
+                        font-size: $fontM - .2em;
+                        color: $textWhite;
+                    }
+                }
+                .filtersWrapper.categories{
+                    .withCollapse{
+                        width: 100%;
+                        height: auto;
+                        margin-top: $dist1;
+                        display: flex;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                        .collapseTrigger{
+                            margin-top: $dist1;
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            color: $textWhite;
+                            @include flex(row,space-between,center,nowrap,"") ;
+                            i{
+                                font-size: $fontM;
+                                color: inherit;
+                            }
+                        }
+                        .collapse{
+                            width: 100%;
+                            // height: auto;
+                            padding-right: $dist3;
+                            display: flex;
+                            @include flex(column,flex-start,flex-start,nowrap,"") ;
+                            color: lighten($textGrey,20%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

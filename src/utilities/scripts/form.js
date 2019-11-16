@@ -1,3 +1,5 @@
+import wNumb from 'wnumb' ;
+import noUiSlider from 'nouislider' ;
 import util from '../utilities.js' ;
 //form validation------------------------------
 //form validation------------------------------

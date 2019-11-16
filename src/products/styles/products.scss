@@ -1,0 +1,95 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#filterProductsWrapper{
+    #productsWrapper{
+        .productsWrapper{
+            width: 100%;
+            height: auto;
+            margin-top: $dist3;
+            display: flex;
+            @include flex(column,flex-start,center,nowrap,"") ;
+            .products{
+                width: 100%;
+                height: auto;
+                display: flex;
+                @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                .product{
+                    overflow: hidden;
+                    width: calc((100% - (4 * 1.5em)) / 4);
+                    height: 25em;
+                    border-radius: $dist2;
+                    background-color: white;
+                    border: .12em solid lighten($textGrey,25%) ;
+                    margin: $dist1;
+                    display: flex;
+                    @include flex(column,flex-start,center,nowrap,"") ;
+                    transition: all .3s linear;
+                    &:hover{
+                        background-color: lighten($textGrey,32%);
+                        transform: translateY(-1em);
+                        box-shadow: 0 .3em 1em -.25em $shadowColor;
+                        z-index: 2;
+                    }
+                    img{
+                        width: 75%;
+                        height: 60%;
+                    }
+                    .info{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(column,flex-start,center,nowrap,"") ;
+                        color: $textDark;
+                        .name{font-size: $fontM;}
+                        .price{
+                            width: auto;
+                            height: auto;
+                            margin-top: .5em;
+                            display: flex;
+                            @include flex(column,flex-start,center,nowrap,"") ;
+                            color: inherit;
+                            .finalPrice{font-size: $fontM;}
+                            .row{
+                                width: auto;
+                                height: auto;
+                                display: flex;
+                                @include flex(row,flex-start,center,nowrap,"") ;
+                                color: inherit;
+                                .beforeDiscount{
+                                    font-size: $fontM;
+                                    text-decoration: line-through;
+                                    color: lighten($textGrey,15%);
+                                }
+                                .discountVal{
+                                    width: auto;
+                                    height: auto;
+                                    border-radius: $dist1;
+                                    color: white;
+                                    background-color: lighten($primaryColor,12%);
+                                    font-size: $fontS;
+                                    padding: .3em .5em;
+                                    margin-right: $dist2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .showMore{
+                width: 100%;
+                height: auto;
+                padding: .5em $dist2;
+                margin-top: $dist2;
+                display: flex;
+                @include flex(row,center,center,nowrap,"") ;
+                @include swapColor(white,lighten($primaryColor,15%)) ;
+                i{font-size: $fontM - .2em;}
+                p{
+                    font-size: $fontM - .2em;
+                    margin-right: .3em;
+                }
+            }
+        }
+    }
+}

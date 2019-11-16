@@ -1,0 +1,14 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#filterProductsWrapper{
+    #productsWrapper{
+        #sort{
+            width: 100%;
+            height: auto;
+            padding: 0 ;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;   
+        }
+    }
+}
