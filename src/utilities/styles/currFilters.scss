@@ -1,0 +1,61 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#filterProductsWrapper{
+    #filtersWrapper{
+        .mobileFixFlexFixer{
+            .currFilters{
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                border-radius: $dist2;
+                border: .2em solid $textWhite ;
+                background-color: darken($darkColor2,2%);
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                .top{
+                    width: 100%;
+                    height: auto;
+                    padding: $dist1;
+                    display: flex;
+                    @include flex(row,space-between,center,nowrap,"") ;
+                    h4{
+                        font-size: $fontM - .1em;
+                        font-weight: 700;
+                        color: white;
+                    }
+                    #clearFilters{
+                        font-size: $fontM - .2em;
+                        @include swapColor(white,lighten($primaryColor,10%)) ;
+                        margin-right: $dist2;
+                        padding: .3em $dist1;
+                    }
+                }
+                .bottom{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    margin-top: $dist1;
+                    @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                    .currFilter{
+                        width: auto;
+                        height: auto;
+                        border-radius: $dist2;
+                        margin: .5em;
+                        padding: .3em $dist1;
+                        cursor: pointer;
+                        @include swapColor(white,lighten($primaryColor,10%)) ;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        i{font-size: $fontM;}
+                        p{
+                            font-size: $fontM - .2em;
+                            margin-right: .3em;
+                        }
+                    }         
+                }
+            }
+        }
+    }
+}
