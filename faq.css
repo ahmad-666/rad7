@@ -6249,6 +6249,434 @@ form#signup {
   form#signup {
     font-size: 6px; } }
 
+form#sort .inputWrapper.select {
+  width: 22em;
+  height: 4em;
+  position: relative;
+  margin: 0; }
+  form#sort .inputWrapper.select input {
+    width: 100%;
+    height: 100%;
+    line-height: 4em;
+    padding: 0 0.75em;
+    color: #2d2d31;
+    font-size: 1.6em;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+    form#sort .inputWrapper.select input::-webkit-input-placeholder {
+      font-size: 1.6em;
+      color: #90909b; }
+    form#sort .inputWrapper.select input::-moz-placeholder {
+      font-size: 1.6em;
+      color: #90909b; }
+    form#sort .inputWrapper.select input:-ms-input-placeholder {
+      font-size: 1.6em;
+      color: #90909b; }
+    form#sort .inputWrapper.select input::-ms-input-placeholder {
+      font-size: 1.6em;
+      color: #90909b; }
+    form#sort .inputWrapper.select input::placeholder {
+      font-size: 1.6em;
+      color: #90909b; }
+  form#sort .inputWrapper.select input.style1 {
+    border: none;
+    border-bottom: 1.2px solid #d3d3d7; }
+    form#sort .inputWrapper.select input.style1:focus ~ label {
+      font-size: 8px;
+      color: #ef6c00;
+      right: 0;
+      bottom: -webkit-calc(100% + .5em);
+      bottom: calc(100% + .5em); }
+    form#sort .inputWrapper.select input.style1:focus ~ .arrow {
+      color: #ef6c00; }
+    form#sort .inputWrapper.select input.style1:focus ~ .line {
+      width: 100%; }
+    form#sort .inputWrapper.select input.style1:focus ~ ul {
+      opacity: 1;
+      visibility: visible; }
+  form#sort .inputWrapper.select input.style2 {
+    border: 1.2px solid #d3d3d7;
+    border-radius: .5em; }
+    form#sort .inputWrapper.select input.style2:focus {
+      border: 1.2px solid #ef6c00; }
+      form#sort .inputWrapper.select input.style2:focus ~ label {
+        font-size: 8px;
+        color: #ef6c00;
+        right: 0;
+        bottom: -webkit-calc(100% + 1.5em);
+        bottom: calc(100% + 1.5em); }
+      form#sort .inputWrapper.select input.style2:focus ~ .arrow {
+        color: #ef6c00; }
+      form#sort .inputWrapper.select input.style2:focus ~ .line {
+        width: 0%; }
+      form#sort .inputWrapper.select input.style2:focus ~ ul {
+        opacity: 1;
+        visibility: visible; }
+  form#sort .inputWrapper.select input.style1.error ~ label {
+    color: #ea6161; }
+  form#sort .inputWrapper.select input.style1.error ~ .arrow {
+    color: #ea6161; }
+  form#sort .inputWrapper.select input.style1.error ~ .line {
+    width: 100%;
+    background-color: #ea6161; }
+  form#sort .inputWrapper.select input.style2.error {
+    border: 1.2px solid #ea6161; }
+    form#sort .inputWrapper.select input.style2.error ~ label {
+      color: #ea6161; }
+    form#sort .inputWrapper.select input.style2.error ~ .arrow {
+      color: #ea6161; }
+    form#sort .inputWrapper.select input.style2.error ~ .line {
+      background-color: #ea6161; }
+  form#sort .inputWrapper.select label {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    color: #c6c6cb;
+    position: absolute;
+    right: 0.75em;
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+    form#sort .inputWrapper.select label .icon {
+      font-size: 1.6em; }
+    form#sort .inputWrapper.select label p {
+      font-size: 1.5em;
+      -webkit-transform: translateX(-0.3em);
+          -ms-transform: translateX(-0.3em);
+              transform: translateX(-0.3em); }
+  form#sort .inputWrapper.select input.style1 ~ label.top {
+    font-size: 8px;
+    right: 0;
+    bottom: -webkit-calc(100% + .5em);
+    bottom: calc(100% + .5em); }
+  form#sort .inputWrapper.select input.style2 ~ label.top {
+    font-size: 8px;
+    right: 0;
+    bottom: -webkit-calc(100% + 1.5em);
+    bottom: calc(100% + 1.5em); }
+  form#sort .inputWrapper.select .arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #c6c6cb;
+    left: 0.75em;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+  form#sort .inputWrapper.select .line {
+    width: 0;
+    height: 1.2px;
+    background-color: #ef6c00;
+    position: absolute;
+    right: 0;
+    top: -webkit-calc(100% - .6px);
+    top: calc(100% - .6px);
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+  form#sort .inputWrapper.select ul {
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    width: 100%;
+    max-height: 16em;
+    overflow: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    position: absolute;
+    top: 105%;
+    right: 0;
+    -webkit-box-shadow: 0 0.2em 0.5em 0em rgba(70, 69, 85, 0.3);
+            box-shadow: 0 0.2em 0.5em 0em rgba(70, 69, 85, 0.3); }
+    form#sort .inputWrapper.select ul li {
+      width: 100%;
+      height: 2.5em;
+      line-height: 2.5em;
+      padding: 0 0.75em;
+      font-size: 1.6em;
+      color: #2d2d31;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear;
+      cursor: pointer;
+      background-color: white; }
+      form#sort .inputWrapper.select ul li:hover {
+        background-color: #e6e6e6; }
+  form#sort .inputWrapper.select ul.show {
+    opacity: 1;
+    visibility: visible; }
+
+form#filters .inputWrapper.range {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  form#filters .inputWrapper.range h4 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fbfbfb; }
+  form#filters .inputWrapper.range .ranger {
+    width: 100%;
+    height: .4em;
+    margin-top: 1.5em; }
+    form#filters .inputWrapper.range .ranger .noUi-connect {
+      background-color: #ef6c00; }
+    form#filters .inputWrapper.range .ranger .noUi-handle.circle {
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      background-color: #ff8623;
+      border: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      cursor: pointer; }
+      form#filters .inputWrapper.range .ranger .noUi-handle.circle::before {
+        display: none; }
+      form#filters .inputWrapper.range .ranger .noUi-handle.circle::after {
+        display: none; }
+      form#filters .inputWrapper.range .ranger .noUi-handle.circle:focus {
+        outline: none; }
+        form#filters .inputWrapper.range .ranger .noUi-handle.circle:focus .noUi-tooltip {
+          outline: none; }
+    form#filters .inputWrapper.range .ranger .noUi-handle.right {
+      right: 0;
+      -webkit-transform: translate(0%, -40%);
+          -ms-transform: translate(0%, -40%);
+              transform: translate(0%, -40%);
+      top: 0%; }
+    form#filters .inputWrapper.range .ranger .noUi-handle.left {
+      left: 0;
+      top: 0%;
+      -webkit-transform: translate(0%, -40%);
+          -ms-transform: translate(0%, -40%);
+              transform: translate(0%, -40%); }
+    form#filters .inputWrapper.range .ranger .noUi-tooltip {
+      display: none; }
+    form#filters .inputWrapper.range .ranger .noUi-tooltip.newStyle {
+      font-size: .8em; }
+    form#filters .inputWrapper.range .ranger .noUi-tooltip.right {
+      -webkit-transform: translate(-90%, 0);
+          -ms-transform: translate(-90%, 0);
+              transform: translate(-90%, 0); }
+    form#filters .inputWrapper.range .ranger .noUi-tooltip.left {
+      -webkit-transform: translate(0%, 0);
+          -ms-transform: translate(0%, 0);
+              transform: translate(0%, 0); }
+  form#filters .inputWrapper.range .text {
+    width: 100%;
+    height: auto;
+    margin-top: 0.75em;
+    text-align: center;
+    color: #c6c6cb;
+    font-size: 1.6em; }
+
+form#filters .filtersWrapper .inputWrapper.checkboxes {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox {
+    width: 100%;
+    height: 100%; }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"] {
+      width: 0;
+      height: 0;
+      display: none; }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox label {
+      color: inherit;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      line-height: 2.5em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-content: "";
+          -ms-flex-line-pack: "";
+              align-content: ""; }
+      form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox label .rect {
+        -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
+        width: 2.3em;
+        height: 2.3em;
+        border: 1px solid #c6c6cb;
+        position: relative;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        border-radius: .45em; }
+        form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox label .rect i {
+          opacity: 0;
+          font-size: 1.6em;
+          color: #fbfbfb;
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear; }
+      form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox label p {
+        max-width: -webkit-calc(100% - .5em - 1.2em - .5em);
+        max-width: calc(100% - .5em - 1.2em - .5em);
+        font-size: 1.6em;
+        color: #c6c6cb;
+        margin-right: .3em;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear; }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label .rect {
+      width: 2em;
+      height: 1em;
+      border-radius: 0;
+      border-top: none;
+      border-right: none;
+      border-left: 1.2px solid #ef6c00;
+      border-bottom: 1.2px solid #ef6c00;
+      -webkit-transform: translateY(-0.3em) rotate(-45deg);
+          -ms-transform: translateY(-0.3em) rotate(-45deg);
+              transform: translateY(-0.3em) rotate(-45deg); }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label p {
+      color: #ff8623; }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+      border: 1px solid transparent;
+      background-color: #ff8623; }
+      form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+        opacity: 1; }
+    form#filters .filtersWrapper .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+      color: #ff8623; }
+
+form#filters .filtersWrapper .withCollapse .collapseTrigger .inputWrapper.checkboxes .checkbox label .rect {
+  width: 2.3em;
+  height: 2.3em;
+  border: 1px solid #fbfbfb; }
+  form#filters .filtersWrapper .withCollapse .collapseTrigger .inputWrapper.checkboxes .checkbox label .rect i {
+    font-size: 1.6em;
+    color: #fbfbfb; }
+
+form#filters .filtersWrapper .withCollapse .collapseTrigger .inputWrapper.checkboxes .checkbox label p {
+  font-size: 1.6em;
+  color: #fbfbfb; }
+
+form#filters .filtersWrapper .withCollapse .collapse {
+  font-size: 9px; }
+  form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox {
+    margin-top: 1.5em; }
+    form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox label {
+      color: inherit; }
+      form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox label .rect {
+        border: 1px solid #c6c6cb; }
+      form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox label p {
+        color: #c6c6cb; }
+    form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label p {
+      color: #ff8623; }
+    form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+      border: 1px solid transparent;
+      background-color: #ff8623; }
+      form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+        opacity: 1; }
+    form#filters .filtersWrapper .withCollapse .collapse .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+      color: #ff8623; }
+
 @media screen and (max-width: 900px) {
   form#admin {
     font-size: 8px; }
@@ -6321,6 +6749,16 @@ form#signup {
     form#signup .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 6px; }
     form#signup .inputWrapper.textarea textarea.style2 ~ label.top {
+      font-size: 6px; }
+  form#sort {
+    font-size: 8px; }
+    form#sort .inputWrapper.select input.style1:focus ~ label {
+      font-size: 6px; }
+    form#sort .inputWrapper.select input.style2:focus ~ label {
+      font-size: 6px; }
+    form#sort .inputWrapper.select input.style1 ~ label.top {
+      font-size: 6px; }
+    form#sort .inputWrapper.select input.style2 ~ label.top {
       font-size: 6px; } }
 
 @media screen and (max-width: 600px) {
@@ -6395,6 +6833,16 @@ form#signup {
     form#signup .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 4px; }
     form#signup .inputWrapper.textarea textarea.style2 ~ label.top {
+      font-size: 4px; }
+  form#sort {
+    font-size: 6px; }
+    form#sort .inputWrapper.select input.style1:focus ~ label {
+      font-size: 4px; }
+    form#sort .inputWrapper.select input.style2:focus ~ label {
+      font-size: 4px; }
+    form#sort .inputWrapper.select input.style1 ~ label.top {
+      font-size: 4px; }
+    form#sort .inputWrapper.select input.style2 ~ label.top {
       font-size: 4px; } }
 
 @font-face {
@@ -6457,6 +6905,33 @@ input[type='number']::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield; }
+
+.mobileFixFlexFixer {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
 
 #topMenu {
   width: 100%;
