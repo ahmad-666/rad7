@@ -45,8 +45,10 @@ TimelineSlider.prototype.checkChangeSlide = function(e){
     let btn = e.currentTarget ;
     let offset = parseInt(btn.getAttribute('data-slide')) ;
     if(!btn.classList.contains('validate')) this.changeSlide(offset) ;  
+    //if 
     else{ //if we need validation
-        if(infos.validate) this.changeSlide(offset) ;       
+        //we need to write this manually when we create instance
+        //if(something) this.changeSlide(offset) ;       
     }
 }
 TimelineSlider.prototype.changeSlide = function(offset){
@@ -54,17 +56,30 @@ TimelineSlider.prototype.changeSlide = function(offset){
     this.slider.style.right = `${currPos+(-1*offset*100)}%` ;
     this.progress.changeStep(offset) ;
 }
-function Timeline(timeline){
+function Timeline(timeline,progressInstance,sliderInstance){
     this.timeline = timeline ;
-    this.progress = new Progress(this.timeline.querySelector('#timeline'),500) ;
-    this.slider = new TimelineSlider(this.timeline.querySelector('#timelineSlider'),this.progress) ;
+    this.progress = progressInstance
+    this.slider = sliderInstance ;
 }
-document.querySelectorAll('.labelHandler').forEach(labelHandler => {
-    new LabelHandler(labelHandler) ;
-})
-let form = document.querySelector('form#sample') ;
-let stage4 = form.querySelector('#stage4') ;
-let infoSubmit = stage4.querySelector('button.next.validate') ;
-let infoInputs = stage4.querySelectorAll('input.validate') ;
-let infos = new FormValidate(form,infoSubmit,infoInputs,false) ;
-new Timeline(document.querySelector('#timelineWrapper')) ;
+//*** if we need validation for changing timeline slide we need to write 
+//condition manually and also we need to add '.validate' to button too :
+// <div class="slide" id="stage2">             
+//     <div class="btnWrapper">
+//         <button type="button" class="changeSlide prev" data-slide="-1">مرحله قبل</button>
+//         <button type="button" class="changeSlide next validate" data-slide="1">مرحله بعد</button>
+//     </div>
+// </div>
+// let progress = new Timeline.Progress(document.querySelector('#timeline'),500) ;
+// let timelineSlider = new Timeline.TimelineSlider(document.querySelector('#timelineSlider'),progress) ;
+// new Timeline.Timeline(document.querySelector('#timelineWrapper'),progress,timelineSlider) ;
+// stage2Submit.addEventListener('click',checkFormValidation) ;
+// function checkFormValidation(e){
+//     if(<form>.validate) {
+//         timelineSlider.changeSlide(parseInt(e.currentTarget.getAttribute('data-slide')));
+//     }
+// }
+export default {
+    Timeline ,
+    TimelineSlider ,
+    Progress
+}

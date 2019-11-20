@@ -1,6 +1,6 @@
-@import './colors.scss' ;
-@import './variables.scss' ;
-@import './mixins.scss' ;
+@import '../../colors.scss' ;
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
 form#basket{
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
@@ -9,35 +9,6 @@ form#basket{
         font-size: $fontL;
         font-weight: 700;
         color: $textDark;
-    }
-    .row{
-        width: 100%;
-        height: auto;
-        margin-top: $dist3;
-        display: flex;
-        @include flex(row,space-between,center,nowrap,"") ;
-        #totalPrice{
-            width: auto;
-            height: auto;
-            display: flex;
-            @include flex(column,flex-start,flex-start,nowrap,"") ;
-            p{
-                &:nth-child(1){
-                    font-weight: 700;
-                    color: $textGrey;
-                    font-size: $fontM;
-                }
-                &:nth-child(2){
-                    font-size: $fontM + .2em;
-                    color: $textDark;
-                }
-            }
-        }
-        button{
-            font-size: $fontM;
-            @include swapColor(white,$primaryColor) ;
-            margin-right: $dist2;
-        }
     }
     table{
         width: 100%;
@@ -337,4 +308,34 @@ form#basket{
             }
         }
     }
+    table ~ .row{
+        width: 100%;
+        height: auto;
+        margin-top: $dist3;
+        display: flex;
+        @include flex(row,space-between,center,nowrap,"") ;
+        #totalPrice{
+            width: auto;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            p{
+                &:nth-child(1){
+                    font-weight: 700;
+                    color: $textGrey;
+                    font-size: $fontM;
+                }
+                &:nth-child(2){
+                    font-size: $fontM + .2em;
+                    color: $textDark;
+                }
+            }
+        }
+        button{
+            font-size: $fontM;
+            @include swapColor(white,$primaryColor) ;
+            margin-right: $dist2;
+        }
+    }
+    
 }

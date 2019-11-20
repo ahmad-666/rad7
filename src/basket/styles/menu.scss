@@ -1,0 +1,34 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#sideMenuTrigger{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    @include swapColor(white,lighten($primaryColor,10%)) ;
+    cursor: pointer;
+    &::before{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        font-size: $fontXL;
+    }
+}
+aside{
+    width: 25em;
+    height: 100vh;
+    
+}
+#blackFilter{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: ;
+}
