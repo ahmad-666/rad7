@@ -130,6 +130,65 @@
         }
     }
 }
+.pushpin.fix{
+	position: fixed; 
+	top: 0;
+	right: 0;
+	z-index: 11;
+}
+.scrollSpyWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ; 
+}
+ul.scrollSpyList{
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;    
+    li{
+        width: auto;
+        height: auto;
+        &:not(:first-child){margin-top: $dist2;}
+        font-size: $fontM;
+        color: $textDark;
+        transition: all .2s linear;
+        cursor: pointer;
+        &:hover{
+            color: lighten($primaryColor,10%);
+        }
+    }
+    li.active{
+        font-weight: 700;
+        color: $primaryColor;
+    }
+}
+ul.scrollSpyList.fix{
+    position: fixed; 
+    top: $dist2;
+    right: $dist2;
+}
+.scrollSpyElms{
+    width: 100%;
+    height: auto;
+    margin: 0 $dist3;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    .scrollSpy{
+        width: 100%;
+        height: auto;
+        // &:nth-child(1){background-color: cornflowerblue;}
+        // &:nth-child(2){background-color: crimson;}
+        // &:nth-child(3){background-color: teal;}
+        // &:nth-child(4){background-color: cyan;}
+    }
+}
+.scrollFade{opacity: 0;visibility: hidden;}
+.scrollFade.fade{opacity: 1;visibility: visible ;}
+.scrollFadeMove{opacity: 0;visibility: hidden;}
+.scrollFadeMove.fade{opacity: 1;visibility: visible;}
 //text effects--------------------------------------------
 //text effects--------------------------------------------
 //text effects--------------------------------------------

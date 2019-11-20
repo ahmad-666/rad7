@@ -1,0 +1,146 @@
+<form novalidate id="basket" name="basket" class="containerStyle" method="GET" action="#!" enctype="text/plain">
+	<h4>سبد خرید</h4>
+	<table>
+		<thead>
+			<tr>
+				<th class="prodName">
+					<h6>نام محصول</h6>
+					<div class="inputWrapper text inputSearch">
+						<input type="text" id="searchProdName" name="searchProdName" class="style2 validate" placeholder="جست و جوی محصول">
+						<span class="line"></span>
+						<div class="msg">
+							<p>نام محصول صحیح وارد کنید</p>
+							<i class="fas fa-caret-up"></i>
+						</div>
+					</div>     
+				</th>
+				<th class="prodQuantity">
+					<h6>تعداد</h6>    
+				</th>
+				<th class="prodPrice">
+					<h6>قیمت</h6>
+				</th>
+				<th class="prodRemove">
+					<h6>حذف</h6>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="prod1" data-unit-price="10">
+				<td class="prodName">
+					<a href="product.html">
+						<img src="./assets/imgs/slide1.jpg" alt="prodImg">
+					</a>
+					<div class="info">
+						<p>میز</p>
+					</div>
+				</td>
+				<td class="prodQuantity">
+					<div class="inputWrapper numberHandler">
+						<input type="hidden">
+						<i class="fas fa-plus increase"></i>
+						<input type="number" id="prod1Quantity" name="prod1Quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+						<i class="fas fa-minus decrease"></i>
+					</div>
+				</td>
+				<td class="prodPrice">
+					<p>300.000تومان</p>
+					<p>
+						(قیمت واحد ۱۰تومان)
+					</p>
+				</td>
+				<td class="prodRemove">
+					<i class="fas fa-times removeRow"></i>
+				</td>
+			</tr>
+			<tr id="prod2" data-unit-price="20">
+				<td class="prodName">
+					<a href="product.html">
+						<img src="./assets/imgs/slide2.jpg" alt="prodImg">
+					</a>
+					<div class="info">
+						<p>صندلی</p>
+					</div>
+				</td>
+				<td class="prodQuantity">
+					<div class="inputWrapper numberHandler">
+						<input type="hidden">
+						<i class="fas fa-plus increase"></i>
+						<input type="number" id="prod2Quantity" name="prod2Quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+						<i class="fas fa-minus decrease"></i>
+					</div>
+				</td>
+				<td class="prodPrice">
+					<p>300.000تومان</p>
+					<p>
+						(قیمت واحد ۲۰تومان)
+					</p>
+				</td>
+				<td class="prodRemove">
+					<i class="fas fa-times removeRow"></i>
+				</td>
+			</tr>
+			<tr id="prod3" data-unit-price="30">
+				<td class="prodName">
+					<a href="product.html">
+						<img src="./assets/imgs/slide3.jpg" alt="prodImg">
+					</a>
+					<div class="info">
+						<p>میز مدل ۲</p>
+					</div>
+				</td>
+				<td class="prodQuantity">
+					<div class="inputWrapper numberHandler">
+						<input type="hidden">
+						<i class="fas fa-plus increase"></i>
+						<input type="number" id="prod3Quantity" name="prod3Quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+						<i class="fas fa-minus decrease"></i>
+					</div>
+				</td>
+				<td class="prodPrice">
+					<p>300.000تومان</p>
+					<p>
+						(قیمت واحد ۳۰تومان)
+					</p>
+				</td>
+				<td class="prodRemove">
+					<i class="fas fa-times removeRow"></i>
+				</td>
+			</tr>
+			<tr id="prod4" data-unit-price="40">
+				<td class="prodName">
+					<a href="product.html">
+						<img src="./assets/imgs/slide4.jpg" alt="prodImg">
+					</a>
+					<div class="info">
+						<p>میز مدل ۱</p>
+					</div>
+				</td>
+				<td class="prodQuantity">
+					<div class="inputWrapper numberHandler">
+						<input type="hidden">
+						<i class="fas fa-plus increase"></i>
+						<input type="number" id="prod4Quantity" name="prod4Quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+						<i class="fas fa-minus decrease"></i>
+					</div>
+				</td>
+				<td class="prodPrice">
+					<p>300.000تومان</p>
+					<p>
+						(قیمت واحد ۴۰تومان)
+					</p>
+				</td>
+				<td class="prodRemove">
+					<i class="fas fa-times removeRow"></i>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="row">
+		<div id="totalPrice">
+			<p>سبد خرید</p>
+			<p class="value">1.000.000تومان</p>
+		</div>
+		<button type="button" class="btn mid pulse">تایید سبد خرید</button>
+	</div>
+</form>

@@ -269,6 +269,201 @@ function findOption(select,cb){
     })
     return selectedOption ;
 }
+//find distance from viewport
+function viewportDist(elm,dir,unit){
+    let res = null ;
+    switch(dir){
+        case 'top': //top of element from top of viewport
+            if(unit == 'px') res = elm.getBoundingClientRect().top;
+            else if(unit =='em') res = parseFloat(pxToEm(elm.getBoundingClientRect().top,elm));
+            break ;
+        case 'left': //left of element from left of viewport
+                if(unit == 'px') res = elm.getBoundingClientRect().left;
+                else if(unit =='em') res = parseFloat(pxToEm(elm.getBoundingClientRect().left,elm));
+                break; 
+        case 'bottom': //bottom of element from bottom of viewport
+            if(unit == 'px') res = window.innerHeight - elm.getBoundingClientRect().bottom;
+            else if(unit =='em') res = parseFloat(pxToEm(window.innerHeight,document.body)) - parseFloat(pxToEm(elm.getBoundingClientRect().bottom,elm));
+            break ;
+        case 'right': //right of element from right of viewport
+            if(unit == 'px') res = window.innerWidth - elm.getBoundingClientRect().right;
+            else if(unit =='em') res = parseFloat(pxToEm(window.innerWidth,document.body)) - parseFloat(pxToEm(elm.getBoundingClientRect().right,elm));
+            break ;
+        default:
+            console.error('dir is wrong inside viewportDist') ;
+    }
+    return res
+}
+// let font = new FontFaceObserver('iranSans') ;
+// font.load().then(()=>{
+//     console.log(util.viewportDist(document.querySelector('.elm'),'top','px')) ;
+// });
+function parentDist(elm,dir,unit,parent){
+    //unit can be 'px'/'em'
+    //dir can be 'top','bottom','left','right'
+    let res = null ;
+    switch(dir){
+        case 'top': //top of element from top of parent
+            if(unit == 'px') res = elm.offsetTop;
+            else if(unit =='em') res = parseFloat(pxToEm(elm.offsetTop,elm));
+            break ;
+        case 'left': //left of element from left of parent
+                if(unit == 'px') res = elm.offsetLeft;
+                else if(unit =='em') res = parseFloat(pxToEm(elm.offsetLeft,elm));
+                break; 
+        case 'bottom': //bottom of element from bottom of parent
+            if(unit == 'px') res = parent.offsetHeight - (elm.offsetTop+elm.offsetHeight);
+            else if(unit =='em') res = parseFloat(pxToEm(parent.offsetHeight,parent)) - (parseFloat(pxToEm(elm.offsetTop,elm))+parseFloat(pxToEm(elm.offsetHeight,elm)));
+            break ;
+        case 'right': //right of element from right of parent
+            if(unit == 'px') res = parent.offsetWidth - (elm.offsetLeft+elm.offsetWidth);
+            else if(unit =='em') res = parseFloat(pxToEm(parent.offsetWidth,parent)) - (parseFloat(pxToEm(elm.offsetLeft,elm))+parseFloat(pxToEm(elm.offsetWidth,elm)));
+            break ;
+        default:
+            console.error('dir is wrong inside viewportDist') ;
+    }
+    return res ;
+}
+// let font = new FontFaceObserver('iranSans') ;
+// font.load().then(()=>{
+//     console.log(util.parentDist(document.querySelector('.child'),'top','px',document.querySelector('.parent'))) ;
+//     console.log(util.parentDist(document.querySelector('child'),'top','em',document.querySelector('.parent'))) ;
+//     .parent must be nearest positioned parent
+// });
+//check if something is inside viewport or not 
+function isInsideViewport(elm,mode){
+    //mode can be 'partOf' or 'full;
+    let top = null ;
+    let left = null ;
+    switch(mode){
+        case 'partOf':
+            top = (window.innerHeight>elm.getBoundingClientRect().top&&elm.getBoundingClientRect().top+elm.offsetHeight>0)?true:false;
+            left = (window.innerWidth>elm.getBoundingClientRect().left&&elm.getBoundingClientRect().left+elm.offsetWidth>0)?true:false;
+            return (top&&left)
+            break ;
+         case 'full':
+            top = (elm.getBoundingClientRect().bottom<window.innerHeight&&elm.getBoundingClientRect().top>0)?true:false;
+            left = (elm.getBoundingClientRect().right<window.innerWidth&&elm.getBoundingClientRect().right>0)?true:false;
+            return (top&&left)
+            break;
+        default:
+            console.error('mode is out of bound inside isInsideViewport');
+    }
+}
+// let elms = document.querySelectorAll('.elm') ;
+// window.addEventListener('scroll',e=>{
+//     elms.forEach(elm=>console.log(elm,util.isInsideViewport(elm,'partOf'))) ;
+// })
+//lazy loading
+class Lazy{
+    //we can add .gif loader or default img or blur of target img
+    constructor(elm,viewportMode,imgType){
+        //viewportMode can be 'full','partOf'
+        //imgType can be 'img' or 'bgImg'
+        this.elm = elm ;
+        this.viewportMode = viewportMode ;
+        this.imgType = imgType ;
+        this.src = this.elm.getAttribute('data-src') ;
+        this.init() ;
+    }
+    init(){
+        this.handleEvent(null) ;
+        window.addEventListener('scroll',this) ;
+    }
+    handleEvent(e){
+        switch(this.imgType){
+            case 'img':
+                if(isInsideViewport(this.elm,this.viewportMode)) {
+                    this.elm.setAttribute('src',this.src) ;
+                    window.removeEventListener('scroll',this) ;
+                }
+                break ;
+            case 'bgImg':
+                if(isInsideViewport(this.elm,this.viewportMode)) {
+                    this.elm.style.backgroundImage = `url(${this.src})` ;
+                    window.removeEventListener('scroll',this) ;
+                }
+                break;
+            default:
+                console.error('imgType inside Lazy is wrong')
+        }
+    }
+}
+//<img class="lazy" src="../assets/imgs/gifs/loader.gif" data-src="../assets/imgs/slide1.jpg" alt="loaderAlt">
+//<img class="lazy" src="../assets/imgs/gifs/loader.gif" data-src="../assets/imgs/slide2.jpg" alt="loaderAlt">
+//document.querySelectorAll('.lazy').forEach(lazy=>new util.Lazy(lazy,'partOf','bgImg'))
+//OR
+//<div class="lazy" data-src="../assets/imgs/slide1.jpg"></div>
+//<div class="lazy" data-src="../assets/imgs/slide2.jpg"></div>
+//background-image:url('../../assets/imgs/gifs/loader.gif') for .lazy
+//document.querySelectorAll('.lazy').forEach(lazy=>new util.Lazy(lazy,'partOf','img'))
+class ScrollAnimation{
+    constructor(elm,viewportMode,dir,animeMode,time,easing,offset){
+        //viewportMode can be 'partOf','full'
+        //dir can be top,right,bottom,right
+        //animeMode can be 'fade' or 'fadeMove'
+        //time need to be something like .5s 
+        //easing need to be something like linear,cubic-bezier(a,b,c,d)
+        //offset need to be something like -6em
+        this.elm = elm ;
+        this.viewportMode = viewportMode ;
+        this.dir = dir ;
+        this.animeMode = animeMode ;
+        this.time = time ;
+        this.easing = easing ;
+        this.offset = offset ;
+        this.init() ;
+    }
+    init(){
+        switch(this.dir){
+            case 'top':
+                this.elm.style.transform = `translate(0,-${this.offset})` ;
+                break;
+            case 'right':
+                this.elm.style.transform = `translate(${this.offset},0)` ;
+                break ;
+            case 'bottom':
+                this.elm.style.transform = `translate(0,${this.offset})` ;
+                break ;
+            case 'left':
+                this.elm.style.transform = `translate(-${this.offset},0)` ;
+                break ;
+            case '':
+                break;
+            default:
+                console.error('dir is wrong inside ScrollAnimation')
+        }
+        this.elm.style.transition = `all ${this.time} ${this.easing}`;
+        this.handleEvent(null) ;
+        window.addEventListener('scroll',this) ;
+    }
+    handleEvent(e){
+        switch(this.animeMode){
+            case 'fade':
+                if(isInsideViewport(this.elm,this.viewportMode)){
+                    this.elm.classList.add('fade') ;
+                    window.removeEventListener('scroll',this) ;
+                }
+                break;
+            case 'fadeMove':
+                if(isInsideViewport(this.elm,this.viewportMode)){
+                    this.elm.classList.add('fade') ;           
+                    this.elm.style.transform = 'translate(0,0)' ;    
+                    window.removeEventListener('scroll',this) ;
+                }          
+                break;
+            default:
+                console.error('animeMode inside ScrollAnimation is wrong')
+        }
+    }
+}
+// <div class="scrollFade"></div>
+// <div class="scrollFade"></div>
+// document.querySelectorAll('.scrollFade').forEach(scrollFade=>new util.ScrollAnimation(scrollFade,'partOf','','fade','1s','ease-in-out','0'))
+//OR
+// <div class="scrollFadeMove"></div>
+// <div class="scrollFadeMove"></div>
+// document.querySelectorAll('.scrollFadeMove').forEach((scrollFadeMove,i)=>new util.ScrollAnimation(scrollFadeMove,'partOf','left','fadeMove','1s','ease-in-out','6em'));
 //exports------------------------------------------------------------------------
 export default{
     getStyle,
@@ -289,4 +484,9 @@ export default{
     emtoPx,
     heightMinMax,
     findOption,
+    viewportDist,
+    parentDist,
+    isInsideViewport,
+    Lazy,
+    ScrollAnimation,
 }
