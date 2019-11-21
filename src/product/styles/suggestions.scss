@@ -140,3 +140,30 @@
     }
     
 }
+@include mediaQ(1100px){
+    #suggestions{
+        .products{
+            .product{
+                width: calc((100% - (2 * 4em)) / 2);
+                height: 22em;
+            }
+        }
+        
+    }
+}
+@include resizeTablet('#suggestions') ;
+@include resizeMobile('#suggestions') ;
+@include mediaQ(500px){
+    #suggestions{
+        .products{
+            .product{
+                width: 95%;
+                height: 22em;
+            }
+        }
+        
+    }
+}
+@include mediaQ(450px){
+    #suggestion{width: 95%;}
+}

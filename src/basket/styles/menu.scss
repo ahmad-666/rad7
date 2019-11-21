@@ -122,3 +122,7 @@ aside.show{right: 0;}
     opacity: 1;
     visibility: visible ;
 }
+@include resizeTablet('#sideMenuTrigger') ;
+@include resizeMobile('#sideMenuTrigger') ;
+@include resizeTablet('aside') ;
+@include resizeMobile('aside') ;

@@ -121,3 +121,20 @@
         }
     }
 }
+@include resizeTablet('#orders') ;
+@include mediaQ(800px){
+    #orders{
+        .orders{
+            .order{width: calc((100% - (2 * 3em)) / 2);}
+        }
+    }
+}
+@include resizeMobile('#orders') ;
+@include mediaQ(450px){
+    #orders{
+        width: 95%;
+        .orders{
+            .order{width: 95%;}
+        }
+    }
+}

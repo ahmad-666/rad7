@@ -27,6 +27,12 @@ main{
                 color: $textDark ;
                 font-weight: 700 ;
             }
+            .articles{
+                width: 100%;
+                height: auto;
+                display: flex;
+                @include flex(column,flex-start,center,nowrap,"") ;
+            }
             .article{
                 width: 100% ;
                 height: auto;
@@ -110,4 +116,83 @@ main{
         }
     }  
     
+}
+@include mediaQ(750px){
+    main{
+        aside.sideBar{
+            width: 100% ;
+            height: auto;
+            margin: 0 ;
+            margin-top: $dist3 ;
+            #popular{
+               .articles{
+                   @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                   .article{
+                       width: calc((100% - (3 * 3em)) / 3);
+                       margin: $dist2;
+                   }
+               }
+            }
+            #similars{
+                margin-top: $dist2 ;
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{
+                            width: 100% ;
+                            height: 20em;
+                        }
+                    }
+                }
+            }
+        }  
+        
+    }
+}
+@include mediaQ(580px){
+    main{
+        aside.sideBar{
+            #popular{
+               .articles{
+                   .article{width: calc((100% - (2 * 3em)) / 2) ;}
+               }
+            }
+            #similars{
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{height: 20em;}
+                    }
+                }
+            }
+        }  
+        
+    }
+}
+@include mediaQ(400px){
+    main{
+        aside.sideBar{
+            #popular{
+               .articles{
+                   .article{
+                       width: 100% ;
+                       .imgWrapper{
+                           img{
+                               height: 20em;
+                           }
+                       }
+                    }
+               }
+            }
+            #similars{
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{height: 20em;}
+                    }
+                }
+            }
+        }  
+        
+    }
 }

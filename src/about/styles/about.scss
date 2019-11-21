@@ -22,3 +22,10 @@
         }
     }
 }
+@include resizeTablet('#about') ;
+@include resizeMobile('#about') ;
+@include mediaQ(450px){
+    #about{
+        width: 95%;
+    }
+}

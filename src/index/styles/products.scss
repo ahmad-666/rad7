@@ -49,9 +49,10 @@
                 height: 30em;
                 margin-top: $dist2;
                 .product{
-                    width: 100%;
+                    width: 50%;
                     height: 100%;
                     img{height: 30em;}
+                    &:nth-child(2){margin-right: $dist2;}
                 }
             }
             .product{
@@ -81,6 +82,57 @@
                         color: white;
                         text-align: center ;
                         background-color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('#products') ;
+@include resizeMobile('#products') ;
+@include mediaQ(450px){
+    #products{
+        width: 95%;
+        .grid{
+            .row{
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                &:nth-child(1){
+                    height: 90em;
+                    .col{
+                        &:nth-child(1){
+                            width: 100%;
+                            height: 66.6%;
+                            .product{
+                                width: 100%;
+                                height: 50%;
+                                &:nth-child(2){margin-top: $dist2;}
+                                img{height:30em;}
+                            }
+                        }
+                        &:nth-child(2){
+                            margin-right: 0;
+                            margin-top: $dist2;
+                            width: 100%;
+                            height: 33.3%;
+                            .product{
+                                width: 100%;
+                                height: 100%;
+                                img{height: 30em;}
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    height: 60em;
+                    margin-top: $dist2;
+                    .product{
+                        width: 100%;
+                        height: 50%;
+                        img{height: 30em;}
+                        &:nth-child(2){
+                            margin-top: $dist2;
+                            margin-right: 0;
+                        }
                     }
                 }
             }

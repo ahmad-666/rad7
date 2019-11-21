@@ -142,3 +142,12 @@ footer{
         }
     }
 }
+@include resizeTablet('footer') ;
+@include resizeMobile('footer') ;
+@include mediaQ(500px){
+    footer{
+        .bottom{
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        }
+    }
+}

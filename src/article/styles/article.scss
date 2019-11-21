@@ -112,3 +112,17 @@ main{
         }
     }
 }
+@include resizeTablet('main') ;
+@include mediaQ(850px){
+    main{
+        width: 95%;
+    }
+}
+@include mediaQ(750px){
+    main{
+        .wrapper{
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+        }
+    }
+}
+@include resizeMobile('main') ;

@@ -146,42 +146,42 @@
         }
     }
 }
-@include resizeTablet(#timelineWrapper) ;
-@include resizeMobile(#timelineWrapper) ;
-@include mediaQ(500px){
-    #timelineWrapper{
-        padding: $dist2 $dist2 ;
-        @include flex(row,flex-start,flex-start,nowrap,"") ;
-        #timeline{
-            flex-shrink: 0 ;
-            width: auto ;
-            height: 90%;
-            margin-top: $dist2 ;
-            margin-right: $dist3;
-            @include flex(column,space-between,center,nowrap,"") ;
-            &::before{
-                width: .3em ;
-                height: 100%;
-                @include center-x ;
-                top: 0 ;
-            }
-            .line{
-                width: .3em;
-                @include center-x ;
-                top: 0 ;
-            }
-            .step{
-                p{
-                    width: 100% ;
-                    text-align:center ;
-                    @include center-y ;
-                    right: -3em ;
-                }
-            }
-        }
-        form#sample{
-            margin-top: $dist2 ;
-            margin-right: $dist2 ;
-        }
-    } 
-}
+// @include resizeTablet(#timelineWrapper) ;
+// @include resizeMobile(#timelineWrapper) ;
+// @include mediaQ(500px){
+//     #timelineWrapper{
+//         padding: $dist2 $dist2 ;
+//         @include flex(row,flex-start,flex-start,nowrap,"") ;
+//         #timeline{
+//             flex-shrink: 0 ;
+//             width: auto ;
+//             height: 90%;
+//             margin-top: $dist2 ;
+//             margin-right: $dist3;
+//             @include flex(column,space-between,center,nowrap,"") ;
+//             &::before{
+//                 width: .3em ;
+//                 height: 100%;
+//                 @include center-x ;
+//                 top: 0 ;
+//             }
+//             .line{
+//                 width: .3em;
+//                 @include center-x ;
+//                 top: 0 ;
+//             }
+//             .step{
+//                 p{
+//                     width: 100% ;
+//                     text-align:center ;
+//                     @include center-y ;
+//                     right: -3em ;
+//                 }
+//             }
+//         }
+//         form#sample{
+//             margin-top: $dist2 ;
+//             margin-right: $dist2 ;
+//         }
+//     } 
+// }

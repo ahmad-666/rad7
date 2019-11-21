@@ -44,3 +44,28 @@
         }
     }
 }
+@include resizeTablet('#whyUs') ;
+@include resizeMobile('#whyUs') ;
+@include mediaQ(550px){
+    #whyUs{
+        .features{
+            .feature{
+                width: calc((100% - (3 * 3em)) / 3);
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #whyUs{
+        width: 95%;
+    }
+}
+@include mediaQ(400px){
+    #whyUs{
+        .features{
+            .feature{
+                width: calc((100% - (2 * 3em)) / 2);
+            }
+        }
+    }
+}

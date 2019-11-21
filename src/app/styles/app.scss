@@ -22,3 +22,10 @@
         }
     }
 }
+@include resizeTablet('#app') ;
+@include resizeMobile('#app') ;
+@include mediaQ(450px){
+    #app{
+        width: 95%;
+    }
+}

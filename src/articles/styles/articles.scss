@@ -145,3 +145,45 @@ main {
         }
     }
 }
+@include mediaQ(1200px){
+    main {
+        width: 95%;
+        // @include flex(row, flex-start, flex-start, nowrap, "");
+        .wrapper {
+            .articles {
+                .article {
+                    width: calc((100% - (3 * 3em)) / 3);             
+                }       
+            }
+        }
+    }
+}
+@include resizeTablet('main');
+@include mediaQ(750px){
+    main {
+        @include flex(column, flex-start, flex-start, nowrap, "");
+    }
+}
+@include resizeMobile('main');
+@include mediaQ(500px){
+    main {
+        .wrapper {
+            .articles {
+                .article {
+                    width: calc((100% - (2 * 3em)) / 2);             
+                }       
+            }
+        }
+    }
+}
+@include mediaQ(350px){
+    main {
+        .wrapper {
+            .articles {
+                .article {
+                    width: 95%;             
+                }       
+            }
+        }
+    }
+}

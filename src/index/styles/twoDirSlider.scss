@@ -30,3 +30,11 @@
         }
     }
 }
+@include resizeTablet('#twoDirSlider') ;
+@include resizeMobile('#twoDirSlider') ;
+@include mediaQ(450px){
+    #twoDirSlider{
+        width: 95%;
+        font-size: 4px;
+    }
+}

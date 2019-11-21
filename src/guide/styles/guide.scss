@@ -22,3 +22,10 @@
         }
     }
 }
+@include resizeTablet('#guide') ;
+@include resizeMobile('#guide') ;
+@include mediaQ(450px){
+    #guide{
+        width: 95%;
+    }
+}

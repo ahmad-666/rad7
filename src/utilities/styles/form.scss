@@ -424,6 +424,43 @@ form#admin {
     }
     
 }
+@include mediaQ(900px){
+    form#admin { 
+        .wrapper{   
+            .inputWrapper.textarea {
+                margin-top: $dist3;
+            } 
+        }   
+    }
+}
+@include mediaQ(800px){
+    form#admin { 
+        .wrapper{
+            .row{
+                .inputWrapper.text {
+                    width: 30em;
+                }
+            }     
+            .inputWrapper.textarea {
+                width: 63em;
+            } 
+        }   
+    }
+}
+@include mediaQ(650px){
+    form#admin { 
+        .wrapper{
+            .row{
+                .inputWrapper.text {
+                    width: calc((100% - (2 * 3em)) / 2);
+                }
+            }     
+            .inputWrapper.textarea {
+                width: calc(100% - 3em);
+            } 
+        }   
+    }
+}
 form#login{
     width: 40em;
     height: auto;
@@ -1942,6 +1979,26 @@ form#basket{
         }
     }
 }
+@include mediaQ(850px){
+    form#basket{
+        .slide#stage2{
+            .inputs{
+                .inputWrapper.text {width: calc((100% - (3 * 3em)) / 3);}
+                .inputWrapper.selectSearch {width: calc((100% - (3 * 3em)) / 3);}
+            }
+        }
+    }
+}
+@include mediaQ(500px){
+    form#basket{
+        .slide#stage2{
+            .inputs{
+                .inputWrapper.text {width: calc((100% - (2 * 3em)) / 2);}
+                .inputWrapper.selectSearch {width: calc((100% - (2 * 3em)) / 2);}
+            }
+        }
+    }
+}
 form#editProfile{
     .inputs{
         width: 100%;
@@ -2308,6 +2365,29 @@ form#editProfile{
         }
     }
 }
+@include resizeTablet('form#editProfile') ;
+@include mediaQ(750px){
+    form#editProfile{
+        .inputs{
+            .inputWrapper.text {width: calc((100% - (3 * 3em)) / 3);}
+            .inputWrapper.selectSearch {width: calc((100% - (3 * 3em)) / 3);}
+        }
+    }
+}
+@include mediaQ(500px){
+    form#editProfile{
+        .inputs{
+            .inputWrapper.text {width: calc((100% - (2 * 3em)) / 2);}
+            .inputWrapper.selectSearch {width: calc((100% - (2 * 3em)) / 2);}
+        }
+    }
+}
+@include mediaQ(450px){
+    form#editProfile{
+        width: 95%;
+    }
+}
+@include resizeMobile('form#editProfile') ;
 form#changePassword{
     .inputs{
         width: 100%;
@@ -2478,46 +2558,67 @@ form#changePassword{
         }
     }
 }
+@include mediaQ(1000px){
+    form#changePassword{
+        .inputs{
+            .inputWrapper.text {width: calc((100% - (3 * 3em)) / 3);}
+        }
+    }
+}
+@include resizeTablet('form#changePassword') ;
+@include mediaQ(450px){
+    form#changePassword{
+        width: 95%;
+        .inputs{
+            .inputWrapper.text {width: calc((100% - (2 * 3em)) / 2);}
+        }
+    }
+}
+@include resizeMobile('form#changePassword') ;
 @include mediaQ(900px){
     form#admin {
-        font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
+        .wrapper{
+            .row{
+                font-size: 8px ;
+                .inputWrapper.text {
+                    input.style1 {
+                        &:focus {
+                            ~label {font-size: 6px;}                  
+                        }
+                    }
+                    input.style2 {
+                        &:focus {
+                            ~label {font-size: 6px;}
+                        }
+                    }  
+                    input.style1 {
+                        ~label.top {font-size: 6px;}
+                    }
+            
+                    input.style2 {
+                        ~label.top {font-size: 6px;}
+                    }
                 }
             }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
+            .inputWrapper.textarea {   
+                textarea.style1 {
+                    &:focus {    
+                        ~label {font-size: 6px;}
+                    }
                 }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 6px;}
+                textarea.style2 {
+                    &:focus {    
+                        ~label {font-size: 6px;}
+                    }
                 }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 6px;}
+                textarea.style1 {
+                    ~label.top {font-size: 6px;}
+                }
+                textarea.style2 {
+                    ~label.top {font-size: 6px;}
                 }
             }
-            textarea.style1 {
-                ~label.top {font-size: 6px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
+        }    
     }
     form#login {
         font-size: 8px ;
@@ -2845,44 +2946,48 @@ form#changePassword{
 }
 @include mediaQ(600px){
     form#admin {
-        font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
+        .wrapper{
+            .row{
+                font-size: 6px ;
+                .inputWrapper.text {
+                    input.style1 {
+                        &:focus {
+                            ~label {font-size: 4px;}                  
+                        }
+                    }
+                    input.style2 {
+                        &:focus {
+                            ~label {font-size: 4px;}
+                        }
+                    }  
+                    input.style1 {
+                        ~label.top {font-size: 4px;}
+                    }
+            
+                    input.style2 {
+                        ~label.top {font-size: 4px;}
+                    }
                 }
             }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
+            .inputWrapper.textarea {   
+                textarea.style1 {
+                    &:focus {    
+                        ~label {font-size: 4px;}
+                    }
                 }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 4px;}
+                textarea.style2 {
+                    &:focus {    
+                        ~label {font-size: 4px;}
+                    }
                 }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 4px;}
+                textarea.style1 {
+                    ~label.top {font-size: 4px;}
+                }
+                textarea.style2 {
+                    ~label.top {font-size: 4px;}
                 }
             }
-            textarea.style1 {
-                ~label.top {font-size: 4px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
+        }      
     }
     form#login {
         font-size: 6px ;

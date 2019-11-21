@@ -27,4 +27,8 @@ form#basket{
         }
     }
 }
-
+@include resizeTablet('#timelineWrapper') ;
+@include resizeMobile('#timelineWrapper') ;
+@include mediaQ(450px){
+    #timelineWrapper{width: 95%;}
+}

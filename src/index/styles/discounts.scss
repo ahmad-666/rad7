@@ -72,3 +72,46 @@
     //     left: $dist2;
     }
 }
+@include mediaQ(1100px){
+    #discounts{
+        .helper{
+            .slides{
+                .slide{
+                    width: calc((100% - (4 * 1.8em)) / 4);
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('#discounts') ;
+@include resizeMobile('#discounts') ;
+
+@include mediaQ(630px){
+    #discounts{
+        .helper{
+            overflow: auto;
+            .btn.prev,.btn.next{display: none;}
+            .slides{
+                .slide{
+                    width: calc((100% - (3 * 1.8em)) / 3);
+                }
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #discounts{
+        width: 95%;
+    }
+}
+@include mediaQ(400px){
+    #discounts{
+        .helper{
+            .slides{
+                .slide{
+                    width: calc((100% - (2 * 1.8em)) / 2);
+                }
+            }
+        }
+    }
+}

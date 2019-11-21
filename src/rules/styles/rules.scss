@@ -22,3 +22,10 @@
         }
     }
 }
+@include resizeTablet('#rules') ;
+@include resizeMobile('#rules') ;
+@include mediaQ(450px){
+    #rules{
+        width: 95%;
+    }
+}

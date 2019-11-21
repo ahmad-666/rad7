@@ -22,3 +22,21 @@
         margin-right: $dist3;
     }
 }
+@include resizeTablet('#filterProductsWrapper') ;
+@include mediaQ(750px){
+    #filterProductsWrapper{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        #filtersWrapper{
+            flex-shrink: 0;
+            width: 100%;
+        }
+        #productsWrapper{
+            margin-top: $dist3;
+            margin-right: 0;
+        }
+    }
+}
+@include resizeMobile('#filterProductsWrapper') ;
+@include mediaQ(450px){
+    #filterProductsWrapper{width: 95%;}
+}

@@ -3,7 +3,6 @@
 @import '../../mixins.scss' ;
 @import './breadcrumb.scss' ;
 @import '../../utilities/styles/productSlider.scss' ;
-// @import '../../utilities/styles/form.scss' ;
 #info{
     width: 90%;
     height: auto;
@@ -127,6 +126,34 @@
             flex-shrink: 0;
             width: 35em;
             margin-right: $dist3;
+        }
+    }
+}
+@include resizeTablet('#info') ;
+@include resizeMobile('#info') ;
+@include mediaQ(530px){
+    #info{
+        #productInfo{
+            @include flex(column,flex-start,center,nowrap,"") ;
+            .productSlider{
+                width: 45em;
+                margin-right: 0;
+                margin-top: $dist3;
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #info{
+        width: 95%;
+    }
+}
+@include mediaQ(380px){
+    #info{
+        #productInfo{
+            .productSlider{
+                width: 100%;
+            }
         }
     }
 }

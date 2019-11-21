@@ -93,3 +93,62 @@
         }
     }
 }
+@include resizeTablet('#filterProductsWrapper #productsWrapper .productsWrapper .showMore') ;
+@include resizeMobile('#filterProductsWrapper #productsWrapper .productsWrapper .showMore') ;
+@include resizeTablet('form#filters .filtersWrapper .withCollapse .collapse') ;
+@include resizeMobile('form#filters .filtersWrapper .withCollapse .collapse') ;
+@include mediaQ(1200px){
+    #filterProductsWrapper{
+        #productsWrapper{
+            .productsWrapper{
+                .products{
+                    .product{
+                        width: calc((100% - (3 * 1.5em)) / 3);
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaQ(950px){
+    #filterProductsWrapper{
+        #productsWrapper{
+            .productsWrapper{
+                .products{
+                    .product{
+                        width: calc((100% - (2 * 1.5em)) / 2);
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaQ(750px){
+    #filterProductsWrapper{
+        #productsWrapper{
+            .productsWrapper{
+                .products{
+                    .product{
+                        width: calc((100% - (3 * 1.5em)) / 3);
+                    }
+                }
+            }
+        }
+    }
+    form#filters .inputWrapper.range .ranger .noUi-handle.left{
+        transform: translate(-50%, -40%);
+    }
+}
+@include mediaQ(430px){
+    #filterProductsWrapper{
+        #productsWrapper{
+            .productsWrapper{
+                .products{
+                    .product{
+                        width: calc((100% - (2 * 1.5em)) / 2);
+                    }
+                }
+            }
+        }
+    }
+}

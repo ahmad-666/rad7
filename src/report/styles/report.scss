@@ -1,7 +1,6 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-// @import '../../utilities/styles/form.scss' ;
 #report{
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
@@ -88,5 +87,34 @@
                 }
             }
         }
+    }
+}
+@include mediaQ(1000px){
+    #report{
+        .contact{
+            .wrapper{
+                .item{
+                    width: calc((100% - (3 * 3em)) / 3);
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('#report') ;
+@include resizeMobile('#report') ;
+@include mediaQ(550px){
+    #report{
+        .contact{
+            .wrapper{
+                .item{
+                    width: calc((100% - (2 * 3em)) / 2);
+                }
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #report{
+        width: 95%;
     }
 }
