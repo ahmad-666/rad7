@@ -1,0 +1,123 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#orders{
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $textDark;
+    }
+    .orders{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        .order{
+            width: calc((100% - (3 * 3em)) / 3);
+            height: auto;
+            border: 1px solid lighten($textGrey,20%) ;
+            border-radius: $dist2;
+            margin: $dist2;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            .top,.middle,.bottom{
+                width: 100%;
+                height: auto;
+                display: flex;
+                padding: $dist2 $dist1;
+                border-bottom: 1px solid lighten($textGrey,20%) ;
+            }
+            .top,.bottom{
+                @include flex(row,space-between,center,nowrap,"") ;
+            }
+            .top{
+                .right{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    p{
+                        font-size: $fontM - .2em;
+                        &:nth-child(1){color: lighten($textGrey,10%);}
+                        &:nth-child(2){color: $textDark;}
+                    }
+                }
+                .left{
+                    width: auto;
+                    height: auto;
+                    margin-right: $dist2;
+                }
+                .state{
+                    font-size: $fontM - .2em;
+                    color: white;
+                    cursor: auto;
+                    padding: $dist1 ;
+                }
+                .state.process{background-color: lighten($redColor2,10%);}
+                .state.ready{background-color: lighten($blueColor1,10%);}
+                .state.send{background-color: lighten($greenColor1,5%);}
+            }
+            .bottom{
+                border-bottom: none ;
+                .right,.left{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    p{
+                        font-size: $fontM - .2em;
+                        &:nth-child(1){color: lighten($textGrey,10%);}
+                        &:nth-child(2){color: $textDark;}
+                    }
+                }
+                .left{margin-right: $dist2;}
+            }
+            .middle{
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                h6{
+                    font-size: $fontM - .2em;
+                    font-weight: 700;
+                    color: $textDark;
+                }
+                ul{
+                    width: 100%;
+                    height: auto;
+                    margin-top: $dist1;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    li{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                        margin-top: $dist1;
+                        .unitPrice{
+                            font-size: $fontM - .2em;
+                            color: lighten($textGrey,10%);
+                            margin-top: 0;
+                        }
+                        .product{
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            @include flex(row,flex-start,center,wrap,flex-start) ;
+                            .circle{
+                                width: 1em;
+                                height: 1em;
+                                border-radius: 50%;
+                                background-color: lighten($primaryColor,20%);
+                            }
+                            a,p{
+                                font-size: $fontM - .2em;
+                                color: $textDark;
+                                margin-right: .3em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

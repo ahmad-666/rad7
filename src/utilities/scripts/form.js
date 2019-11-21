@@ -583,16 +583,17 @@ StarScore.prototype.setHiddenInput = function(e){
 //Seperate each 3number ----------------------------
 //Seperate each 3number ----------------------------
 //Seperate each 3number ----------------------------
-function Separate3Num(wrapper,separator){
+function Separate3Num(wrapper,separator,appendText){
     this.wrapper = wrapper ;
     this.separator = separator ;
+    this.appendText = appendText ;
     if(this.wrapper.classList.contains('inputWrapper')){//we are goint to add input event on input
         this.input = this.wrapper.querySelector('input') ;
         this.input.addEventListener('keypress',this.justNum.bind(this)) ;
         this.input.addEventListener('input',this.checkSeparator.bind(this)) ;
     }
     else{//we are goint to format textContent of <p> or <span> , ...
-        this.wrapper.textContent = this.format(this.wrapper.textContent) ;
+        this.wrapper.textContent = `${this.format(this.wrapper.textContent)} ${this.appendText}` ;
     }
 }
 Separate3Num.prototype.justNum = function(e){
@@ -607,7 +608,7 @@ Separate3Num.prototype.format = function(num){
     let str = num.toString() ;
     let res = null ;
     let addSeparate = (input)=>{
-        let arr = input.split('') ;//covert number to array
+        let arr = input.split('').reverse() ;//covert number to array
         if(arr.length<=3) return input ;    
         else{
             let howMany = (arr.length%3==0)?(Math.floor(arr.length/3-1)):Math.floor((arr.length/3)); //how many ',' needed 
@@ -616,7 +617,7 @@ Separate3Num.prototype.format = function(num){
                 arr.splice(i*3+3+offset,0,this.separator) ;
                 offset++ ;
             }
-            return arr.join('') ;
+            return arr.reverse().join('') ;
         }      
     }
     if(!str.includes('.')) res = addSeparate(str) ; //for integer numbers
@@ -746,8 +747,9 @@ SearchList.prototype.handleEvent = function(e){
 //     new StarScore(star) ;
 // })
 // //Separate3Num--------------------------------
+// <p class="finalPrice separate3Num">12345678</p>
 // document.querySelectorAll('.separate3Num').forEach(separate3Num=>{
-//     new Separate3Num(separate3Num,',') ;
+//     new Separate3Num(separate3Num,',','تومان') ;
 // })
 // //SearchList--------------------------------
 // document.querySelectorAll('.inputWrapper.searchList').forEach(searchList => {

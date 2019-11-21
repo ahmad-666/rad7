@@ -13,4 +13,5 @@ import '../index/scripts/nav.js' ;
 import '../products/scripts/ranger.js' ;
 import '../products/scripts/sort.js' ;
 import '../products/scripts/filters.js' ;
+import '../products/scripts/products.js' ;
 //load videos
