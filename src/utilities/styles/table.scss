@@ -343,3 +343,12 @@ form#basket{
 @include mediaQ(550px){
     form#basket{padding: .3em;}
 }
+@include mediaQ(330px){
+    form#basket table thead tr th, 
+    form#basket table thead tr td, 
+    form#basket table tbody tr th, 
+    form#basket table tbody tr td{
+        font-size: 4px;
+    }
+
+}
