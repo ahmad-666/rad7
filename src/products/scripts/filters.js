@@ -2,12 +2,14 @@ import FontFaceObserver from 'fontfaceobserver' ;
 import collapse from '../../utilities/scripts/collapse.js' ;
 import Filter from '../../utilities/scripts/filters.js' ;
 //variables-----------------------------------
+//----------------------------------------------
 let filtersWrapper = document.querySelector('#filtersWrapper') ;
 let currFiltersWrapper = filtersWrapper.querySelector('.currFilters .bottom') ;
 let filtersForm = filtersWrapper.querySelector('form#filters') ;
 let mainCategories = filtersForm.querySelectorAll('.mainCategory') ;
 let clearAllBtn = currFiltersWrapper.parentElement.querySelector('#clearFilters') ;
 //collapse-----------------------------------
+//collapse----------------------------------------------
 filtersForm.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
    all = [...all] ;
    let others = all.filter(elm =>elm!=withCollapse);
@@ -19,3 +21,4 @@ filtersForm.querySelectorAll('label').forEach(label=>label.addEventListener('cli
 //filter handler------------------------------------
 let filterHandlerInstance = mainCategories.forEach(mainCategory=>new Filter.FilterHandler(currFiltersWrapper,mainCategory)) ;
 new Filter.CurrFilterClearAll(currFiltersWrapper,filtersForm,clearAllBtn,filterHandlerInstance) ;
+//filters handlers----------------------------------------------
