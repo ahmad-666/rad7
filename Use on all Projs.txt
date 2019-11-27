@@ -15,6 +15,6 @@
 	npm i css-loader sass-loader node-sass style-loader --save-dev 
 		*if we see error while installing it we should install other packages like webpack first and then install these packages.
 	npm i html-loader file-loader --save-dev 
-	npm i html-webpack-plugin mini-css-extract-plugin clean-webpack-plugin --save-dev
+	npm i html-webpack-plugin mini-css-extract-plugin clean-webpack-plugin copy-webpack-plugin --save-dev
 	npm i @fortawesome/fontawesome-free animejs gh-pages fontfaceobserver nouislider wnumb
 -should change webpack config to match current entry points.

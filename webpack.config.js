@@ -3,6 +3,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //transfer style vis css not js
 const HtmlWebpackPlugin = require('html-webpack-plugin') ; 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: 'development', //development | production
     optimization: {
@@ -30,7 +31,8 @@ module.exports = {
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist') 
+        path: path.resolve(__dirname, './dist'),
+        //publicPath: './assets/imgs/'
     },
     module: {
         rules: [
@@ -265,6 +267,10 @@ module.exports = {
             chunks: ['orders'],
             template: './src/orders/orders.html' //should point to target html file that we want to add <script>,<link>
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin() ,
+        new CopyWebpackPlugin([
+            { from: './src/manifest.json', to:'' } ,   
+            { from: './src/assets/icons', to:'assets/icons' } ,   
+        ])
     ]
 };

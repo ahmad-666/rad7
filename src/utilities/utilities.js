@@ -464,6 +464,141 @@ class ScrollAnimation{
 // <div class="scrollFadeMove"></div>
 // <div class="scrollFadeMove"></div>
 // document.querySelectorAll('.scrollFadeMove').forEach((scrollFadeMove,i)=>new util.ScrollAnimation(scrollFadeMove,'partOf','left','fadeMove','1s','ease-in-out','6em'));
+//converts----------------------------------------------------
+function urlBase64ToUint8Array(base64String) {
+  var padding = '='.repeat((4 - base64String.length % 4) % 4);
+  var base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  var rawData = window.atob(base64);
+  var outputArray = new Uint8Array(rawData.length);
+
+  for (var i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+//detect touch devices----------------------------------------------------
+function isTouchDevice() {//return true/false ... false on desktop dev-tool and true on mobile dev-tool
+    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+    var mq = query=> window.matchMedia(query).matches  
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) return true;
+    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+    return mq(query);
+}
+//move elm on mousemove event----------------------------------------------------
+class MoveElm{ //touch,non-touch compatible
+    constructor(container,elm){
+        this.container = container ;
+        this.elm = elm ;
+        this.inInside = null ;
+        this.init() ;
+    }
+    init(){
+        if(!isTouchDevice()) this.container.addEventListener('mousemove',this.moveElm.bind(this)) ;    
+        else this.container.addEventListener('touchmove',this.moveElmTouch.bind(this)) ;     
+    }
+    moveElm(e){ //for non-touch devices
+        let topInside = null ;
+        let rightInside = null ;
+        topInside = (e.y-this.elm.offsetWidth/2>this.container.getBoundingClientRect().top&&e.y+this.elm.offsetHeight/2<this.container.getBoundingClientRect().bottom)?true:false ;
+        rightInside = (e.x-this.elm.offsetWidth/2>this.container.getBoundingClientRect().left&&e.x+this.elm.offsetWidth/2<this.container.getBoundingClientRect().right)?true:false ;
+        this.inInside = (topInside&&rightInside)?true:false ;
+        if(this.inInside){
+            let topPos = (e.y-this.container.getBoundingClientRect().top)-(this.elm.offsetHeight/2) ;
+            let rightPos = ((window.innerWidth-e.x)-(window.innerWidth-this.container.getBoundingClientRect().right)) - (this.elm.offsetWidth/2) ; 
+            this.elm.style.top = `${topPos}px` ;
+            this.elm.style.right = `${rightPos}px` ;
+        }
+    }
+    moveElmTouch(e){ //for touch devices
+        let x = e.targetTouches[0].clientX;
+        let y = e.targetTouches[0].clientY;
+        let topInside = null ;
+        let rightInside = null ;
+        topInside = (y-this.elm.offsetWidth/2>this.container.getBoundingClientRect().top&&y+this.elm.offsetHeight/2<this.container.getBoundingClientRect().bottom)?true:false ;
+        rightInside = (x-this.elm.offsetWidth/2>this.container.getBoundingClientRect().left&&x+this.elm.offsetWidth/2<this.container.getBoundingClientRect().right)?true:false ;
+        this.inInside = (topInside&&rightInside)?true:false ;
+        if(this.inInside){
+            let topPos = (y-this.container.getBoundingClientRect().top)-(this.elm.offsetHeight/2) ;
+            let rightPos = ((window.innerWidth-x)-(window.innerWidth-this.container.getBoundingClientRect().right)) - (this.elm.offsetWidth/2) ; 
+            this.elm.style.top = `${topPos}px` ;
+            this.elm.style.right = `${rightPos}px` ;
+        }
+    }
+}
+//new MoveElm(document.querySelector('.container'),document.querySelector('.elm'))
+//move elm on draging----------------------------------------------------
+class DragElm{
+    constructor(container,elm){
+        this.container = container ;
+        this.elm = elm ;
+        this.drag = null ;
+        this.device = isTouchDevice()?'touch':'non-touch' ;
+        this.init() ;
+    }
+    init(){
+        if(this.device!='touch') {
+            this.elm.addEventListener('mousedown',e=>{
+                this.drag = true ;
+                this.elm.addEventListener('mousemove',this) ;
+            }) ;
+            this.elm.addEventListener('mouseup',e=>{
+                this.drag=false;
+                this.elm.removeEventListener('mousemove',this) ;
+            }) ;
+        }
+        else {
+            this.elm.addEventListener('touchstart',e=>{
+                this.drag = true ;
+                this.elm.addEventListener('touchmove',this) ;
+            }) ;
+            this.elm.addEventListener('touchend',e=>{
+                this.drag=false;
+                this.elm.removeEventListener('touchmove',this) ;
+            }) ;
+        }
+    }
+    handleEvent(e){//drag element
+        let topPos = null ;
+        let rightPos = null ;
+        let topInside = null ;
+        let rightInside = null ;
+        if(this.device!='touch'){
+            topInside=(e.y-this.elm.offsetHeight/2>this.container.getBoundingClientRect().top&&e.y+this.elm.offsetHeight/2<this.container.getBoundingClientRect().bottom)?true:false ;
+            rightInside=(e.x-this.elm.offsetWidth/2>this.container.getBoundingClientRect().left&&e.x+this.elm.offsetWidth/2<this.container.getBoundingClientRect().right)?true:false ;
+            if(topInside&&rightInside){
+                topPos = (e.y-this.container.getBoundingClientRect().top)-this.elm.offsetHeight/2;
+                rightPos = (window.innerWidth-e.x)-(window.innerWidth-this.container.getBoundingClientRect().right)-(this.elm.offsetWidth/2);
+                this.elm.style.top = `${topPos}px` ;
+                this.elm.style.right = `${rightPos}px` ;
+            }
+        }
+        else{
+            let x = e.targetTouches[0].clientX ;
+            let y = e.targetTouches[0].clientY ;
+            topInside=(y-this.elm.offsetHeight/2>this.container.getBoundingClientRect().top&&y+this.elm.offsetHeight/2<this.container.getBoundingClientRect().bottom)?true:false ;
+            rightInside=(x-this.elm.offsetWidth/2>this.container.getBoundingClientRect().left&&x+this.elm.offsetWidth/2<this.container.getBoundingClientRect().right)?true:false ;
+            if(topInside&&rightInside){
+                topPos = (y-this.container.getBoundingClientRect().top)-this.elm.offsetHeight/2;
+                rightPos = (window.innerWidth-x)-(window.innerWidth-this.container.getBoundingClientRect().right)-(this.elm.offsetWidth/2);
+                this.elm.style.top = `${topPos}px` ;
+                this.elm.style.right = `${rightPos}px` ;
+            }
+        }
+    }
+}
+//new DragElm(document.querySelector('.container'),document.querySelector('.elm')) ;
+//clear parent(remove children)------------------------------------------------------------------------
+function clearParent(parent){ //totally clear parent(any node like elm node,text node,...)
+    while(parent.hasChildNodes()) parent.removeChild(parent.lastChild) ;
+}
+//clearParent(document.querySelector('.container')) ;
+function removeChildren(children){//just remove specific childrens
+    children.forEach(child=>child.parentElement.removeChild(child)) ;
+}
+//removeChildren(document.querySelectorAll('.elm2')) ;
 //exports------------------------------------------------------------------------
 export default{
     getStyle,
@@ -489,4 +624,10 @@ export default{
     isInsideViewport,
     Lazy,
     ScrollAnimation,
+	urlBase64ToUint8Array,
+	isTouchDevice,
+	MoveElm,
+	DragElm,
+	clearParent,
+	removeChildren,
 }
