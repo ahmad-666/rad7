@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/about/about.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/changePassword/changePassword.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2146,26 +2146,60 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 
 /***/ }),
 
-/***/ "./src/about/about.js":
-/*!****************************!*\
-  !*** ./src/about/about.js ***!
-  \****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/basket/scripts/menu.js":
+/*!************************************!*\
+  !*** ./src/basket/scripts/menu.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/styles/form.scss */ \"./src/utilities/styles/form.scss\");\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/styles/about.scss */ \"./src/about/styles/about.scss\");\n/* harmony import */ var _about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _index_scripts_topMenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../index/scripts/topMenu */ \"./src/index/scripts/topMenu.js\");\n/* harmony import */ var _index_scripts_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../index/scripts/nav */ \"./src/index/scripts/nav.js\");\n//load styles\n\n\n\n\n\n\n //load scripts\n\n\n //load videos\n\n//# sourceURL=webpack:///./src/about/about.js?");
+eval("var sideMenuTrigger = document.querySelector('#sideMenuTrigger');\nvar blackFilter = document.querySelector('#blackFilter');\nvar sideMenu = document.querySelector('aside');\nsideMenuTrigger.addEventListener('click', toggleSideMenu);\n\nfunction toggleSideMenu(e) {\n  e.stopPropagation();\n  sideMenuTrigger.classList.toggle('move');\n  sideMenuTrigger.classList.toggle('fa-bars');\n  sideMenuTrigger.classList.toggle('fa-times');\n  sideMenu.classList.toggle('show');\n  blackFilter.classList.toggle('show');\n  if (sideMenu.classList.contains('show')) document.addEventListener('click', sideMenuDocHandler);else document.removeEventListener('click', sideMenuDocHandler);\n}\n\nfunction sideMenuDocHandler(e) {\n  e.stopPropagation();\n  var clickedElm = e.target;\n\n  if (!sideMenu.contains(clickedElm)) {\n    document.removeEventListener('click', sideMenuDocHandler);\n    sideMenuTrigger.classList.remove('move');\n    sideMenuTrigger.classList.add('fa-bars');\n    sideMenuTrigger.classList.remove('fa-times');\n    sideMenu.classList.remove('show');\n    blackFilter.classList.remove('show');\n  }\n}\n\n//# sourceURL=webpack:///./src/basket/scripts/menu.js?");
 
 /***/ }),
 
-/***/ "./src/about/styles/about.scss":
+/***/ "./src/basket/styles/menu.scss":
 /*!*************************************!*\
-  !*** ./src/about/styles/about.scss ***!
+  !*** ./src/basket/styles/menu.scss ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/about/styles/about.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/basket/styles/menu.scss?");
+
+/***/ }),
+
+/***/ "./src/changePassword/changePassword.js":
+/*!**********************************************!*\
+  !*** ./src/changePassword/changePassword.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/styles/form.scss */ \"./src/utilities/styles/form.scss\");\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../basket/styles/menu.scss */ \"./src/basket/styles/menu.scss\");\n/* harmony import */ var _basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _changePassword_styles_changePassword_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../changePassword/styles/changePassword.scss */ \"./src/changePassword/styles/changePassword.scss\");\n/* harmony import */ var _changePassword_styles_changePassword_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_changePassword_styles_changePassword_scss__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _index_scripts_topMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../index/scripts/topMenu */ \"./src/index/scripts/topMenu.js\");\n/* harmony import */ var _index_scripts_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../index/scripts/nav */ \"./src/index/scripts/nav.js\");\n/* harmony import */ var _basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../basket/scripts/menu.js */ \"./src/basket/scripts/menu.js\");\n/* harmony import */ var _basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _changePassword_scripts_changePassword_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../changePassword/scripts/changePassword.js */ \"./src/changePassword/scripts/changePassword.js\");\n//load styles\n\n\n\n\n\n\n\n //load scripts\n\n\n\n\n //load videos\n\n//# sourceURL=webpack:///./src/changePassword/changePassword.js?");
+
+/***/ }),
+
+/***/ "./src/changePassword/scripts/changePassword.js":
+/*!******************************************************!*\
+  !*** ./src/changePassword/scripts/changePassword.js ***!
+  \******************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ \"./node_modules/core-js/modules/es.array.for-each.js\");\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ \"./node_modules/core-js/modules/web.dom-collections.for-each.js\");\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/scripts/form.js */ \"./src/utilities/scripts/form.js\");\n\n\n\nvar changePassForm = document.querySelector('form#changePassword');\nvar changePassFormData = {\n  elm: changePassForm,\n  submit: changePassForm.querySelector('button[type=\"submit\"]'),\n  inputs: changePassForm.querySelectorAll('.validate'),\n  send: true,\n  modal: null,\n  labels: changePassForm.querySelectorAll('.labelHandler')\n};\nchangePassFormData.labels.forEach(function (label) {\n  return new _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].LabelHandler(label);\n});\nnew _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].FormValidate(changePassFormData.elm, changePassFormData.submit, changePassFormData.inputs, changePassFormData.send, changePassFormData.modal);\n\n//# sourceURL=webpack:///./src/changePassword/scripts/changePassword.js?");
+
+/***/ }),
+
+/***/ "./src/changePassword/styles/changePassword.scss":
+/*!*******************************************************!*\
+  !*** ./src/changePassword/styles/changePassword.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/changePassword/styles/changePassword.scss?");
 
 /***/ }),
 

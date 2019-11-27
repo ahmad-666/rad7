@@ -229,36 +229,7 @@
                         <h4>فیلتر های انتخابی</h4>
                         <button id="clearFilters" class="btn small pulse">پاک کردن همه</button>
                     </div>
-                    <div class="bottom">
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>
-                        <div class="currFilter">
-                            <i class="fas fa-times close"></i>
-                            <p>نام فیلتر</p>
-                        </div>                   
-                    </div>
+                    <div class="bottom"></div>
                 </div>
                 <form novalidate name="filters" id="filters" method="GET" action="#!" enctype="text/plain">
                     <div class="filtersWrapper inputWrapper range">
@@ -271,24 +242,24 @@
                     <div class="filtersWrapper categories">
                         <h4>دسته بندی محصولات</h4>
                         <div class="withCollapse">
-                            <div class="collapseTrigger">
+                            <div class="mainCategory">
                                 <div class="inputWrapper checkboxes">
                                     <div class="checkbox">
-                                        <input type="checkbox" id="desk" name="desk" class="style1" value="checkbox1">
+                                        <input type="checkbox" id="desk" name="desk" class="style1" value="desk">
                                         <label for="desk">
                                             <span class="rect">
                                                 <i class="fas fa-check center-xy"></i>
                                             </span>
-                                            <p>میز  </p>
+                                            <p>میز </p>
                                         </label>
                                     </div>   
                                 </div>
-                                <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-angle-down collapseTrigger"></i>
                             </div>          
                             <div class="collapse">
                                 <div class="inputWrapper checkboxes">
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="desk1" name="desk1" class="style1" value="checkbox1">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk1" name="desk1" class="style1" value="desk1">
                                         <label for="desk1">
                                             <span class="rect">
                                                 <i class="fas fa-check center-xy"></i>
@@ -296,8 +267,8 @@
                                             <p >میز نوع ۱</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="desk2" name="desk2" class="style1" value="checkbox1">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk2" name="desk2" class="style1" value="desk2">
                                         <label for="desk2">
                                             <span class="rect">
                                                 <i class="fas fa-check center-xy"></i>
@@ -305,8 +276,8 @@
                                             <p>میز نوع ۲</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="desk3" name="desk3" class="style1" value="checkbox1">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk3" name="desk3" class="style1" value="desk3">
                                         <label for="desk3">
                                             <span class="rect">
                                                 <i class="fas fa-check center-xy"></i>
@@ -314,8 +285,8 @@
                                             <p >میز نوع ۳</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="desk4" name="desk4" class="style1" value="checkbox1">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk4" name="desk4" class="style1" value="desk4">
                                         <label for="desk4">
                                             <span class="rect">
                                                 <i class="fas fa-check center-xy"></i>
@@ -327,7 +298,7 @@
                             </div>
                         </div>
                         <div class="withCollapse">
-                            <div class="collapseTrigger">
+                            <div class="mainCategory">
                                 <div class="inputWrapper checkboxes">
                                     <div class="checkbox">
                                         <input type="checkbox" id="chair" name="chair" class="style1" value="checkbox1">
@@ -339,11 +310,11 @@
                                         </label>
                                     </div>   
                                 </div>
-                                <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-angle-down collapseTrigger"></i>
                             </div>          
                             <div class="collapse">
                                 <div class="inputWrapper checkboxes">
-                                    <div class="checkbox">
+                                    <div class="checkbox subCategory">
                                         <input type="checkbox" id="chair1" name="chair1" class="style1" value="checkbox1">
                                         <label for="chair1">
                                             <span class="rect">
@@ -352,7 +323,7 @@
                                             <p>صندلی نوع ۱</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox subCategory">
                                         <input type="checkbox" id="chair2" name="chair2" class="style1" value="checkbox1">
                                         <label for="chair2">
                                             <span class="rect">
@@ -361,7 +332,7 @@
                                             <p>صندلی نوع ۲</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox subCategory">
                                         <input type="checkbox" id="chair3" name="chair3" class="style1" value="checkbox1">
                                         <label for="chair3">
                                             <span class="rect">
@@ -370,7 +341,7 @@
                                             <p>صندلی نوع ۳</p>
                                         </label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox subCategory">
                                         <input type="checkbox" id="chair4" name="chair4" class="style1" value="checkbox1">
                                         <label for="chair4">
                                             <span class="rect">
@@ -412,7 +383,7 @@
                         <div class="info">
                             <p class="name">نام محصول</p>
                             <div class="price">
-                                <p class="finalPrice">500.000تومان</p>
+                                <p class="finalPrice separate3Num">12345678</p>
                             </div>
                         </div>
                     </a>

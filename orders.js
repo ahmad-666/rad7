@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/about/about.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/orders/orders.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2146,26 +2146,25 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 
 /***/ }),
 
-/***/ "./src/about/about.js":
-/*!****************************!*\
-  !*** ./src/about/about.js ***!
-  \****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/basket/scripts/menu.js":
+/*!************************************!*\
+  !*** ./src/basket/scripts/menu.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/styles/form.scss */ \"./src/utilities/styles/form.scss\");\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/styles/about.scss */ \"./src/about/styles/about.scss\");\n/* harmony import */ var _about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_about_styles_about_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _index_scripts_topMenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../index/scripts/topMenu */ \"./src/index/scripts/topMenu.js\");\n/* harmony import */ var _index_scripts_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../index/scripts/nav */ \"./src/index/scripts/nav.js\");\n//load styles\n\n\n\n\n\n\n //load scripts\n\n\n //load videos\n\n//# sourceURL=webpack:///./src/about/about.js?");
+eval("var sideMenuTrigger = document.querySelector('#sideMenuTrigger');\nvar blackFilter = document.querySelector('#blackFilter');\nvar sideMenu = document.querySelector('aside');\nsideMenuTrigger.addEventListener('click', toggleSideMenu);\n\nfunction toggleSideMenu(e) {\n  e.stopPropagation();\n  sideMenuTrigger.classList.toggle('move');\n  sideMenuTrigger.classList.toggle('fa-bars');\n  sideMenuTrigger.classList.toggle('fa-times');\n  sideMenu.classList.toggle('show');\n  blackFilter.classList.toggle('show');\n  if (sideMenu.classList.contains('show')) document.addEventListener('click', sideMenuDocHandler);else document.removeEventListener('click', sideMenuDocHandler);\n}\n\nfunction sideMenuDocHandler(e) {\n  e.stopPropagation();\n  var clickedElm = e.target;\n\n  if (!sideMenu.contains(clickedElm)) {\n    document.removeEventListener('click', sideMenuDocHandler);\n    sideMenuTrigger.classList.remove('move');\n    sideMenuTrigger.classList.add('fa-bars');\n    sideMenuTrigger.classList.remove('fa-times');\n    sideMenu.classList.remove('show');\n    blackFilter.classList.remove('show');\n  }\n}\n\n//# sourceURL=webpack:///./src/basket/scripts/menu.js?");
 
 /***/ }),
 
-/***/ "./src/about/styles/about.scss":
+/***/ "./src/basket/styles/menu.scss":
 /*!*************************************!*\
-  !*** ./src/about/styles/about.scss ***!
+  !*** ./src/basket/styles/menu.scss ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/about/styles/about.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/basket/styles/menu.scss?");
 
 /***/ }),
 
@@ -2234,6 +2233,40 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/init.scss?");
+
+/***/ }),
+
+/***/ "./src/orders/orders.js":
+/*!******************************!*\
+  !*** ./src/orders/orders.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/styles/form.scss */ \"./src/utilities/styles/form.scss\");\n/* harmony import */ var _utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utilities_styles_form_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../basket/styles/menu.scss */ \"./src/basket/styles/menu.scss\");\n/* harmony import */ var _basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_basket_styles_menu_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _orders_styles_orders_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../orders/styles/orders.scss */ \"./src/orders/styles/orders.scss\");\n/* harmony import */ var _orders_styles_orders_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_orders_styles_orders_scss__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _index_scripts_topMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../index/scripts/topMenu */ \"./src/index/scripts/topMenu.js\");\n/* harmony import */ var _index_scripts_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../index/scripts/nav */ \"./src/index/scripts/nav.js\");\n/* harmony import */ var _basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../basket/scripts/menu.js */ \"./src/basket/scripts/menu.js\");\n/* harmony import */ var _basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_basket_scripts_menu_js__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _orders_scripts_orders_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../orders/scripts/orders.js */ \"./src/orders/scripts/orders.js\");\n/* harmony import */ var _orders_scripts_orders_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_orders_scripts_orders_js__WEBPACK_IMPORTED_MODULE_11__);\n//load styles\n\n\n\n\n\n\n\n //load scripts\n\n\n\n\n //load videos\n\n//# sourceURL=webpack:///./src/orders/orders.js?");
+
+/***/ }),
+
+/***/ "./src/orders/scripts/orders.js":
+/*!**************************************!*\
+  !*** ./src/orders/scripts/orders.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./src/orders/scripts/orders.js?");
+
+/***/ }),
+
+/***/ "./src/orders/styles/orders.scss":
+/*!***************************************!*\
+  !*** ./src/orders/styles/orders.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/orders/styles/orders.scss?");
 
 /***/ }),
 
