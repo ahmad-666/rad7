@@ -28,6 +28,7 @@ module.exports = {
         'changePassword' : './src/changePassword/changePassword.js' ,     
         'editProfile' : './src/editProfile/editProfile.js' ,     
         'orders' : './src/orders/orders.js' ,     
+        '404' : './src/404/404.js' ,     
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
@@ -267,10 +268,17 @@ module.exports = {
             chunks: ['orders'],
             template: './src/orders/orders.html' //should point to target html file that we want to add <script>,<link>
         }),
+        new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
+            filename: '404.html' , //name of file inside ./dist folder
+            inject: true,
+            chunks: ['404'],
+            template: './src/404/404.html' //should point to target html file that we want to add <script>,<link>
+        }),
         new CleanWebpackPlugin() ,
         new CopyWebpackPlugin([
+            { from: './src/assets/icons', to:'assets/icons' } , 
             { from: './src/manifest.json', to:'' } ,   
-            { from: './src/assets/icons', to:'assets/icons' } ,   
+            { from: './src/sw.js', to:'' } 
         ])
     ]
 };

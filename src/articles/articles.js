@@ -7,6 +7,7 @@ import '../index/styles/header.scss' ;
 import '../articles/styles/articles.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
+import '../swReg.js' ;
 import '../index/scripts/topMenu' ;
 import '../index/scripts/nav' ;
 import '../articles/scripts/articles.js' ;

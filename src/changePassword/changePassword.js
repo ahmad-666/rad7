@@ -8,6 +8,7 @@ import '../basket/styles/menu.scss' ;
 import '../changePassword/styles/changePassword.scss';
 import '../index/styles/footer.scss' ;
 //load scripts
+import '../swReg.js' ;
 import '../index/scripts/topMenu' ;
 import '../index/scripts/nav' ;
 import '../basket/scripts/menu.js' ;

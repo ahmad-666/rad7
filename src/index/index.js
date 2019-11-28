@@ -11,6 +11,7 @@ import '../index/styles/features.scss' ;
 import '../index/styles/articles.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
+import '../swReg.js' ;
 import '../index/scripts/topMenu' ;
 import '../index/scripts/nav' ;
 import '../index/scripts/twoDitSlider.js' ;

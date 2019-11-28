@@ -8,6 +8,7 @@ import '../product/styles/productInfo.scss' ;
 import '../product/styles/suggestions.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
+import '../swReg.js' ;
 import '../index/scripts/topMenu' ;
 import '../index/scripts/nav' ;
 import '../product/scripts/productInfo.js' ;

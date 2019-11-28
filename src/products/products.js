@@ -8,6 +8,7 @@ import '../index/styles/header.scss' ;
 import '../products/styles/wrapper.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts
+import '../swReg.js' ;
 import '../index/scripts/topMenu.js' ;
 import '../index/scripts/nav.js' ;
 import '../products/scripts/ranger.js' ;
