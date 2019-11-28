@@ -2,7 +2,7 @@
 //importScripts('./utilities/idbUtilities.js') ;
 let STATIC_CACHE = 'static-v7' ;
 let DYNAMIC_CACHE = 'dynamic-v6' ;
-let offlineFallback = './404.html' ;
+let offlineFallback = '/rad7/404.html' ;
 let dynamicCacheMaxItems = 30 ;
 //let syncUserTable = 'sync-userTable' ;
 //let syncUserTag = 'sync-userData'
@@ -12,8 +12,8 @@ let cacheThenNetworkURLs = [ //urls that contains dynamic data
 let staticCachingAssets = [
     //html files 
     //for webpack/non-webpack version : (beside sw.js file)
-    // offlineFallback ,
-    // '/',
+    offlineFallback ,
+    '/rad7/',
     '/rad7/about.html',
     '/rad7/basket.html',
     '/rad7/faq.html',
