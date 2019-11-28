@@ -14,7 +14,7 @@ let staticCachingAssets = [
     //for webpack/non-webpack version : (beside sw.js file)
     // offlineFallback ,
     // '/',
-    '/about.html',
+    '/rad7/about.html',
     // '/basket.html',
     // '/faq.html',
     // '/guide.html',
