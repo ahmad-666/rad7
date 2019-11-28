@@ -1,7 +1,7 @@
 //importScripts('./utilities/idb.js') ;
 //importScripts('./utilities/idbUtilities.js') ;
-let STATIC_CACHE = 'static-v7' ;
-let DYNAMIC_CACHE = 'dynamic-v6' ;
+let STATIC_CACHE = 'static-v8' ;
+let DYNAMIC_CACHE = 'dynamic-v7' ;
 let offlineFallback = '/rad7/404.html' ;
 let dynamicCacheMaxItems = 30 ;
 //let syncUserTable = 'sync-userTable' ;
@@ -108,7 +108,12 @@ let staticCachingAssets = [
     '/rad7/assets/icons/namad.png' ,
     '/rad7/assets/icons/return.png' ,
     '/rad7/assets/icons/support.png' ,
-    '/rad7/assets/svgs/404.svg'
+    '/rad7/assets/svgs/404.svg',
+    '/rad7/assets/imgs/guide-desktop-1.png',
+    '/rad7/assets/imgs/guide-desktop-2.png',
+    '/rad7/assets/imgs/guide-mob-1.png',
+    '/rad7/assets/imgs/guide-mob-2.png',
+    '/rad7/assets/imgs/guide-mob-3.png'
 ] ;
 function trimCache(cacheName,maxItems){
     caches.open(cacheName)
