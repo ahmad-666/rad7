@@ -1,7 +1,7 @@
 //importScripts('./utilities/idb.js') ;
 //importScripts('./utilities/idbUtilities.js') ;
-let STATIC_CACHE = 'static-v6' ;
-let DYNAMIC_CACHE = 'dynamic-v5' ;
+let STATIC_CACHE = 'static-v7' ;
+let DYNAMIC_CACHE = 'dynamic-v6' ;
 let offlineFallback = './404.html' ;
 let dynamicCacheMaxItems = 30 ;
 //let syncUserTable = 'sync-userTable' ;
@@ -12,29 +12,29 @@ let cacheThenNetworkURLs = [ //urls that contains dynamic data
 let staticCachingAssets = [
     //html files 
     //for webpack/non-webpack version : (beside sw.js file)
-    offlineFallback ,
-    '/',
+    // offlineFallback ,
+    // '/',
     '/about.html',
-    '/basket.html',
-    '/faq.html',
-    '/guide.html',
-    '/index.html',
-    '/orders.html',
-    '/product.html',
-    '/products.html',
-    '/rules.html',
+    // '/basket.html',
+    // '/faq.html',
+    // '/guide.html',
+    // '/index.html',
+    // '/orders.html',
+    // '/product.html',
+    // '/products.html',
+    // '/rules.html',
     //css files 
         //for webpack version : (beside sw.js and just final bundle)
-    '/404.css',
-    '/about.css',
-    '/basket.css',
-    '/faq.css',
-    '/guide.css',
-    '/index.css',
-    '/orders.css',
-    '/product.css',
-    '/products.css',
-    '/rules.css',
+    // '/404.css',
+    // '/about.css',
+    // '/basket.css',
+    // '/faq.css',
+    // '/guide.css',
+    // '/index.css',
+    // '/orders.css',
+    // '/product.css',
+    // '/products.css',
+    // '/rules.css',
         //for non-webpack version : (inside their own folder and separate files not bundles)
     // './404/styles/404.css',
     // './about/styles/about.css',
@@ -63,12 +63,12 @@ let staticCachingAssets = [
     // './rules/styles/rules.css',
     //js files
         //for webpack version : (beside sw.js and just final bundle)
-    '/basket.js',
-    '/faq.js',
-    '/index.js',
-    '/orders.js',
-    '/product.js',
-    '/products.js',
+    // '/basket.js',
+    // '/faq.js',
+    // '/index.js',
+    // '/orders.js',
+    // '/product.js',
+    // '/products.js',
         //for non-webpack version : (inside their own folder and separate files not bundles)
     // './basket/scripts/basket.js',
     // './basket/scripts/menu.js',
@@ -101,14 +101,14 @@ let staticCachingAssets = [
     // './utilities/scripts/twoDirSlider.js' ,
     //assets
         //for webpack/non-webpack version : (beside sw.js file inside assets folder)
-    '/assets/icons/checkout.png' ,
-    '/assets/icons/gurantee.png' ,
-    '/assets/icons/logo-144x144.png' ,
-    '/assets/icons/logo.png' ,
-    '/assets/icons/namad.png' ,
-    '/assets/icons/return.png' ,
-    '/assets/icons/support.png' ,
-    '/assets/svgs/404.svg'
+    // '/assets/icons/checkout.png' ,
+    // '/assets/icons/gurantee.png' ,
+    // '/assets/icons/logo-144x144.png' ,
+    // '/assets/icons/logo.png' ,
+    // '/assets/icons/namad.png' ,
+    // '/assets/icons/return.png' ,
+    // '/assets/icons/support.png' ,
+    // '/assets/svgs/404.svg'
 ] ;
 function trimCache(cacheName,maxItems){
     caches.open(cacheName)
