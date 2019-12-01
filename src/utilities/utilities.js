@@ -599,6 +599,78 @@ function removeChildren(children){//just remove specific childrens
     children.forEach(child=>child.parentElement.removeChild(child)) ;
 }
 //removeChildren(document.querySelectorAll('.elm2')) ;
+//reveal effect
+class Reveal{
+    constructor(reveal,revealMode,time){
+        this.reveal = reveal ;
+        this.revealMode = revealMode ;
+        this.time = time ; //like 1 , 1.2 , 2 ,...
+        this.block = this.reveal.querySelector('.block') ;
+        this.init() ;
+    }
+    init(){
+        this.block.style.transitionDuration = `${this.time}s` ;
+        if(this.block.getAttribute('data-color')) this.block.style.backgroundColor = this.block.getAttribute('data-color') ;
+        if(this.block.getAttribute('data-gradient')) this.block.style.backgroundImage = this.block.getAttribute('data-gradient') ;
+        window.addEventListener('scroll',this) ;
+    }
+    handleEvent(e){
+        if(isInsideViewport(this.reveal,this.revealMode)){
+            this.reveal.classList.add('show') ;
+            this.block.classList.add('hide') ;
+            window.removeEventListener('scroll',this) ;
+        }
+    }
+}
+//document.querySelectorAll('.blockReveal').forEach(reveal=>new util.Reveal(reveal,'partOf',1))
+//-------------------------------------------------
+class Reveal2{
+    constructor(reveal,revealMode,time){
+        this.reveal = reveal ;
+        this.revealMode = revealMode ;
+        this.time = time ; //like 1 , 1.2 , 2 ,...
+        this.block = this.reveal.querySelector('.block') ;
+        this.contents = this.reveal.querySelectorAll('.content') ;
+        this.init() ;
+    }
+    init(){
+        this.contents.forEach(content=>content.style.transitionDelay=`${this.time/2}s`)
+        this.block.style.animationDuration = `${this.time}s` ;
+        if(this.block.getAttribute('data-color')) this.block.style.backgroundColor = this.block.getAttribute('data-color') ;
+        if(this.block.getAttribute('data-gradient')) this.block.style.backgroundImage = this.block.getAttribute('data-gradient') ;
+        window.addEventListener('scroll',this) ;
+    }
+    handleEvent(e){
+        if(isInsideViewport(this.reveal,this.revealMode)){
+            this.contents.forEach(content=>content.classList.add('show'));
+            this.block.classList.add('hide') ;
+            window.removeEventListener('scroll',this) ;
+        }
+    }
+}
+// document.querySelectorAll('.blockReveal2').forEach(reveal=>new util.Reveal2(reveal,'partOf',1))
+//scroll------------------------------------------------------------------------
+let hasScroll = elm => elm.offsetHeight<elm.scrollHeight ;
+//when content height is more than max-height or real height of element
+class SmoothScroll{
+    constructor(trigger){
+        this.trigger = trigger ;
+        this.target = document.querySelector(`#${this.trigger.getAttribute('data-target')}`) ;
+        this.init() ;
+    }
+    init(){
+        this.trigger.addEventListener('click',e=>{
+            window.scrollTo({
+                top: this.target.getBoundingClientRect().top,
+                left: 0 ,
+                behavior: 'smooth'
+            })
+        })
+    }
+}
+//document.querySelectorAll('.smoothScroll').forEach(smooth=> new util.SmoothScroll(smooth)) ;
+// <button class="smoothScroll" data-target="smoothTarget">smooth</button>
+// <div id="smoothTarget"></div>
 //exports------------------------------------------------------------------------
 export default{
     getStyle,
@@ -629,5 +701,9 @@ export default{
 	MoveElm,
 	DragElm,
 	clearParent,
-	removeChildren,
+    removeChildren,
+    Reveal ,
+    Reveal2 ,
+    hasScroll ,
+    SmoothScroll ,
 }

@@ -42,4 +42,3 @@ mobileNav.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) => {
     document.body.classList.remove('disableScroll') ;
     fs.classList.remove('show') ;
  }
- 
