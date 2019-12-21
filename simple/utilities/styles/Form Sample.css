@@ -236,6 +236,14 @@ form#sample .inputWrapper.text label {
   transition: all .2s linear;
 }
 
+form#sample .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
+}
+
 form#sample .inputWrapper.text label .icon {
   font-size: 1.6em;
 }
@@ -506,6 +514,14 @@ form#sample .inputWrapper.select label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#sample .inputWrapper.select label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#sample .inputWrapper.select label .icon {
@@ -810,6 +826,14 @@ form#sample .inputWrapper.selectSearch label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#sample .inputWrapper.selectSearch label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#sample .inputWrapper.selectSearch label .icon {
@@ -1714,6 +1738,14 @@ form#sample .inputWrapper.textarea label {
   -moz-transition: all .2s linear;
   transition: all .2s linear;
   color: #c6c6cb;
+}
+
+form#sample .inputWrapper.textarea label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#sample .inputWrapper.textarea label i {

@@ -21,3 +21,12 @@ function toggleSearch(e){
         docHandler(searchInput,[]) ;
     }
 }
+topMenu.querySelector('.smoothScroll').addEventListener('click',e=>{
+    let targetQuery = e.currentTarget.getAttribute('data-target') ;
+    let target = document.querySelector(`#${targetQuery}`) ;
+    window.scrollTo({
+        behavior: "smooth" ,
+        left: 0 ,
+        top: target.getBoundingClientRect().top 
+    })
+})

@@ -1,4 +1,4 @@
-//import Form from '../../utilities/scripts/form.js' ;
+import Form from '../../utilities/scripts/form.js' ;
 let editProfileForm = document.querySelector('form#editProfile') ;
 let editProfileFormData = {
     elm: editProfileForm,
@@ -9,8 +9,8 @@ let editProfileFormData = {
     modal:null,
     labels:editProfileForm.querySelectorAll('.labelHandler')
 }
-editProfileFormData.labels.forEach(label=>new LabelHandler(label)) ;
-new FormValidate(editProfileFormData.elm,editProfileFormData.submit,
+editProfileFormData.labels.forEach(label=>new Form.LabelHandler(label)) ;
+new Form.FormValidate(editProfileFormData.elm,editProfileFormData.submit,
     editProfileFormData.inputs,editProfileFormData.send,
     editProfileFormData.modal) ;
 editProfileFormData.selects = [...editProfileFormData.selects] ;

@@ -20,7 +20,7 @@
         .hoverEffect{
             @include underlineHover(.1em,white) ;
             &:hover{
-                color: lighten($primaryColor,15%) ;
+                color: $primaryColor ;
             }
         }
         .basketHover{
@@ -81,6 +81,13 @@
         }  
         a{
             font-size: $fontM;
+        }
+        .smoothScroll{
+            @include changeColor(lighten($primaryColor,20%),transparent,white,lighten($primaryColor,5%)) ;
+            border: 1px solid lighten($primaryColor,20%) ;
+            padding: 0 $dist1 + .3em;
+            border-radius: $dist1;
+
         }
     }
 }

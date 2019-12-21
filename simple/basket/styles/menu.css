@@ -120,12 +120,12 @@ aside .logo {
 }
 
 aside .logo img {
-  width: 15em;
-  height: 6em;
+  width: 12em;
+  height: 4em;
 }
 
 aside .logo p {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
   color: #2d2d31;
 }

@@ -227,10 +227,12 @@ form#basket{
                     }
                 }
                 td.prodQuantity{
+                    display: flex;
+                    @include flex(column,flex-start,center,nowrap,"") ;
                     .inputWrapper.numberHandler {
                         position: relative;
-                        right: 50%;
-                        transform: translateX(50%);
+                        // right: 50%;
+                        // transform: translateX(50%);
                         width: auto;
                         height: auto;
                         display: flex;
@@ -242,7 +244,7 @@ form#basket{
                         .increase,.decrease {
                             font-size: $fontS + .1em;
                             cursor: pointer;
-                            color: lighten($darkColor, 5%);
+                            color: $primaryColor;
                         }   
                         input {
                             width: 2em;
@@ -254,6 +256,13 @@ form#basket{
                             border: 1.2px solid lighten($textGrey, 20%);     
                         }   
                         input.error {border: 1.2px solid lighten($redColor2, 5%);}
+                    }
+                    .confirmQuantity{
+                        padding: .1em 1em;
+                        font-size: $fontS + .3em;
+                        margin-top: $dist1;
+                        background-color: lighten($primaryColor,15%);
+                        color: white;
                     }
                 }
                 td.prodPrice{
@@ -269,12 +278,12 @@ form#basket{
                     .removeRow{
                         cursor: pointer;
                         transition: all .2s linear;
-                        color: $textGrey;
+                        color: $primaryColor;
                         position: relative;
                         right: 50%;
                         transform: translateX(50%);
                         &::before{font-size: $fontL ;}
-                        &:hover{color: lighten($redColor2,5%);}
+                        &:hover{color: lighten($primaryColor,25%);}
                     }                 
                 }
             }

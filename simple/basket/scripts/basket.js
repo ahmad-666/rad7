@@ -19,7 +19,7 @@ new Timeline(timelineWrapper,progress,timelineSlider) ;
 //init table
 new Table(table,trs,totalPrice) ;
 //init form 
-stage2Labels.forEach(label=>new Form.LabelHandler(label)) ;
+stage2Labels.forEach(label=>new LabelHandler(label)) ;
 let basketFormSelectSearchs = basketForm.querySelectorAll('.inputWrapper.selectSearch') ;
 basketFormSelectSearchs = [...basketFormSelectSearchs] ;
 basketFormSelectSearchs.forEach(selectSearch => {

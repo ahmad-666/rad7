@@ -1,4 +1,4 @@
-import util from '../utilities.js' ;
+//import util from '../utilities.js' ;
 function Modal(triggers,others,needCheck){
     //this.triggers is array and we use array because sometimes multiple things will trigger same
     //modal like comment section(multiple submit button trigger adminApprove modal)
@@ -16,8 +16,9 @@ function Modal(triggers,others,needCheck){
     if(!this.needCheck) this.triggers.forEach(trigger =>trigger.addEventListener('click',this.openModal.bind(this)));   
 }
 Modal.prototype.openModal = function(e){
+    //e.stopPropagation();
     this.modal.classList.add('show') ;
-    this.close.addEventListener('click',this) ;
+    if(this.close) this.close.addEventListener('click',this) ;
     setTimeout(()=>document.addEventListener('click',this),10)
 }
 Modal.prototype.handleEvent = function(e){
@@ -28,8 +29,9 @@ Modal.prototype.handleEvent = function(e){
     else if(e.currentTarget  == this.close) this.closeModal() ;    
 }
 Modal.prototype.closeModal = function(){
+    //e.stopPropagation();
     this.modal.classList.remove('show') ;
-    this.close.removeEventListener('click',this) ;
+    if(this.close) this.close.removeEventListener('click',this) ; 
     document.removeEventListener('click',this) ;
 }
 // let adminApproveTriggers = document.querySelectorAll('.modalTrigger[data-modal="adminApprove"]') ;
@@ -42,6 +44,4 @@ Modal.prototype.closeModal = function(){
 //     let inputs = myForm.querySelectorAll('input.validate,textarea.validate') ;
 //     new form.FormValidate(myForm,submit,inputs,false,adminApproveModal) ;
 // })
-export default{
-    Modal
-}
+//export default Modal

@@ -48,9 +48,13 @@
 </head>
 
 <body class="bg">
-    <header>
+     <header>
         <div id="topMenu">
             <div class="right">
+                <a href="index.html" class="home hoverEffect">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
                 <a href="login.html" class="login hoverEffect">
                     <i class="fas fa-user"></i>
                     <p>ورود/ثبت نام</p>
@@ -75,8 +79,8 @@
             </div>
             <div class="left">
                 <a href="rules.html" class="hoverEffect">قوانین</a>
+                <a href="#!" class="smoothScroll" data-target="namad">نماد اعتماد</a>
                 <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
-                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
             </div>
         </div>
         <nav class="shadowBellow">
@@ -183,7 +187,7 @@
                 </li>
                 <li class="logo">
                     <a href="index.html">
-                        <p>راد هفت</p>
+                        <p>راد هفتم</p>
                         <img src="./assets/icons/logo.png" alt="logoImg">
                     </a>
                 </li>
@@ -193,7 +197,7 @@
                         <li class="logo">
                             <a href="index.html">
                                 <img src="./assets/icons/logo.png" alt="logoImg">
-                                <p>راد هفت</p>
+                                <!-- <p>راد هفت</p> -->
                             </a>
                         </li>
                         <li class="withCollapse">
@@ -265,13 +269,13 @@
     <aside>
         <a href="index.html" class="logo">
             <img src="./assets/icons/logo.png" alt="logoImg">
-            <p>راد هفتم</p>
+            <p>خوش آمدید دوست عزیز</p>
         </a>
         <div class="links">
-            <a href="editProfile.html" class="editProfile">
+            <!-- <a href="editProfile.html" class="editProfile">
                 <i class="fas fa-user"></i>
                 <p>ویرایش مشخصات</p>
-            </a>
+            </a> -->
             <a href="changePassword.html" class="changePassword">
                 <i class="fas fa-lock"></i>
                 <p>تغییر رمز ورود</p>
@@ -321,7 +325,7 @@
                             <tr>
                                 <th class="prodName">
                                     <h6>نام محصول</h6>
-                                    <div class="inputWrapper text inputSearch">
+                                    <!-- <div class="inputWrapper text inputSearch">
                                         <input type="text" id="searchProdName" name="searchProdName"
                                             class="style2 validate" placeholder="جست و جوی محصول">
                                         <span class="line"></span>
@@ -329,7 +333,7 @@
                                             <p>نام محصول صحیح وارد کنید</p>
                                             <i class="fas fa-caret-up"></i>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </th>
                                 <th class="prodQuantity">
                                     <h6>تعداد</h6>
@@ -360,6 +364,7 @@
                                             data-max="10" data-step="1" value="1" required readonly>
                                         <i class="fas fa-minus decrease"></i>
                                     </div>
+                                    <button class="btn small confirmQuantity">تایید</button>
                                 </td>
                                 <td class="prodPrice">
                                     <p>300.000تومان</p>
@@ -388,6 +393,7 @@
                                             data-max="10" data-step="1" value="1" required readonly>
                                         <i class="fas fa-minus decrease"></i>
                                     </div>
+                                    <button class="btn small confirmQuantity">تایید</button>
                                 </td>
                                 <td class="prodPrice">
                                     <p>300.000تومان</p>
@@ -416,6 +422,7 @@
                                             data-max="10" data-step="1" value="1" required readonly>
                                         <i class="fas fa-minus decrease"></i>
                                     </div>
+                                    <button class="btn small confirmQuantity">تایید</button>
                                 </td>
                                 <td class="prodPrice">
                                     <p>300.000تومان</p>
@@ -444,6 +451,7 @@
                                             data-max="10" data-step="1" value="1" required readonly>
                                         <i class="fas fa-minus decrease"></i>
                                     </div>
+                                    <button class="btn small confirmQuantity">تایید</button>
                                 </td>
                                 <td class="prodPrice">
                                     <p>300.000تومان</p>
@@ -472,6 +480,7 @@
                         <div class="inputWrapper text">
                             <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
                             <label for="name">
+                                <i class="fas fa-asterisk isRequire"></i>
                                 <i class="fas fa-user icon"></i>
                                 <p>نام و نام خانوادگی</p>
                             </label>
@@ -482,7 +491,7 @@
                             </div>
                         </div>
                         <div class="inputWrapper text">
-                            <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+                            <input type="email" id="email" name="email" class="style1 labelHandler validate">
                             <label for="email">
                                 <i class="fas fa-envelope icon"></i>
                                 <p>پست الکترونیکی</p>
@@ -494,7 +503,7 @@
                             </div>
                         </div>
                         <div class="inputWrapper text">
-                            <input type="number" id="tel" name="tel" class="style1 labelHandler validate" required>
+                            <input type="number" id="tel" name="tel" class="style1 labelHandler validate">
                             <label for="tel">
                                 <i class="fas fa-phone icon"></i>
                                 <p>شماره ثابت</p>
@@ -509,6 +518,7 @@
                             <input type="number" id="mobile" name="mobile" class="style1 labelHandler validate" required
                                 pattern="\d{11}">
                             <label for="mobile">
+                                <i class="fas fa-asterisk isRequire"></i>
                                 <i class="fas fa-mobile-alt icon"></i>
                                 <p>شماره موبایل</p>
                             </label>
@@ -522,6 +532,7 @@
                             <input type="hidden" id="stateHidden" name="stateHidden">
                             <input type="text" id="state" name="state" class="style1 validate" required>
                             <label for="state">
+                                <i class="fas fa-asterisk isRequire"></i>
                                 <i class="fas fa-map-marker-alt icon"></i>
                                 <p>استان محل سکونت</p>
                             </label>
@@ -544,6 +555,7 @@
                             <input type="hidden" id="cityHidden" name="cityHidden">
                             <input type="text" id="city" name="city" class="style1 validate" required>
                             <label for="city">
+                                <i class="fas fa-asterisk isRequire"></i>
                                 <i class="fas fa-map-marker-alt icon"></i>
                                 <p>شهر محل سکونت</p>
                             </label>
@@ -562,7 +574,7 @@
                                 <li data-value="mashhad">مشهد</li>                   
                             </ul>
                         </div>                               
-                        <div class="inputWrapper text">
+                        <!-- <div class="inputWrapper text">
                             <input type="text" id="post" name="post" class="style1 labelHandler validate" required>
                             <label for="post">
                                 <i class="fas fa-mail-bulk"></i>
@@ -573,11 +585,12 @@
                                 <p>کد پستی را وارد کنید</p>
                                 <i class="fas fa-caret-up"></i>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="inputWrapper text">
                             <input type="text" id="address" name="address" class="style1 labelHandler validate"
                                 required>
                             <label for="address">
+                                <i class="fas fa-asterisk isRequire"></i>
                                 <i class="fas fa-map-marker-alt icon"></i>
                                 <p>آدرس محل سکونت</p>
                             </label>
@@ -599,9 +612,9 @@
                         <p class="code">کد پیگیری شما : ۱۲۳۴۵۶۷۸۹۰</p>
                     </div>
                     <p class="thanks">از اینکه راد هفتم را انتخاب کردید از شما متشکریم</p>
-                    <div class="btnWrapper">
+                    <!-- <div class="btnWrapper">
                         <button type="button" class="changeSlide prev" data-slide="-1">مرحله قبل</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </form>
@@ -664,6 +677,7 @@
             </div>
         </div>
     </footer>
+    <script src="./libraries/fontfaceobserver.js"></script>
     <script src="./utilities/utilities.js"></script>
     <script src="./utilities/scripts/collapse.js"></script>
     <script src="./utilities/scripts/timeline.js"></script>

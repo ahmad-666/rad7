@@ -48,9 +48,13 @@
 </head>
 
 <body class="bg">
-    <header>
+     <header>
         <div id="topMenu">
             <div class="right">
+                <a href="index.html" class="home hoverEffect">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
                 <a href="login.html" class="login hoverEffect">
                     <i class="fas fa-user"></i>
                     <p>ورود/ثبت نام</p>
@@ -75,8 +79,8 @@
             </div>
             <div class="left">
                 <a href="rules.html" class="hoverEffect">قوانین</a>
+                <a href="#!" class="smoothScroll" data-target="namad">نماد اعتماد</a>
                 <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
-                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
             </div>
         </div>
         <nav class="shadowBellow">
@@ -183,7 +187,7 @@
                 </li>
                 <li class="logo">
                     <a href="index.html">
-                        <p>راد هفت</p>
+                        <p>راد هفتم</p>
                         <img src="./assets/icons/logo.png" alt="logoImg">
                     </a>
                 </li>
@@ -193,7 +197,7 @@
                         <li class="logo">
                             <a href="index.html">
                                 <img src="./assets/icons/logo.png" alt="logoImg">
-                                <p>راد هفت</p>
+                                <!-- <p>راد هفت</p> -->
                             </a>
                         </li>
                         <li class="withCollapse">
@@ -642,11 +646,13 @@
             </div>
         </div>
     </footer>
+
+    <script src="./libraries/fontfaceobserver.js"></script>
     <script src="./utilities/utilities.js"></script>
-    <script src="./utilities/scripts/collapse.js"></script>
     <script src="./utilities/scripts/form.js"></script>
-    <script src="./utilities/scripts/timeline.js"></script>
-    <script src="./utilities/scripts/table.js"></script>
-    <script src="./basket/scripts/basket.js"></script>
+    <script src="./utilities/scripts/collapse.js"></script>
+    <script src="./index/scripts/topMenu.js"></script>
+    <script src="./index/scripts/nav.js"></script>
+    <script src="./basket/scripts/menu.js"></script>
 </body>
 </html>

@@ -930,13 +930,39 @@ form#basket table tbody tr td.prodName .info p {
   color: #90909b;
 }
 
+form#basket table tbody tr td.prodQuantity {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
 form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler {
   position: relative;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-     -moz-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
   width: auto;
   height: auto;
   display: -webkit-box;
@@ -978,7 +1004,7 @@ form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .increase
 form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .increase, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .decrease {
   font-size: 1.3em;
   cursor: pointer;
-  color: #39393e;
+  color: #ef6c00;
 }
 
 form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input {
@@ -993,6 +1019,14 @@ form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input {
 
 form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input.error {
   border: 1.2px solid #ea6161;
+}
+
+form#basket table tbody tr td.prodQuantity .confirmQuantity {
+  padding: .1em 1em;
+  font-size: 1.5em;
+  margin-top: 0.75em;
+  background-color: #ff943d;
+  color: white;
 }
 
 form#basket table tbody tr td.prodPrice p {
@@ -1020,7 +1054,7 @@ form#basket table tbody tr td.prodRemove .removeRow {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
-  color: #90909b;
+  color: #ef6c00;
   position: relative;
   right: 50%;
   -webkit-transform: translateX(50%);
@@ -1034,7 +1068,7 @@ form#basket table tbody tr td.prodRemove .removeRow::before {
 }
 
 form#basket table tbody tr td.prodRemove .removeRow:hover {
-  color: #ea6161;
+  color: #ffb070;
 }
 
 form#basket table tbody tr.hide {
@@ -1294,6 +1328,47 @@ form#basket .slide#stage3 .thanks {
   font-weight: 700;
   margin-top: 0.75em;
   color: #2d2d31;
+}
+
+form#basket .slide#stage1 .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket .slide#stage1 .row p:first-child {
+  font-size: 2em;
+  color: #ef6c00;
+}
+
+form#basket .slide#stage1 .row p:last-child {
+  font-size: 2em;
+  color: #ea6161;
 }
 
 @media screen and (max-width: 950px) {

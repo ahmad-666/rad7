@@ -892,12 +892,132 @@
   border: 1.2px solid #00BC9A;
 }
 
+#info #productInfo .details .row:last-child .basketSum {
+  width: auto;
+  height: auto;
+  margin-right: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#info #productInfo .details .row:last-child .basketSum p:first-child {
+  font-size: 1.6em;
+  color: #2d2d31;
+}
+
+#info #productInfo .details .row:last-child .basketSum p:last-child {
+  color: #ef6c00;
+  font-size: 1.6em;
+}
+
 #info #productInfo .productSlider {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
   width: 35em;
   margin-right: 3em;
+}
+
+#basketModal {
+  width: auto;
+  height: auto;
+  padding: 1.5em;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 0 1em 0.3em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 1em 0.3em rgba(70, 69, 85, 0.3);
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  border-radius: 1.5em;
+}
+
+#basketModal i {
+  font-size: 2.4em;
+  color: #ef6c00;
+}
+
+#basketModal h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #ff943d;
+  margin-top: 1.5em;
+}
+
+#basketModal p {
+  font-size: 1.6em;
+  color: #90909b;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 950px) {
+  #basketModal {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #basketModal {
+    font-size: 6px;
+  }
 }
 
 @media screen and (max-width: 950px) {

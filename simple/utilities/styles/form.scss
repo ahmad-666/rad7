@@ -153,7 +153,7 @@ form#productInfo{
         }
     }
 }
-form#admin { 
+form#admin,form#commentForm { 
     .wrapper{
         @include flex(column,flex-start,flex-start,nowrap,"") ;
         .row{
@@ -162,7 +162,7 @@ form#admin {
             display: flex;
             @include flex(row,flex-start,flex-start,wrap,flex-start) ;
             .inputWrapper.text {
-                width: calc((100% - (3 * 3em)) / 3);
+                width: calc((100% - (4 * 3em)) / 4);
                 height: 4em;
                 position: relative;
                 margin: $dist2;
@@ -250,7 +250,13 @@ form#admin {
                     @include flex(row, flex-start, center, nowrap, "");
                     color: lighten($textGrey, 20%);
                     transition: all .2s linear;
-        
+                    .isRequire{
+                        width: auto;
+                        height: auto;
+                        color: lighten($redColor2, 0%);
+                        font-size: $fontS - .1em; 
+                        padding-left: .3em;
+                    }
                     .icon {
                         font-size: $fontM;
                     }
@@ -325,7 +331,7 @@ form#admin {
             }
         }     
         .inputWrapper.textarea {
-            width: calc((2 * (100% - (3 * 3em)) / 3) + 3em);
+            width: calc((3 * (100% - (4 * 3em)) / 4) + 6.5em);
             height: auto;
             position: relative;
             margin: $dist2;
@@ -424,6 +430,13 @@ form#admin {
                 @include flex(row, flex-start, center, nowrap, "");
                 transition: all .2s linear;
                 color: lighten($textGrey,20%);
+                .isRequire{
+                    width: auto;
+                    height: auto;
+                    color: lighten($redColor2, 0%);
+                    font-size: $fontS - .1em; 
+                    padding-left: .3em;
+                }
                 i {
                     font-size: $fontM;
                 }
@@ -452,7 +465,7 @@ form#admin {
     
 }
 @include mediaQ(900px){
-    form#admin { 
+    form#admin,form#commentForm { 
         .wrapper{   
             .inputWrapper.textarea {
                 margin-top: $dist3;
@@ -461,7 +474,7 @@ form#admin {
     }
 }
 @include mediaQ(800px){
-    form#admin { 
+    form#admin,form#commentForm { 
         .wrapper{
             .row{
                 .inputWrapper.text {
@@ -482,6 +495,13 @@ form#admin {
                     width: calc((100% - (2 * 3em)) / 2);
                 }
             }     
+            .inputWrapper.textarea {
+                width: calc(100% - 3em);
+            } 
+        }   
+    }
+    form#commentForm { 
+        .wrapper{ 
             .inputWrapper.textarea {
                 width: calc(100% - 3em);
             } 
@@ -592,6 +612,13 @@ form#login{
             @include flex(row, flex-start, center, nowrap, "");
             color: lighten($textGrey, 20%);
             transition: all .2s linear;
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             .icon {
                 font-size: $fontM;
             }
@@ -874,6 +901,13 @@ form#forgetPassword{
             @include flex(row, flex-start, center, nowrap, "");
             color: lighten($textGrey, 20%);
             transition: all .2s linear;
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             .icon {
                 font-size: $fontM;
             }
@@ -1744,7 +1778,13 @@ form#basket{
                     @include flex(row, flex-start, center, nowrap, "");
                     color: lighten($textGrey, 20%);
                     transition: all .2s linear;
-        
+                    .isRequire{
+                        width: auto;
+                        height: auto;
+                        color: lighten($redColor2, 0%);
+                        font-size: $fontS - .1em; 
+                        padding-left: .3em;
+                    }
                     .icon {
                         font-size: $fontM;
                     }
@@ -1937,7 +1977,13 @@ form#basket{
                     bottom: 50%;
                     transform: translateY(50%);
                     transition: all .2s linear;
-        
+                    .isRequire{
+                        width: auto;
+                        height: auto;
+                        color: lighten($redColor2, 0%);
+                        font-size: $fontS - .1em; 
+                        padding-left: .3em;
+                    }
                     .icon {
                         font-size: $fontM;
                     }
@@ -2131,7 +2177,13 @@ form#editProfile{
                 @include flex(row, flex-start, center, nowrap, "");
                 color: lighten($textGrey, 20%);
                 transition: all .2s linear;
-    
+                .isRequire{
+                    width: auto;
+                    height: auto;
+                    color: lighten($redColor2, 0%);
+                    font-size: $fontS - .1em; 
+                    padding-left: .3em;
+                }
                 .icon {
                     font-size: $fontM;
                 }
@@ -2324,7 +2376,13 @@ form#editProfile{
                 bottom: 50%;
                 transform: translateY(50%);
                 transition: all .2s linear;
-    
+                .isRequire{
+                    width: auto;
+                    height: auto;
+                    color: lighten($redColor2, 0%);
+                    font-size: $fontS - .1em; 
+                    padding-left: .3em;
+                }
                 .icon {
                     font-size: $fontM;
                 }
@@ -2520,7 +2578,13 @@ form#changePassword{
                 @include flex(row, flex-start, center, nowrap, "");
                 color: lighten($textGrey, 20%);
                 transition: all .2s linear;
-    
+                .isRequire{
+                    width: auto;
+                    height: auto;
+                    color: lighten($redColor2, 0%);
+                    font-size: $fontS - .1em; 
+                    padding-left: .3em;
+                }
                 .icon {
                     font-size: $fontM;
                 }

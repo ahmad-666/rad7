@@ -4,6 +4,7 @@
 		<div class="inputWrapper text">
 			<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
 			<label for="name">
+				<i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-user icon"></i>
 				<p>نام و نام خانوادگی</p>
 			</label>
@@ -16,6 +17,7 @@
 		<div class="inputWrapper text">
 			<input type="email" id="email" name="email" class="style1 labelHandler validate" required>
 			<label for="email">
+				<i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-envelope icon"></i>
 				<p>پست الکترونیکی</p>
 			</label>
@@ -28,6 +30,7 @@
 		<div class="inputWrapper text">
 			<input type="password" id="password" name="password" class="style1 labelHandler validate" required pattern=".{6,}">
 			<label for="password">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-lock icon"></i>
 				<p>رمز ورود</p>
 			</label>
@@ -40,6 +43,7 @@
 		<div class="inputWrapper text">
 			<input type="password" id="passwordRepeat" name="passwordRepeat" class="style1 labelHandler validate" required>
 			<label for="passwordRepeat">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-lock icon"></i>
 				<p>تکرار رمز ورود</p>
 			</label>
@@ -52,6 +56,7 @@
 		<div class="inputWrapper text">
 			<input type="number" id="tel" name="tel" class="style1 labelHandler validate" required>
 			<label for="tel">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-phone icon"></i>
 				<p>شماره ثابت</p>
 			</label>
@@ -64,6 +69,7 @@
 		<div class="inputWrapper text">
 			<input type="number" id="mobile" name="mobile" class="style1 labelHandler validate" required pattern="\d{11}">
 			<label for="mobile">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-mobile-alt icon"></i>
 				<p>شماره موبایل</p>
 			</label>
@@ -76,6 +82,7 @@
 		<div class="inputWrapper text">
 			<input type="text" id="post" name="post" class="style1 labelHandler validate" required>
 			<label for="post">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-mail-bulk"></i>
 				<p>کد پستی</p>
 			</label>
@@ -88,6 +95,7 @@
 		<div class="inputWrapper text">
 			<input type="text" id="address" name="address" class="style1 labelHandler validate" required>
 			<label for="address">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-map-marker-alt icon"></i>
 				<p>آدرس محل سکونت</p>
 			</label>
@@ -101,6 +109,7 @@
 			<input type="hidden" id="cityHidden" name="cityHidden">
 			<input type="text" id="city" name="city" class="style2 validate" required readonly>
 			<label for="city">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-map-marker-alt icon"></i>
 				<p>شهر محل سکونت</p>
 			</label>
@@ -123,6 +132,7 @@
 			<input type="hidden" id="stateHidden" name="stateHidden">
 			<input type="text" id="state" name="state" class="style1 validate" required>
 			<label for="state">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-map-marker-alt icon"></i>
 				<p>استان محل سکونت</p>
 			</label>
@@ -152,9 +162,9 @@
 			</div>
 		</div>
 		<div class="inputWrapper numberHandler">
-			<i class="fas fa-plus increase"></i>
-			<input type="number" id="quantity" name="quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
 			<i class="fas fa-minus decrease"></i>
+			<input type="number" id="quantity" name="quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+			<i class="fas fa-plus increase"></i>
 		</div>
 		<div class="inputWrapper checkboxes">
 			<div class="checkbox">
@@ -207,6 +217,7 @@
 		<div class="inputWrapper textarea">
 			<textarea name="comment1" id="comment1" class="style1 labelHandler validate" required></textarea>
 			<label for="comment1">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-comments"></i>
 				<p>نظر خود را وارد نمایید</p>
 			</label>
@@ -217,6 +228,7 @@
 			<!-- style2 just border-bottom , need to use with autoExpand class -->
 			<textarea name="comment2" id="comment2" class="style2 labelHandler autoExpand validate" required></textarea>
 			<label for="comment2">
+			    <i class="fas fa-asterisk isRequire"></i>
 				<i class="fas fa-comments"></i>
 				<p>نظر خود را وارد نمایید</p>
 			</label>

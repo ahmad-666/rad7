@@ -27,6 +27,6 @@ Tabs.prototype.openTab = function(e){
 //document.querySelectorAll('.tabs_wrapper').forEach(tabWrapper => {
 //     new Tabs(tabWrapper)
 //})
-export default{
-	Tabs
-}
+// export default{
+// 	Tabs
+// }

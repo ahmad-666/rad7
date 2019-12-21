@@ -152,7 +152,7 @@
 }
 
 #articles .articles .col:nth-child(1) .article .title {
-  width: 200%;
+  width: 100%;
   height: 8em;
   padding: 0.75em;
   position: absolute;
@@ -244,7 +244,7 @@
 }
 
 #articles .articles .col:nth-child(2) .row:nth-child(1) .article:nth-child(1) .title {
-  width: 200%;
+  width: 100%;
   height: 4em;
   padding: 0.75em;
   position: absolute;
@@ -299,7 +299,7 @@
 }
 
 #articles .articles .col:nth-child(2) .row:nth-child(1) .article:nth-child(2) .title {
-  width: 200%;
+  width: 100%;
   height: 4em;
   padding: 0.75em;
   position: absolute;
@@ -358,7 +358,7 @@
 }
 
 #articles .articles .col:nth-child(2) .row:nth-child(2) .article:nth-child(1) .title {
-  width: 200%;
+  width: 100%;
   height: 4em;
   padding: 0.75em;
   position: absolute;
@@ -413,7 +413,7 @@
 }
 
 #articles .articles .col:nth-child(2) .row:nth-child(2) .article:nth-child(2) .title {
-  width: 200%;
+  width: 100%;
   height: 4em;
   padding: 0.75em;
   position: absolute;
@@ -566,7 +566,7 @@
        object-position: center center;
   }
   #articles .articles .col:nth-child(1) .article .title {
-    width: 200%;
+    width: 100%;
     height: 4em;
     padding: 0.75em;
     position: absolute;

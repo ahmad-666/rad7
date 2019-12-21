@@ -67,7 +67,7 @@
 }
 
 #topMenu .right > *, #topMenu .left > * {
-  color: #ef6c00;
+  color: #ffa256;
 }
 
 #topMenu .right:last-child, #topMenu .left:last-child {
@@ -96,7 +96,7 @@
 }
 
 #topMenu .right .hoverEffect:hover, #topMenu .left .hoverEffect:hover {
-  color: #ff943d;
+  color: #ef6c00;
 }
 
 #topMenu .right .basketHover:hover, #topMenu .left .basketHover:hover {
@@ -265,6 +265,25 @@
 
 #topMenu .left a {
   font-size: 1.6em;
+}
+
+#topMenu .left .smoothScroll {
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #ffa256;
+  background-color: transparent;
+  border: 1.2px solid transparent;
+  border: 1px solid #ffa256;
+  padding: 0 1.05em;
+  border-radius: 0.75em;
+}
+
+#topMenu .left .smoothScroll:hover {
+  color: white;
+  background-color: #ff780a;
+  border: 1.2px solid white;
 }
 
 @media screen and (max-width: 430px) {
@@ -598,8 +617,8 @@ nav ul.desktop li.bars ul.mobile li.logo a {
 }
 
 nav ul.desktop li.bars ul.mobile li.logo a img {
-  width: 20em;
-  height: 10em;
+  width: 15em;
+  height: 7em;
   margin-right: 0;
 }
 

@@ -243,7 +243,7 @@ form#productInfo .inputWrapper.numberHandler input.error {
   border: 1.2px solid #ea6161;
 }
 
-form#admin .wrapper {
+form#admin .wrapper, form#commentForm .wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -269,7 +269,7 @@ form#admin .wrapper {
           align-content: "";
 }
 
-form#admin .wrapper .row {
+form#admin .wrapper .row, form#commentForm .wrapper .row {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -302,16 +302,16 @@ form#admin .wrapper .row {
           align-content: flex-start;
 }
 
-form#admin .wrapper .row .inputWrapper.text {
-  width: -webkit-calc((100% - (3 * 3em)) / 3);
-  width: -moz-calc((100% - (3 * 3em)) / 3);
-  width: calc((100% - (3 * 3em)) / 3);
+form#admin .wrapper .row .inputWrapper.text, form#commentForm .wrapper .row .inputWrapper.text {
+  width: -webkit-calc((100% - (4 * 3em)) / 4);
+  width: -moz-calc((100% - (4 * 3em)) / 4);
+  width: calc((100% - (4 * 3em)) / 4);
   height: 4em;
   position: relative;
   margin: 1.5em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input {
+form#admin .wrapper .row .inputWrapper.text input, form#commentForm .wrapper .row .inputWrapper.text input {
   width: 100%;
   height: 100%;
   line-height: 4em;
@@ -323,42 +323,42 @@ form#admin .wrapper .row .inputWrapper.text input {
   transition: all .2s linear;
 }
 
-form#admin .wrapper .row .inputWrapper.text input::-webkit-input-placeholder {
+form#admin .wrapper .row .inputWrapper.text input::-webkit-input-placeholder, form#commentForm .wrapper .row .inputWrapper.text input::-webkit-input-placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input:-moz-placeholder {
+form#admin .wrapper .row .inputWrapper.text input:-moz-placeholder, form#commentForm .wrapper .row .inputWrapper.text input:-moz-placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input::-moz-placeholder {
+form#admin .wrapper .row .inputWrapper.text input::-moz-placeholder, form#commentForm .wrapper .row .inputWrapper.text input::-moz-placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input:-ms-input-placeholder {
+form#admin .wrapper .row .inputWrapper.text input:-ms-input-placeholder, form#commentForm .wrapper .row .inputWrapper.text input:-ms-input-placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input::-ms-input-placeholder {
+form#admin .wrapper .row .inputWrapper.text input::-ms-input-placeholder, form#commentForm .wrapper .row .inputWrapper.text input::-ms-input-placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input::placeholder {
+form#admin .wrapper .row .inputWrapper.text input::placeholder, form#commentForm .wrapper .row .inputWrapper.text input::placeholder {
   color: #90909b;
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1 {
+form#admin .wrapper .row .inputWrapper.text input.style1, form#commentForm .wrapper .row .inputWrapper.text input.style1 {
   border: none;
   border-bottom: 1.2px solid #d3d3d7;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1:focus ~ label {
+form#admin .wrapper .row .inputWrapper.text input.style1:focus ~ label, form#commentForm .wrapper .row .inputWrapper.text input.style1:focus ~ label {
   color: #ef6c00;
   font-size: 8px;
   bottom: -webkit-calc(100% + .5em);
@@ -371,20 +371,20 @@ form#admin .wrapper .row .inputWrapper.text input.style1:focus ~ label {
   right: 0;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1:focus ~ .line {
+form#admin .wrapper .row .inputWrapper.text input.style1:focus ~ .line, form#commentForm .wrapper .row .inputWrapper.text input.style1:focus ~ .line {
   width: 100%;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2 {
+form#admin .wrapper .row .inputWrapper.text input.style2, form#commentForm .wrapper .row .inputWrapper.text input.style2 {
   border: 1.2px solid #d3d3d7;
   border-radius: 3em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2:focus {
+form#admin .wrapper .row .inputWrapper.text input.style2:focus, form#commentForm .wrapper .row .inputWrapper.text input.style2:focus {
   border: 1.2px solid #ef6c00;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2:focus ~ label {
+form#admin .wrapper .row .inputWrapper.text input.style2:focus ~ label, form#commentForm .wrapper .row .inputWrapper.text input.style2:focus ~ label {
   color: #ef6c00;
   font-size: 8px;
   bottom: -webkit-calc(100% + 1.5em);
@@ -397,31 +397,31 @@ form#admin .wrapper .row .inputWrapper.text input.style2:focus ~ label {
   right: 0.75em;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2:focus ~ .line {
+form#admin .wrapper .row .inputWrapper.text input.style2:focus ~ .line, form#commentForm .wrapper .row .inputWrapper.text input.style2:focus ~ .line {
   width: 0%;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1.error {
+form#admin .wrapper .row .inputWrapper.text input.style1.error, form#commentForm .wrapper .row .inputWrapper.text input.style1.error {
   border-bottom: 1.2px solid #ea6161;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1.error ~ label {
+form#admin .wrapper .row .inputWrapper.text input.style1.error ~ label, form#commentForm .wrapper .row .inputWrapper.text input.style1.error ~ label {
   color: #ea6161;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1.error ~ .line {
+form#admin .wrapper .row .inputWrapper.text input.style1.error ~ .line, form#commentForm .wrapper .row .inputWrapper.text input.style1.error ~ .line {
   background-color: #ea6161;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2.error {
+form#admin .wrapper .row .inputWrapper.text input.style2.error, form#commentForm .wrapper .row .inputWrapper.text input.style2.error {
   border: 1.2px solid #ea6161;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2.error ~ label {
+form#admin .wrapper .row .inputWrapper.text input.style2.error ~ label, form#commentForm .wrapper .row .inputWrapper.text input.style2.error ~ label {
   color: #ea6161;
 }
 
-form#admin .wrapper .row .inputWrapper.text label {
+form#admin .wrapper .row .inputWrapper.text label, form#commentForm .wrapper .row .inputWrapper.text label {
   width: auto;
   height: auto;
   position: absolute;
@@ -465,11 +465,19 @@ form#admin .wrapper .row .inputWrapper.text label {
   transition: all .2s linear;
 }
 
-form#admin .wrapper .row .inputWrapper.text label .icon {
+form#admin .wrapper .row .inputWrapper.text label .isRequire, form#commentForm .wrapper .row .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
+}
+
+form#admin .wrapper .row .inputWrapper.text label .icon, form#commentForm .wrapper .row .inputWrapper.text label .icon {
   font-size: 1.6em;
 }
 
-form#admin .wrapper .row .inputWrapper.text label p {
+form#admin .wrapper .row .inputWrapper.text label p, form#commentForm .wrapper .row .inputWrapper.text label p {
   font-size: 1.5em;
   -webkit-transform: translateX(-0.3em);
      -moz-transform: translateX(-0.3em);
@@ -477,7 +485,7 @@ form#admin .wrapper .row .inputWrapper.text label p {
           transform: translateX(-0.3em);
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style1 ~ label.top {
+form#admin .wrapper .row .inputWrapper.text input.style1 ~ label.top, form#commentForm .wrapper .row .inputWrapper.text input.style1 ~ label.top {
   font-size: 8px;
   bottom: -webkit-calc(100% + .5em);
   bottom: -moz-calc(100% + .5em);
@@ -489,7 +497,7 @@ form#admin .wrapper .row .inputWrapper.text input.style1 ~ label.top {
   right: 0;
 }
 
-form#admin .wrapper .row .inputWrapper.text input.style2 ~ label.top {
+form#admin .wrapper .row .inputWrapper.text input.style2 ~ label.top, form#commentForm .wrapper .row .inputWrapper.text input.style2 ~ label.top {
   font-size: 8px;
   bottom: -webkit-calc(100% + 1.5em);
   bottom: -moz-calc(100% + 1.5em);
@@ -501,7 +509,7 @@ form#admin .wrapper .row .inputWrapper.text input.style2 ~ label.top {
   right: 0.75em;
 }
 
-form#admin .wrapper .row .inputWrapper.text .line {
+form#admin .wrapper .row .inputWrapper.text .line, form#commentForm .wrapper .row .inputWrapper.text .line {
   width: 0%;
   height: 1.2px;
   background-color: #ef6c00;
@@ -515,7 +523,7 @@ form#admin .wrapper .row .inputWrapper.text .line {
   transition: all .2s linear;
 }
 
-form#admin .wrapper .row .inputWrapper.text .msg {
+form#admin .wrapper .row .inputWrapper.text .msg, form#commentForm .wrapper .row .inputWrapper.text .msg {
   width: auto;
   height: auto;
   border-radius: 3em;
@@ -532,12 +540,12 @@ form#admin .wrapper .row .inputWrapper.text .msg {
   transition: all .2s linear;
 }
 
-form#admin .wrapper .row .inputWrapper.text .msg p {
+form#admin .wrapper .row .inputWrapper.text .msg p, form#commentForm .wrapper .row .inputWrapper.text .msg p {
   color: #fbfbfb;
   font-size: 1.4em;
 }
 
-form#admin .wrapper .row .inputWrapper.text .msg i {
+form#admin .wrapper .row .inputWrapper.text .msg i, form#commentForm .wrapper .row .inputWrapper.text .msg i {
   font-size: 2.4em;
   color: #ea6161;
   position: absolute;
@@ -547,16 +555,16 @@ form#admin .wrapper .row .inputWrapper.text .msg i {
   top: calc(0% - .6em);
 }
 
-form#admin .wrapper .row .inputWrapper.text .msg.show {
+form#admin .wrapper .row .inputWrapper.text .msg.show, form#commentForm .wrapper .row .inputWrapper.text .msg.show {
   opacity: 1;
   visibility: visible;
   z-index: 2;
 }
 
-form#admin .wrapper .inputWrapper.textarea {
-  width: -webkit-calc((2 * (100% - (3 * 3em)) / 3) + 3em);
-  width: -moz-calc((2 * (100% - (3 * 3em)) / 3) + 3em);
-  width: calc((2 * (100% - (3 * 3em)) / 3) + 3em);
+form#admin .wrapper .inputWrapper.textarea, form#commentForm .wrapper .inputWrapper.textarea {
+  width: -webkit-calc((3 * (100% - (4 * 3em)) / 4) + 6.5em);
+  width: -moz-calc((3 * (100% - (4 * 3em)) / 4) + 6.5em);
+  width: calc((3 * (100% - (4 * 3em)) / 4) + 6.5em);
   height: auto;
   position: relative;
   margin: 1.5em;
@@ -567,7 +575,7 @@ form#admin .wrapper .inputWrapper.textarea {
   display: flex;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea {
+form#admin .wrapper .inputWrapper.textarea textarea, form#commentForm .wrapper .inputWrapper.textarea textarea {
   width: 100%;
   font-size: 1.6em;
   color: #2d2d31;
@@ -579,43 +587,43 @@ form#admin .wrapper .inputWrapper.textarea textarea {
   resize: none;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea::-webkit-input-placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea::-webkit-input-placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea::-webkit-input-placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea:-moz-placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea:-moz-placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea:-moz-placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea::-moz-placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea::-moz-placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea::-moz-placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea:-ms-input-placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea:-ms-input-placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea:-ms-input-placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea::-ms-input-placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea::-ms-input-placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea::-ms-input-placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea::placeholder {
+form#admin .wrapper .inputWrapper.textarea textarea::placeholder, form#commentForm .wrapper .inputWrapper.textarea textarea::placeholder {
   font-size: 1.6em;
   color: #90909b;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1 {
+form#admin .wrapper .inputWrapper.textarea textarea.style1, form#commentForm .wrapper .inputWrapper.textarea textarea.style1 {
   height: 10em;
   border: 1.2px solid #d3d3d7;
   border-radius: 1.5em;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style1 ~ label {
   bottom: 100%;
   -webkit-transform: translateY(150%);
      -moz-transform: translateY(150%);
@@ -623,11 +631,11 @@ form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label {
           transform: translateY(150%);
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1:focus {
+form#admin .wrapper .inputWrapper.textarea textarea.style1:focus, form#commentForm .wrapper .inputWrapper.textarea textarea.style1:focus {
   border: 1.2px solid #ef6c00;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1:focus ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style1:focus ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style1:focus ~ label {
   font-size: 8px;
   right: 0.75em;
   color: #ef6c00;
@@ -640,13 +648,13 @@ form#admin .wrapper .inputWrapper.textarea textarea.style1:focus ~ label {
           transform: translateY(0);
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2 {
+form#admin .wrapper .inputWrapper.textarea textarea.style2, form#commentForm .wrapper .inputWrapper.textarea textarea.style2 {
   overflow: hidden;
   border: none;
   border-bottom: 1.2px solid #d3d3d7;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style2 ~ label {
   top: 50%;
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
@@ -654,11 +662,11 @@ form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label {
           transform: translateY(-50%);
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2:focus {
+form#admin .wrapper .inputWrapper.textarea textarea.style2:focus, form#commentForm .wrapper .inputWrapper.textarea textarea.style2:focus {
   border-bottom: 1.2px solid #ef6c00;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2:focus ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style2:focus ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style2:focus ~ label {
   font-size: 8px;
   right: 0;
   color: #ef6c00;
@@ -669,27 +677,27 @@ form#admin .wrapper .inputWrapper.textarea textarea.style2:focus ~ label {
           transform: translateY(-100%);
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2:focus ~ .line {
+form#admin .wrapper .inputWrapper.textarea textarea.style2:focus ~ .line, form#commentForm .wrapper .inputWrapper.textarea textarea.style2:focus ~ .line {
   width: 100%;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1.error {
+form#admin .wrapper .inputWrapper.textarea textarea.style1.error, form#commentForm .wrapper .inputWrapper.textarea textarea.style1.error {
   border: 1.2px solid #ea6161;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1.error ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style1.error ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style1.error ~ label {
   color: #ea6161;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2.error {
+form#admin .wrapper .inputWrapper.textarea textarea.style2.error, form#commentForm .wrapper .inputWrapper.textarea textarea.style2.error {
   border-bottom: 1.2px solid #ea6161;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2.error ~ label {
+form#admin .wrapper .inputWrapper.textarea textarea.style2.error ~ label, form#commentForm .wrapper .inputWrapper.textarea textarea.style2.error ~ label {
   color: #ea6161;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label.top {
+form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label.top, form#commentForm .wrapper .inputWrapper.textarea textarea.style1 ~ label.top {
   font-size: 8px;
   bottom: -webkit-calc(100% + 2em);
   bottom: -moz-calc(100% + 2em);
@@ -701,7 +709,7 @@ form#admin .wrapper .inputWrapper.textarea textarea.style1 ~ label.top {
   right: 0;
 }
 
-form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label.top {
+form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label.top, form#commentForm .wrapper .inputWrapper.textarea textarea.style2 ~ label.top {
   font-size: 8px;
   top: 0;
   -webkit-transform: translateY(-100%);
@@ -711,7 +719,7 @@ form#admin .wrapper .inputWrapper.textarea textarea.style2 ~ label.top {
   right: 0;
 }
 
-form#admin .wrapper .inputWrapper.textarea label {
+form#admin .wrapper .inputWrapper.textarea label, form#commentForm .wrapper .inputWrapper.textarea label {
   width: auto;
   height: auto;
   position: absolute;
@@ -751,11 +759,19 @@ form#admin .wrapper .inputWrapper.textarea label {
   color: #c6c6cb;
 }
 
-form#admin .wrapper .inputWrapper.textarea label i {
+form#admin .wrapper .inputWrapper.textarea label .isRequire, form#commentForm .wrapper .inputWrapper.textarea label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
+}
+
+form#admin .wrapper .inputWrapper.textarea label i, form#commentForm .wrapper .inputWrapper.textarea label i {
   font-size: 1.6em;
 }
 
-form#admin .wrapper .inputWrapper.textarea label p {
+form#admin .wrapper .inputWrapper.textarea label p, form#commentForm .wrapper .inputWrapper.textarea label p {
   font-size: 1.5em;
   -webkit-transform: translateX(-0.3em);
      -moz-transform: translateX(-0.3em);
@@ -763,7 +779,7 @@ form#admin .wrapper .inputWrapper.textarea label p {
           transform: translateX(-0.3em);
 }
 
-form#admin .wrapper .inputWrapper.textarea .line {
+form#admin .wrapper .inputWrapper.textarea .line, form#commentForm .wrapper .inputWrapper.textarea .line {
   width: 0%;
   height: 1.2px;
   background-color: #ef6c00;
@@ -777,7 +793,7 @@ form#admin .wrapper .inputWrapper.textarea .line {
   transition: all .2s linear;
 }
 
-form#admin button {
+form#admin button, form#commentForm button {
   margin: 0.75em auto 0 auto;
   cursor: pointer;
   -webkit-transition: all .3s linear;
@@ -789,13 +805,13 @@ form#admin button {
   position: relative;
 }
 
-form#admin button:hover {
+form#admin button:hover, form#commentForm button:hover {
   color: #ff8623;
   background-color: white;
   border: 1.2px solid #ff8623;
 }
 
-form#admin button::before, form#admin button::after {
+form#admin button::before, form#admin button::after, form#commentForm button::before, form#commentForm button::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -812,19 +828,19 @@ form#admin button::before, form#admin button::after {
   opacity: 0;
 }
 
-form#admin button:hover::before, form#admin button:hover::after {
+form#admin button:hover::before, form#admin button:hover::after, form#commentForm button:hover::before, form#commentForm button:hover::after {
   -webkit-animation: pulse .5s linear 1 forwards;
      -moz-animation: pulse .5s linear 1 forwards;
           animation: pulse .5s linear 1 forwards;
 }
 
-form#admin button:hover::before {
+form#admin button:hover::before, form#commentForm button:hover::before {
   -webkit-animation-delay: 0s;
      -moz-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-form#admin button:hover::after {
+form#admin button:hover::after, form#commentForm button:hover::after {
   -webkit-animation-delay: .3s;
      -moz-animation-delay: .3s;
           animation-delay: .3s;
@@ -865,16 +881,16 @@ form#admin button:hover::after {
 }
 
 @media screen and (max-width: 900px) {
-  form#admin .wrapper .inputWrapper.textarea {
+  form#admin .wrapper .inputWrapper.textarea, form#commentForm .wrapper .inputWrapper.textarea {
     margin-top: 3em;
   }
 }
 
 @media screen and (max-width: 800px) {
-  form#admin .wrapper .row .inputWrapper.text {
+  form#admin .wrapper .row .inputWrapper.text, form#commentForm .wrapper .row .inputWrapper.text {
     width: 30em;
   }
-  form#admin .wrapper .inputWrapper.textarea {
+  form#admin .wrapper .inputWrapper.textarea, form#commentForm .wrapper .inputWrapper.textarea {
     width: 63em;
   }
 }
@@ -886,6 +902,11 @@ form#admin button:hover::after {
     width: calc((100% - (2 * 3em)) / 2);
   }
   form#admin .wrapper .inputWrapper.textarea {
+    width: -webkit-calc(100% - 3em);
+    width: -moz-calc(100% - 3em);
+    width: calc(100% - 3em);
+  }
+  form#commentForm .wrapper .inputWrapper.textarea {
     width: -webkit-calc(100% - 3em);
     width: -moz-calc(100% - 3em);
     width: calc(100% - 3em);
@@ -1108,6 +1129,14 @@ form#login .inputWrapper.text label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#login .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#login .inputWrapper.text label .icon {
@@ -1604,6 +1633,14 @@ form#forgetPassword .inputWrapper.text label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#forgetPassword .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#forgetPassword .inputWrapper.text label .icon {
@@ -3057,6 +3094,14 @@ form#basket .slide#stage2 .inputs .inputWrapper.text label {
   transition: all .2s linear;
 }
 
+form#basket .slide#stage2 .inputs .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
+}
+
 form#basket .slide#stage2 .inputs .inputWrapper.text label .icon {
   font-size: 1.6em;
 }
@@ -3327,6 +3372,14 @@ form#basket .slide#stage2 .inputs .inputWrapper.selectSearch label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#basket .slide#stage2 .inputs .inputWrapper.selectSearch label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#basket .slide#stage2 .inputs .inputWrapper.selectSearch label .icon {
@@ -3671,6 +3724,14 @@ form#editProfile .inputs .inputWrapper.text label {
   transition: all .2s linear;
 }
 
+form#editProfile .inputs .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
+}
+
 form#editProfile .inputs .inputWrapper.text label .icon {
   font-size: 1.6em;
 }
@@ -3941,6 +4002,14 @@ form#editProfile .inputs .inputWrapper.selectSearch label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#editProfile .inputs .inputWrapper.selectSearch label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#editProfile .inputs .inputWrapper.selectSearch label .icon {
@@ -4301,6 +4370,14 @@ form#changePassword .inputs .inputWrapper.text label {
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+form#changePassword .inputs .inputWrapper.text label .isRequire {
+  width: auto;
+  height: auto;
+  color: #e74a4a;
+  font-size: 1.1em;
+  padding-left: .3em;
 }
 
 form#changePassword .inputs .inputWrapper.text label .icon {

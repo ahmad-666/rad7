@@ -41,6 +41,9 @@ footer{
                 width: auto;
                 height: auto;
                 margin: $dist1 $dist2;
+                background-color: white;
+                border-radius: $dist1;
+                padding: $dist1;
                 img{
                     width: 8em;
                     height: 8em;
@@ -144,10 +147,23 @@ footer{
 }
 @include resizeTablet('footer') ;
 @include resizeMobile('footer') ;
-@include mediaQ(500px){
+@include mediaQ(460px){
     footer{
         .bottom{
             @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        }
+    }
+    footer{
+        .bottom{
+            .col.contact{
+                .socials{
+                    .wrapper{
+                        width: 80vw;               
+                        @include flex(row,center,center,wrap,flex-start) ;
+                       
+                    }
+                }
+            }
         }
     }
 }
