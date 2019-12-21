@@ -1,0 +1,69 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+.sliderCarousel{
+    width: 80% ;
+    height: auto;
+    padding: $dist1 0 ;
+    margin: $sectionsDist auto 0 auto ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    position: relative ;
+    h4{
+        font-size: $fontL ;
+        color: $textDark; 
+        font-weight: 700 ;
+    } 
+    .helper{
+        width: 100% ;
+        height: auto;
+        overflow: hidden;
+        margin-top: $dist1;
+        position: relative;
+        .btn{
+            width: 3em ;
+            height: 3em;
+            border-radius: 50% ;
+            cursor: pointer;
+            z-index: 2;
+            @include swapColor(white,$primaryColor)
+            i{font-size: $fontM ;}
+        }
+        .btn.prev{right: $dist1 ;}
+        .btn.next{left: $dist1 ;}
+        .slides{
+            width: 100% ;
+            height: auto;
+            margin-top: $dist1 ;
+            display: flex ;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            position: relative ;
+            transition: all .3s linear ;
+            .slide{
+                flex-shrink: 0 ;
+                width: calc((100% - (4 * 1.5em)) / 4) ;
+                height: 25em;
+                margin: 0 $dist1 ;
+                // &:first-child{margin-right: 0;}
+                // &:last-child{margin-left: 0;}
+                // &:nth-child(4n+1){background-color: lighten($blueColor1,10%) ;}
+                // &:nth-child(4n+2){background-color: lighten($redColor1,10%) ;}
+                // &:nth-child(4n+3){background-color: lighten($orangeColor1,10%) ;}
+                // &:nth-child(4n+4){background-color: lighten($greenColor1,10%) ;}
+            }
+        }
+    }
+    .show_more{
+        width: auto ;
+        height: auto;
+        margin-top: $dist1;
+        font-size: $fontM ;
+        color: $textGrey ;
+        transition: all .2s linear;
+        &:hover{color: $primaryColor;}
+        i{
+            font-size: $fontS ;
+            transform: translate(-.3em,15%) ;
+        }
+    }
+}

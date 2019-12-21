@@ -14,7 +14,7 @@ class Table{
         this.rows.forEach(row=>{this.totalPrice += row.price});
         this.totalPriceElm.textContent = '' ;
         this.totalPriceElm.textContent = `${this.totalPrice}تومان` ;
-        this.search.addEventListener('input',this.searching.bind(this)) ;
+        if(this.search) this.search.addEventListener('input',this.searching.bind(this)) ;
     }
     updateBasket(price,ops){
         switch(ops){

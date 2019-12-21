@@ -1,0 +1,83 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#twoDirSlider{
+    width: 90%;
+    height: auto;
+    margin: $sectionsDist auto 0 auto;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    .dots{
+        width: auto;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        .dot{
+            width: 1.8em;
+            height: 1.8em;
+            border-radius: 50%;
+            background-color: lighten($textGrey,25%);
+            &:not(:first-child){margin-right: $dist2;}
+            transition: all .2s linear;
+            cursor: pointer;   
+            &:not(.active){
+                &:hover{
+                    background-color: lighten($primaryColor,25%);
+                }
+            }      
+        }
+        .dot.active{
+            background-color: lighten($primaryColor,8%);
+            transform: scale(1.3);
+        }
+    }
+    .sliderWrapper{    
+        overflow: hidden;
+        width: 100%;
+        height: 40em;
+        position: relative;
+        display: flex;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .btn{
+            z-index: 2;
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            opacity: .7;
+            cursor: pointer;       
+            @include changeColor(darken($textGrey,20%),lighten($textGrey,20%),white,lighten($primaryColor,10%)) ;
+            &::before{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%,-50%);         
+                font-size: $fontM;
+            }
+        }
+        .btn.prev{right: $dist2;}
+        .btn.next{left: $dist2;}
+        .slider{   
+            width: 50%;
+            height: 100%;
+            transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            display: flex;
+            .slide{
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+            }
+            img.slide{
+                object-fit: cover;
+            }
+            .empty{
+                background-color: white;
+            }
+        }
+        .slider[data-dir="top"]{@include flex(column,flex-start,flex-start,nowrap,"") ;}
+        .slider[data-dir="bottom"]{@include flex(column,flex-end,flex-start,nowrap,"") ;}
+        .slider[data-dir="right"]{@include flex(row,flex-start,flex-start,nowrap,"") ;}
+        .slider[data-dir="left"]{@include flex(row,flex-end,flex-start,nowrap,"") ;}
+    }
+}

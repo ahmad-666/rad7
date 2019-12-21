@@ -42,25 +42,27 @@
         <a href="index.html">
             <img src="../assets/icons/logo.png" alt="logoImg">
         </a>
-        <h4>ورود</h4>
+        <h4>ورود/ساخت حساب کاربری</h4>
         <div class="inputWrapper text">
-            <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
-            <label for="email">
-                <i class="fas fa-envelope icon"></i>
-                <p>پست الکترونیکی</p>
+            <input type="number" id="mobile" name="mobile" class="style1 labelHandler validate" pattern="\d{11}" required>
+            <label for="mobile">
+                <i class="fas fa-asterisk isRequire"></i>
+                <i class="fas fa-mobile icon"></i>
+                <p>شماره موبایل</p>
             </label>
             <span class="line"></span>
             <div class="msg">
-                <p>ایمیل صحیح وارد نمایید</p>
+                <p>شماره موبایل صحیح(با ۰۹) وارد کنید</p>
                 <i class="fas fa-caret-up"></i>
             </div>
         </div>
         <div class="inputWrapper text">
-            <input type="password" id="password" name="password" class="style1 labelHandler validate" required>
+            <input type="password" id="password" name="password" class="style1 labelHandler validate" pattern=".{6,}" required>
             <a class="rememberPassword" href="forgetPassword.html">رمز عبور خود را فراموش کرده اید؟</a>
             <label for="password">
+                <i class="fas fa-asterisk isRequire"></i>
                 <i class="fas fa-lock icon"></i>
-                <p>رمز ورود</p>
+                <p>رمز ورود(حداقل ۶رقم)</p>
             </label>
             <span class="line"></span>
             <div class="msg">
@@ -80,9 +82,9 @@
                 </label>
             </div>
         </div>
-        <a class="signup" href="signup.html">
+        <!-- <a class="signup" href="signup.html">
             ساخت حساب کاربری
-        </a>
+        </a> -->
     </form>
 </body>
 

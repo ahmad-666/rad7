@@ -14,13 +14,13 @@
         display: flex;
         @include flex(row,flex-start,center,nowrap,"") ;
         > * {
-            color: $textWhite;
+            color: lighten($primaryColor,20%);
         }
         &:last-child{margin-right: $dist2 * 2;}
         .hoverEffect{
             @include underlineHover(.1em,white) ;
             &:hover{
-                color: darken(white,25%) ;
+                color: $primaryColor ;
             }
         }
         .basketHover{
@@ -35,7 +35,7 @@
                 margin-right: $dist3 + 1em;
             }
         }  
-        .login{
+        .login,.home{
             display: flex;
             @include flex(row,flex-start,center,nowrap,"") ;
             i{font-size: $fontM;}
@@ -81,6 +81,13 @@
         }  
         a{
             font-size: $fontM;
+        }
+        .smoothScroll{
+            @include changeColor(lighten($primaryColor,20%),transparent,white,lighten($primaryColor,5%)) ;
+            border: 1px solid lighten($primaryColor,20%) ;
+            padding: 0 $dist1 + .3em;
+            border-radius: $dist1;
+
         }
     }
 }

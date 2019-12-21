@@ -1,0 +1,42 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './currFilters.scss' ;
+@import './filters.scss' ;
+@import './sort.scss' ;
+@import './products.scss' ;
+#filterProductsWrapper{
+    width: 90%;
+    height: auto;
+    margin: $sectionsDist auto 0 auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ;
+    #filtersWrapper{
+        flex-shrink: 0;
+        width: 30em;
+        height: auto;        
+    }
+    #productsWrapper{
+        width: 100%;
+        height: auto;
+        margin-right: $dist3;
+    }
+}
+@include resizeTablet('#filterProductsWrapper') ;
+@include mediaQ(750px){
+    #filterProductsWrapper{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        #filtersWrapper{
+            flex-shrink: 0;
+            width: 100%;
+        }
+        #productsWrapper{
+            margin-top: $dist3;
+            margin-right: 0;
+        }
+    }
+}
+@include resizeMobile('#filterProductsWrapper') ;
+@include mediaQ(450px){
+    #filterProductsWrapper{width: 95%;}
+}

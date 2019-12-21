@@ -1,0 +1,40 @@
+@import '../../utilities/styles/twoDirSlider.scss' ;
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#twoDirSlider{
+    .sliderWrapper{    
+        .left{
+            .slide{
+                display: flex;
+                @include flex(column,center,center,nowrap,"") ;
+                .name{
+                    font-size: $fontL + .2em;
+                    font-weight: 700;
+                }
+                .price{
+                    margin-top: $dist1;
+                    font-size: $fontM ;
+                }
+                a{
+                    width: auto;
+                    height: auto;
+                    border-radius: $dist2;
+                    font-size: $fontXL;
+                    padding: .3em $dist2 ;
+                    margin-top: $dist1;
+                    @include swapColor(white,lighten($greenColor1,0%)) ;
+                    @include pulse(lighten($greenColor1,0%)) ;
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('#twoDirSlider') ;
+@include resizeMobile('#twoDirSlider') ;
+@include mediaQ(450px){
+    #twoDirSlider{
+        width: 95%;
+        font-size: 4px;
+    }
+}

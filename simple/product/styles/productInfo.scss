@@ -1,0 +1,159 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './breadcrumb.scss' ;
+@import '../../utilities/styles/productSlider.scss' ;
+#info{
+    width: 90%;
+    height: auto;
+    margin: $dist3 auto 0 auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    #productInfo{
+        width: 100%;
+        margin-top: $dist1;
+        display: flex;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .details{
+            width: 100%;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            .row{
+                width: 100%;
+                height: auto;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;     
+                &:not(:first-child){
+                    margin-top: $dist3;
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid lighten($textGrey,20%);
+                    padding-bottom: $dist3 ;
+                }
+                > * {
+                    &:not(:first-child){
+                        margin-top: $dist1;
+                    }
+                }
+                .available{
+                    cursor: auto;
+                    color: $textWhite;
+                    background-color: $greenColor1;
+                }
+                .notAvailable{
+                    cursor: auto;
+                    color: $textWhite;
+                    background-color: lighten($redColor2,5%);
+                }
+                .name{
+                    font-size: $fontM + .2em;
+                    color: $textDark;
+                }
+                .discountWrapper{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    .beforeDiscount{
+                        font-size: $fontM;
+                        color: lighten($textGrey,15%);
+                        text-decoration: line-through;
+                    }
+                    .discount{
+                        width: auto;
+                        height: auto;
+                        border-radius: $dist1;
+                        color: $textWhite;
+                        background-color: lighten($primaryColor,10%);
+                        font-size: $fontS;
+                        padding: .3em $dist1;
+                        margin-right: $dist3;
+                    }
+                }
+                .finalPrice{
+                    font-size: $fontM + .2em;
+                    color: $textDark;
+                }
+                .score{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    .stars{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        i{
+                            font-size: $fontM;
+                            color: lighten($textGrey,20%);
+                            &:not(:first-child){
+                                margin-right: .3em;
+                            }
+                        }
+                        i.active{
+                            color: lighten($primaryColor,10%);
+                        }
+                    }
+                    p{
+                        margin-right: .6em;
+                        font-size: $fontM - .15em;
+                        color: $textGrey;
+                        transform: translateY(.1em);
+                    }
+                }
+                .desc{
+                    width: 100%;
+                    height: auto;
+                    font-size: $fontM;
+                    color: $textGrey;
+                    line-height: $dist2 + .5em;
+                }
+                &:last-child{
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    .addToBasket{
+                        @include pulse($greenColor1) ;
+                        @include swapColor($textWhite,$greenColor1) ;
+                        margin-right: $dist2;
+                        margin-top: -.1em;
+                    }
+                }
+            }
+        }
+        .productSlider{
+            flex-shrink: 0;
+            width: 35em;
+            margin-right: $dist3;
+        }
+    }
+}
+@include resizeTablet('#info') ;
+@include resizeMobile('#info') ;
+@include mediaQ(530px){
+    #info{
+        #productInfo{
+            @include flex(column,flex-start,center,nowrap,"") ;
+            .productSlider{
+                width: 45em;
+                margin-right: 0;
+                margin-top: $dist3;
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #info{
+        width: 95%;
+    }
+}
+@include mediaQ(380px){
+    #info{
+        #productInfo{
+            .productSlider{
+                width: 100%;
+            }
+        }
+    }
+}

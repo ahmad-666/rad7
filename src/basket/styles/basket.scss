@@ -26,6 +26,22 @@ form#basket{
             color: $textDark;
         }
     }
+    .slide#stage1{
+        .row{
+            display: flex;
+            @include flex(row,flex-end,flex-start,nowrap,"") ;
+            p{
+                &:first-child{
+                    font-size: $fontL;
+                    color: $primaryColor;
+                }
+                &:last-child{
+                    font-size: $fontL;
+                    color: lighten($redColor2,5%);
+                }
+            }
+        }
+    }
 }
 @include resizeTablet('#timelineWrapper') ;
 @include resizeMobile('#timelineWrapper') ;

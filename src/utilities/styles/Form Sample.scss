@@ -109,7 +109,13 @@ form#sample {
             @include flex(row, flex-start, center, nowrap, "");
             color: lighten($textGrey, 20%);
             transition: all .2s linear;
-
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             .icon {
                 font-size: $fontM;
             }
@@ -303,7 +309,13 @@ form#sample {
             bottom: 50%;
             transform: translateY(50%);
             transition: all .2s linear;
-
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             .icon {
                 font-size: $fontM;
             }
@@ -503,7 +515,13 @@ form#sample {
             bottom: 50%;
             transform: translateY(50%);
             transition: all .2s linear;
-
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             .icon {
                 font-size: $fontM;
             }
@@ -1054,6 +1072,13 @@ form#sample {
             @include flex(row, flex-start, center, nowrap, "");
             transition: all .2s linear;
             color: lighten($textGrey,20%);
+            .isRequire{
+                width: auto;
+                height: auto;
+                color: lighten($redColor2, 0%);
+                font-size: $fontS - .1em; 
+                padding-left: .3em;
+            }
             i {
                 font-size: $fontM;
             }

@@ -1,0 +1,240 @@
+<nav>
+	<ul class="desktop">
+		<li>
+			<a href="#!">مورد۱</a>
+		</li>
+		<li class="withIcon">
+			<a href="#!">
+				<i class="fas fa-home"></i>
+				<p>مورد۲</p>
+			</a>
+		</li>
+		<li class="dropdownTrigger withSmallMenu">
+			<a href="#!">
+				<p>مورد۳</p>
+				<i class="fas fa-angle-down"></i>
+			</a>
+			<ul class="dropdown fadeIn shadowBellow">
+				<li>
+					<a href="#!">محصول ۱</a>
+				</li>
+				<li>
+					<a href="#!">محصول ۲</a>
+				</li>
+				<li>
+					<a href="#!">محصول ۳</a>
+				</li>
+				<li>
+					<a href="#!">محصول ۴</a>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdownTrigger withBigMenu">
+			<a href="#!">
+				<p>مورد۴</p>
+				<i class="fas fa-angle-down"></i>
+			</a>
+			<div class="dropdown fadeIn center-x shadowBellow">
+				<div class="menu">
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+					<div class="col">
+						<h4>عنوان۱</h4>
+						<div class="items">
+							<a href="#!" class="item">مورد۱</a>
+							<a href="#!" class="item">مورد۲</a>
+							<a href="#!" class="item">مورد۳</a>
+							<a href="#!" class="item">مورد۴</a>
+							<a href="#!" class="item">مورد۵</a>
+						</div>
+					</div>
+				</div>
+				<img src="./assets/imgs/img1.jpg" alt="imgAlt">
+			</div>
+		</li>
+		<li class="logo">
+			<a href="#!">
+				<p>اسم سایت</p>
+				<img src="./assets/imgs/img2.jpg" alt="logoImg">
+			</a>
+		</li>
+		<li class="bars">
+			<i class="fas fa-bars"></i>
+			<ul class="mobile shadowBlurL fadeIn">
+				<li class="logo">
+					<a href="#!">
+						<img src="./assets/imgs/img1.jpg" alt="logoImg">
+						<p>نام سایت</p>
+					</a>
+				</li>
+				<li>
+					<a href="#!">مورد۱</a>
+				</li>
+				<li class="withIcon">
+					<a href="#!">
+						<i class="fas fa-home"></i>
+						<p>مورد ۲</p>
+					</a>
+				</li>
+				<li class="withCollapse">
+					<div class="collapseTrigger">
+						<p>مورد۳</p>
+						<i class="fas fa-angle-down"></i>
+					</div>
+					<div class="collapse">
+						<a href="#!">مورد۱</a>
+						<a href="#!">مورد۲</a>
+						<a href="#!">مورد۳</a>
+						<a href="#!">مورد۴</a>
+					</div>
+				</li>
+				<li class="withIcon fullScreen">
+					<div href="#!" class="fullScreenTrigger" data-target="fs1">
+						<p>مورد ۴</p>
+						<i class="fas fa-angle-left"></i>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<div class="fullScreenMenu" id="fs1">
+	<i class="fas fa-times close"></i>
+	<div class="cols">
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!"> 
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+				مورد
+			</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+		<div class="col">
+			<h4>عنوان</h4>
+			<a href="#!">مورد ۱</a>
+			<a href="#!">مورد ۲</a>
+			<a href="#!">مورد ۳</a>
+			<a href="#!">مورد ۴</a>
+			<a href="#!">مورد ۵</a>
+		</div>
+	</div>
+	<img src="./assets/imgs/img1.jpg" alt="imgAlt">
+</div>
+<script src="./fontfaceobserver/fontfaceobserver.js"></script>
+<script src="./collapse.js"></script>

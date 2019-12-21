@@ -300,7 +300,7 @@ NumberInput.prototype.justNumber = function(e){
 //input with increase/decrease---------------------
 //input with increase/decrease---------------------
 //input with increase/decrease---------------------
-function NumberHandler(wrapper){
+function NumberHandler(wrapper,initVal,changeElm,append){
     this.wrapper = wrapper ;
     this.increase = this.wrapper.querySelector('.increase') ;
     this.decrease = this.wrapper.querySelector('.decrease') ;
@@ -310,14 +310,20 @@ function NumberHandler(wrapper){
     this.step = parseFloat(this.input.getAttribute('data-step')) ;
     this.increase.addEventListener('click',this.add.bind(this)) ;
     this.decrease.addEventListener('click',this.minus.bind(this)) ;
+    this.initVal = initVal ;
+    this.changeElm = changeElm ;
+    this.append = append ;
+    if(this.changeElm) this.changeElm.textContent = `${this.input.value*this.initVal} ${this.append}` ;  
 }
 NumberHandler.prototype.add = function(e){
     let val = parseFloat(this.input.value) ;
     this.input.value = val+this.step<=this.max?val+this.step:val ;
+    if(this.changeElm) this.changeElm.textContent = `${this.input.value*this.initVal} ${this.append}` ;  
 }
 NumberHandler.prototype.minus = function(e){
     let val = parseFloat(this.input.value) ;
     this.input.value = val-this.step>=this.min?val-this.step:val ;
+    if(this.changeElm) this.changeElm.textContent = `${this.input.value*this.initVal} ${this.append}` ;
 }
 //textarea autoExpand-------------------------
 //textarea autoExpand-------------------------

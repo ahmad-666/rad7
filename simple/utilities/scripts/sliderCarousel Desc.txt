@@ -1,0 +1,27 @@
+<div id="discounts" class="sliderCarousel scrollArrows containerStyle">
+	<h4>تخفیف ها</h4>
+	<div class="helper">
+		<button class="btn prev center-y">
+			<i class="fas fa-angle-right center-xy"></i>
+		</button>
+		<button class="btn next center-y">
+			<i class="fas fa-angle-left center-xy"></i>
+		</button>
+		<div class="slides" style="right:0px">
+			<a href="#!" class="slide"></a>    
+			<a href="#!" class="slide"></a>    
+			<a href="#!" class="slide"></a>    
+			<a href="#!" class="slide"></a>    
+			<a href="#!" class="slide"></a>    
+		</div>
+	</div> 
+	<a href="products.html" class="show_more">
+		نمایش همه
+		<i class="fas fa-angle-double-left"></i>
+	</a>
+	<div class="arrows">
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+	</div>
+</div>

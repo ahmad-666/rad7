@@ -1,0 +1,354 @@
+@import '../../colors.scss' ;
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+form#basket{
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    padding: $dist2;
+    h4{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $textDark;
+    }
+    table{
+        width: 100%;
+        height: auto;
+        margin-top: $dist1;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        thead,tbody{
+            width: 100%;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            tr{
+                width: 100%;
+                height: auto;
+                padding: $dist2;
+                display: flex;
+                background: transparent;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                th,td{
+                    font-size: 10px;
+                    height: auto;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    &:not(:first-child){margin-right: $dist2;}
+                    h6{
+                        width: 100%;
+                        text-align: center;
+                        font-size: $fontM + .2em;
+                        font-weight: 700;
+                        color: $textDark;
+                    }
+                }
+                th.prodName,td.prodName{width: 100%;}
+                th.prodQuantity,td.prodQuantity{
+                    flex-shrink: 0;
+                    width: 10em;
+                }
+                th.prodPrice,td.prodPrice{width: 50%;}
+                th.prodRemove,td.prodRemove{
+                    flex-shrink: 0;
+                    width: 5em;
+                }
+                th.prodName{
+                    h6{width: auto;}
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    .inputWrapper.text {
+                        width: 20em;
+                        height: 4em;
+                        position: relative;
+                        // margin: 0 auto;
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            line-height: 4em;
+                            padding: 0 $dist1;
+                            font-size: $fontM;
+                            color: $darkColor;
+                            transition: all .2s linear;
+                            &::placeholder {
+                                color: $textGrey;
+                                font-size: .8em;
+                            }
+                        }
+                        input.style1 {
+                            border: none;
+                            border-bottom: 1.2px solid lighten($textGrey, 25%);   
+                            &:focus {
+                                ~label {
+                                    color: $primaryColor;
+                                    font-size: 8px;
+                                    bottom: calc(100% + .5em);
+                                    transform: translateY(50%);
+                                    right: 0;
+                                }
+                
+                                ~.line {
+                                    width: 100%;
+                                }
+                            }
+                        }            
+                        input.style2 {
+                            border: 1.2px solid lighten($textGrey, 25%);
+                            border-radius: $dist3;        
+                            &:focus {
+                                border: 1.2px solid $primaryColor;        
+                                ~label {
+                                    color: $primaryColor;
+                                    font-size: 8px;
+                                    bottom: calc(100% + 1.5em);
+                                    transform: translateY(50%);
+                                    right: $dist1;
+                                }         
+                                ~.line {
+                                    width: 0%;
+                                }
+                            }
+                        }       
+                        input.style1.error {
+                            border-bottom: 1.2px solid lighten($redColor2, 5%);   
+                            ~label {color: lighten($redColor2, 5%);}      
+                            ~.line {background-color: lighten($redColor2, 5%);}
+                        }
+                        input.style2.error {
+                            border: 1.2px solid lighten($redColor2, 5%);   
+                            ~label {color: lighten($redColor2, 5%);}
+                        } 
+                        label {
+                            width: auto;
+                            height: auto;
+                            position: absolute;
+                            right: $dist1;
+                            bottom: 50%;
+                            transform: translateY(50%);
+                            display: flex;
+                            @include flex(row, flex-start, center, nowrap, "");
+                            color: lighten($textGrey, 20%);
+                            transition: all .2s linear;         
+                            .icon {font-size: $fontM;} 
+                            p {
+                                font-size: $fontM - .1em;
+                                transform: translateX(-.3em);
+                            }
+                        }      
+                        input.style1 {
+                            ~label.top {
+                                font-size: 8px;
+                                bottom: calc(100% + .5em);
+                                transform: translateY(50%);
+                                right: 0;
+                            }
+                        }            
+                        input.style2 {
+                            ~label.top {
+                                font-size: 8px;
+                                bottom: calc(100% + 1.5em);
+                                transform: translateY(50%);
+                                right: $dist1;
+                            }
+                        }       
+                        .line {
+                            width: 0%;
+                            height: 1.2px;
+                            background-color: $primaryColor;
+                            position: absolute;
+                            right: 0;
+                            top: calc(100% - 1px);
+                            transition: all .2s linear;
+                        }      
+                        .msg {
+                            width: auto;
+                            height: auto;
+                            border-radius: $dist3;
+                            padding: $dist1 $dist2;
+                            position: relative;
+                            background-color: lighten($redColor2, 5%);
+                            position: absolute;
+                            right: 0;
+                            top: 115%;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .2s linear;     
+                            p {
+                                color: $whiteColor2;
+                                font-size: $fontM - .2em;
+                            }   
+                            i {
+                                font-size: $fontXL;
+                                color: lighten($redColor2, 5%);
+                                position: absolute;
+                                right: $dist2;
+                                top: calc(0% - .6em);
+                            }
+                        }        
+                        .msg.show {
+                            opacity: 1;
+                            visibility: visible;
+                            z-index: 2;
+                        }
+                    }             
+                }
+                td.prodName{@include flex(row,flex-start,center,nowrap,"") ;}
+            }
+        }
+        thead{
+            tr{border-bottom: 1px solid $textGrey;}
+        }
+        tbody{
+            tr{
+                transition: background-color .3s linear;
+                background-color: transparent;
+                &:not(:last-child){border-bottom: 1px solid $textGrey;}
+                &:hover{
+                    background-color: lighten($textGrey,30%);
+                }
+                td.prodName{
+                    a{
+                        width: auto;
+                        height: auto;
+                        img{
+                            width: 6em;
+                            height: 6em;
+                            border-radius: 50%;
+                        }
+                    }
+                    .info{
+                        width: auto;
+                        height: auto;
+                        margin-right: $dist1;
+                        display: flex;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                        p{
+                            font-size: $fontM;
+                            color: $textGrey;
+                        }
+                    }
+                }
+                td.prodQuantity{
+                    .inputWrapper.numberHandler {
+                        position: relative;
+                        right: 50%;
+                        transform: translateX(50%);
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row, space-around, center, nowrap, ""); 
+                        .increase,.decrease,input {
+                            margin-right: .3em;
+                            &:first-child {margin-right: 0;}
+                        }         
+                        .increase,.decrease {
+                            font-size: $fontS + .1em;
+                            cursor: pointer;
+                            color: lighten($darkColor, 5%);
+                        }   
+                        input {
+                            width: 2em;
+                            height: 2em;
+                            text-align: center;
+                            line-height: 2em;
+                            color: $darkColor;
+                            font-size: $fontM;
+                            border: 1.2px solid lighten($textGrey, 20%);     
+                        }   
+                        input.error {border: 1.2px solid lighten($redColor2, 5%);}
+                    }
+                }
+                td.prodPrice{
+                    p{
+                        color: $textGrey;
+                        &:nth-child(1){font-size: $fontM ;}
+                        &:nth-child(2){font-size: $fontM - .2em;}
+                        &:not(:first-child){margin-top: $dist1;}
+                    }
+                }
+                td.prodRemove{
+                    text-align: center;
+                    .removeRow{
+                        cursor: pointer;
+                        transition: all .2s linear;
+                        color: $textGrey;
+                        position: relative;
+                        right: 50%;
+                        transform: translateX(50%);
+                        &::before{font-size: $fontL ;}
+                        &:hover{color: lighten($redColor2,5%);}
+                    }                 
+                }
+            }
+            tr.hide{
+                display: none ;
+                animation: hideRow .3s linear forwards ;
+                @keyframes hideRow {
+                    0%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    100%{           
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+            }
+            tr.show{
+                display: flex ;
+                animation: showRow .3s linear forwards ;
+                @keyframes showRow {
+                    0%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    table ~ .row{
+        width: 100%;
+        height: auto;
+        margin-top: $dist3;
+        display: flex;
+        @include flex(row,space-between,center,nowrap,"") ;
+        #totalPrice{
+            width: auto;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            p{
+                &:nth-child(1){
+                    font-weight: 700;
+                    color: $textGrey;
+                    font-size: $fontM;
+                }
+                &:nth-child(2){
+                    font-size: $fontM + .2em;
+                    color: $textDark;
+                }
+            }
+        }
+        button{
+            font-size: $fontM;
+            @include swapColor(white,$primaryColor) ;
+            margin-right: $dist2;
+        }
+    }
+}
+@include resizeTablet('form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td') ;
+@include resizeMobile('form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td') ;
+@include mediaQ(550px){
+    form#basket{padding: .3em;}
+}
+@include mediaQ(330px){
+    form#basket table thead tr th, 
+    form#basket table thead tr td, 
+    form#basket table tbody tr th, 
+    form#basket table tbody tr td{
+        font-size: 4px;
+    }
+
+}

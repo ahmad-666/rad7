@@ -1,0 +1,489 @@
+@import './variables.scss' ;
+@import './colors.scss' ;
+@import './mixins.scss' ;
+//visual effects -----------------------------------------
+//visual effects -----------------------------------------
+//visual effects -----------------------------------------
+.shadowS{box-shadow: 0 0 1em .05em rgba(175,175,175,.5);}
+.shadowL{box-shadow: 0 0 1.5em .1em rgba(135,135,135,.5);}
+.shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
+.shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
+.shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
+.shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
+.containerStyle{
+    width: 90% ;
+    height: auto;
+    margin: $sectionsDist auto 0 auto ;
+    padding: $dist2  ;
+    background-color: $bgColor ;
+    box-shadow: 0 0 1em .01em $shadowColor ;
+    border-radius: $dist2 ;
+    // overflow: hidden;
+}
+.zoom{
+    // <div class="img zoom">
+    //     <img src="../assets/imgs/article1.jpg" alt="articleImg">     
+    // </div>
+    cursor: pointer;
+    border-radius: $dist2 ;
+    overflow: hidden;
+    img{
+        width: 100% ;
+        height: 100%;
+        object-fit: cover ;
+        transition: all .3s linear ;
+    }
+    &:hover{
+        img{transform: scale(1.2) ;}    
+    }
+}
+.pulse{
+    position: relative ;
+    &::before,&::after{
+        content: '' ;
+        width: 100% ;
+        height: 100%;
+        position: absolute ;
+        top: 50% ;
+        right: 50% ;
+        transform: translate(50%,-50%) scale(1) ;
+        border-radius: $dist3 ;
+        background-color: transparent ;
+        border: 1.2px solid $primaryColor ;
+        opacity: 0;
+    }
+    &:hover {
+        &::before,&::after{animation: pulse .5s linear 1 forwards ;}
+        &::before{animation-delay: 0s ;}
+        &::after{animation-delay: .3s ;}
+    }  
+    @keyframes pulse {
+        from{opacity: 1;}
+        to{
+            opacity: 0;
+            transform: translate(50%,-50%) scale(1.5) ;
+        }
+    }
+}
+.blurS{filter: blur(1px);}
+.blurM{filter: blur(3px);}
+.blurL{filter: blur(5px);}
+.blurXL{filter: blur(10px);}
+.btn{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    border-radius: $dist3;
+}
+.btn.small{
+    font-size: $fontM;
+    padding: .3em $dist2 + .2em;
+}
+.btn.mid{
+    font-size: $fontM + .3em;
+    padding: .4em $dist2 + .3em;
+}
+.btn.large{
+    font-size: $fontL;
+    padding: .5em $dist2 + .5em;
+}
+.fadeIn{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s linear;
+}
+.fadeIn.show{
+    opacity: 1;
+    visibility: visible;
+}
+.fadeOut{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s linear;
+}
+.fadeOut.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.underline{
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $textGrey;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 100%;
+    }
+}
+.underlineHover{
+    //we need both .underline and .underlineHover
+    &::before{
+        transition: all .2s linear;
+        width: 0;
+    }
+    &:hover{
+        &::before{
+            width: 100% ;
+        }
+    }
+}
+.pushpin.fix{
+	position: fixed; 
+	top: 0;
+	right: 0;
+	z-index: 11;
+}
+.scrollSpyWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ; 
+}
+ul.scrollSpyList{
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;    
+    li{
+        width: auto;
+        height: auto;
+        &:not(:first-child){margin-top: $dist2;}
+        font-size: $fontM;
+        color: $textDark;
+        transition: all .2s linear;
+        cursor: pointer;
+        &:hover{
+            color: lighten($primaryColor,10%);
+        }
+    }
+    li.active{
+        font-weight: 700;
+        color: $primaryColor;
+    }
+}
+ul.scrollSpyList.fix{
+    position: fixed; 
+    top: $dist2;
+    right: $dist2;
+}
+.scrollSpyElms{
+    width: 100%;
+    height: auto;
+    margin: 0 $dist3;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    .scrollSpy{
+        width: 100%;
+        height: auto;
+        // &:nth-child(1){background-color: cornflowerblue;}
+        // &:nth-child(2){background-color: crimson;}
+        // &:nth-child(3){background-color: teal;}
+        // &:nth-child(4){background-color: cyan;}
+    }
+}
+.scrollFade{opacity: 0;visibility: hidden;}
+.scrollFade.fade{opacity: 1;visibility: visible ;}
+.scrollFadeMove{opacity: 0;visibility: hidden;}
+.scrollFadeMove.fade{opacity: 1;visibility: visible;}
+.blockReveal{
+    display: inline-block;
+    padding: $dist2;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .3s linear;
+    opacity: 0;
+    .block{
+        width: 100%;
+        height: 100%;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+// <div class="blockReveal" data-reveal="right">
+//     <p>this is some text</p>
+//     <!-- can be <img> or <p> or any other elements -->
+//     <!-- <div class="block" data-color="crimson"></div> -->
+//     <div class="block" data-gradient="linear-gradient(to right, #6bd1bb, #44c7c5, #0bbccf, #00b0d7, #00a2da, #219ce1, #4195e6, #608ce7, #7f89ef, #a083f3, #c27af1, #e26fea)"></div>
+// </div>
+.blockReveal.show{
+    opacity: 1;
+    visibility: visible;
+}
+.blockReveal[data-reveal="right"]{
+    .block{
+        transform-origin: right center;
+        transform: scaleX(1);
+    }
+    .block.hide{transform: scaleX(0);}
+}
+.blockReveal[data-reveal="left"]{
+    .block{
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+    .block.hide{transform: scaleX(0);}
+}
+.blockReveal[data-reveal="top"]{
+    .block{
+        transform-origin: center bottom;
+        transform: scaleY(1);
+    }
+    .block.hide{transform: scaleY(0);}
+}
+.blockReveal[data-reveal="bottom"]{
+    .block{
+        transform-origin: center top;
+        transform: scaleY(1);
+    }
+    .block.hide{transform: scaleY(0);}
+}
+.blockReveal2{
+    display: inline-block;
+    padding: $dist2;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    p{
+        font-weight: 700;
+        font-size: $fontXL;
+        color: $textDark;
+    }
+    .content{
+        opacity: 0;
+        transition: opacity 0s linear;
+    }
+    .content.show{opacity: 1;}
+    .block{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+// <div class="blockReveal2" data-reveal="right">
+//     <p class="content">this is some text</p>
+//     <!-- can be <img> or <p> or any other elements -->
+//     <!-- <div class="block" data-color="crimson"></div> -->
+//     <div class="block" data-color="linear-gradient(to right, #6bd1bb, #44c7c5, #0bbccf, #00b0d7, #00a2da, #219ce1, #4195e6, #608ce7, #7f89ef, #a083f3, #c27af1, #e26fea)"></div>
+// </div>
+.blockReveal2[data-reveal="right"]{
+    .block{
+        animation: blockReveal2Right ease-in-out forwards ;
+        @keyframes blockReveal2Right {
+            0%{
+                transform-origin: right center;
+                transform: scaleX(0);
+            }
+            50%{
+                transform: scaleX(1);
+                transform-origin: right center;
+            }
+            50.0001%{
+                transform-origin: left center;
+            }
+            100%{
+                transform: scaleX(0);
+                transform-origin: left center;
+            }
+        }
+    }
+}
+.blockReveal2[data-reveal="left"]{
+    .block{
+        animation: blockReveal2Left ease-in-out forwards ;
+        @keyframes blockReveal2Left {
+            0%{
+                transform-origin: left center;
+                transform: scaleX(0);
+            }
+            50%{
+                transform: scaleX(1);
+                transform-origin: left center;
+            }
+            50.0001%{
+                transform-origin: right center;
+            }
+            100%{
+                transform: scaleX(0);
+                transform-origin: right center;
+            }
+        }
+    }
+}
+.blockReveal2[data-reveal="top"]{
+    .block{
+        animation: blockReveal2Top ease-in-out forwards ;
+        @keyframes blockReveal2Top {
+            0%{
+                transform-origin: center bottom;
+                transform: scaleY(0);
+            }
+            50%{
+                transform: scaleY(1);
+                transform-origin: center bottom;
+            }
+            50.0001%{
+                transform-origin: center top;
+            }
+            100%{
+                transform: scaleY(0);
+                transform-origin: center top;
+            }
+        }
+    }
+}
+.blockReveal2[data-reveal="bottom"]{
+    .block{
+        animation: blockReveal2Bottom ease-in-out forwards ;
+        @keyframes blockReveal2Bottom {
+            0%{
+                transform-origin: center top;
+                transform: scaleY(0);
+            }
+            50%{
+                transform: scaleY(1);
+                transform-origin: center top;
+            }
+            50.0001%{
+                transform-origin: center bottom;
+            }
+            100%{
+                transform: scaleY(0);
+                transform-origin: center bottom;
+            }
+        }
+    }
+}
+//text effects--------------------------------------------
+//text effects--------------------------------------------
+//text effects--------------------------------------------
+.ellipse{
+    white-space: nowrap ;
+    overflow: hidden;
+    text-overflow: ellipsis ;
+}
+//size and pos--------------------------------------------
+//size and pos--------------------------------------------
+//size and pos--------------------------------------------
+.fullSize{
+    width: 100% ;
+    height: 100%;
+}
+.fullSize-abs{
+    width: 100% ;
+    height: 100%;
+    top: 0 ;
+    right: 0 ;
+    position: absolute ;
+}
+.center-x{
+    position: absolute ;
+    right: 50% ;
+    transform: translateX(50%) ;
+}
+.center-y{
+    position: absolute ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+}
+.center-xy{
+    position: absolute ;
+    top: 50% ;
+    right: 50% ;
+    transform: translate(50%,-50%) ;
+}
+//scroll arrows-------------------------------------------
+//scroll arrows-------------------------------------------
+//scroll arrows-------------------------------------------
+.scrollArrows{
+    position: relative;
+    .arrows{
+        display: none ;
+        width: auto ;
+        height: auto;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        position: absolute ;
+        left: 0;
+        bottom: 100% ;
+        i{
+            font-size: $fontL ;
+            color: $primaryColor ;
+            margin-right: .3em ;
+            animation: arrowAnime .6s linear infinite alternate ;
+            &:nth-child(1){animation-delay: 0 ;}
+            &:nth-child(2){animation-delay: .3s ;}
+            &:nth-child(3){animation-delay: .6s ;      
+            }         
+        }
+        @keyframes arrowAnime {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }     
+    }
+    .arrows.show{display: flex ;}
+}
+//others-------------------------------------------
+//others-------------------------------------------
+//others-------------------------------------------
+@include hiddenShow('.modal') ;
+.collapseTrigger{cursor: pointer;}
+// we should not use height:auto .collapse again in other files
+.collapse{height: auto;}
+.collapse.close{
+    opacity: 0;
+    visibility: hidden ;
+    height: 0;
+}
+.collapse.addTransition{transition: all .15s linear ;}
+.collapse.open{
+    opacity: 1;
+    visibility: visible ;
+}
+.dropdownTrigger{
+    // <li class="dropdownTrigger">
+    //     <p>حساب من</p>
+    //     <i class="fas fa-anlge-down"></i>
+    //     <ul class="dropdown">
+    //         <li>
+    //             <a href="login.html">ورود</a>
+    //         </li>
+    //         <li>
+    //             <a href="signup.html">ساخت حساب کاربری</a>
+    //         </li>
+    //     </ul>
+    // </li>
+    position: relative ;
+    &:hover{
+        .dropdown{
+            visibility: visible;
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    .dropdown{
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s linear;
+        position: absolute ;
+        top: 105%;
+        right: 0;
+    }
+    .dropdown.show{
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+

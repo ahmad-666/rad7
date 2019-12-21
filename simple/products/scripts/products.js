@@ -1,0 +1,2 @@
+//import Form from '../../utilities/scripts/form.js' ;
+document.querySelectorAll('#productsWrapper .productsWrapper .products .separate3Num').forEach(separate3Num=>new Separate3Num(separate3Num,',','تومان')) ;

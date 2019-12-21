@@ -1,0 +1,31 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#guide{
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $textDark;
+    }
+    .desc{
+        width: 100%;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        p{
+            font-size: $fontM ;
+            color: $textGrey ;
+            line-height: $dist2 + 1em;
+        }
+    }
+}
+@include resizeTablet('#guide') ;
+@include resizeMobile('#guide') ;
+@include mediaQ(450px){
+    #guide{
+        width: 95%;
+    }
+}

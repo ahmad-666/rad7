@@ -1,0 +1,169 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#suggestions{
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL;
+        color: $textDark;
+        font-weight: 700;
+    }
+    .products{
+        width: 100%;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        .product{
+            width: calc((100% - (3 * 4em)) / 3);
+            height: 22em;
+            margin: $dist2 + .5em ;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            position: relative;
+            box-shadow: 0 .5em 1.5em -.5em rgba(60,60,60,.5) ;
+            transition: all .4s linear;
+            &:hover{
+                z-index: 1;
+                transform: translateY(-1.5em);
+                box-shadow: 0 1.2em 2em -0em rgba(60,60,60,.3) ;
+                .bar{
+                    i{
+                        color: lighten($primaryColor,15%);
+                        background-color: white;
+                    }
+                }
+            }
+            .right,.left{
+                width: 50%;
+                height: 100%;
+            }
+            .left{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .right{
+                background-color: lighten($textGrey,37%);
+                padding: $dist2 $dist1;
+                display: flex;
+                @include flex(column,space-between,center,nowrap,"") ;
+                .name{
+                    font-size: $fontM - .2em;
+                    color: $textDark;
+                }
+                .price{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(column,flex-start,center,nowrap,"") ;
+                    .discountWrapper{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        .beforeDiscount{
+                            color: lighten($textGrey,20%);
+                            font-size: $fontM - .2em;
+                            text-decoration: line-through;
+                        }
+                        .discount{
+                            width: auto;
+                            height: auto;
+                            padding: .3em $dist1;
+                            border-radius: $dist1;
+                            font-size: $fontS - .2em;
+                            color: white;
+                            background-color: lighten($primaryColor,15%);
+                            margin-right: $dist1;
+                        }
+                    }
+                    .finalPrice{
+                        font-size: $fontM - .2em;
+                        color: $textDark;
+                        margin-top: $dist1;
+                    }
+                }
+                .scores{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"");
+                    .stars{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        i{
+                            font-size: $fontS;
+                            color: lighten($textGrey,10%);
+                            margin-right: .1em;
+                        }
+                        i.active{color: lighten($primaryColor,20%);}
+                    }
+                    p{
+                        font-size: $fontS;
+                        color: $textGrey;
+                        margin-right: .3em;
+                        margin-top: .1em;
+                    }
+                }
+            }
+            .bar{
+                top: 0;
+                width: auto;
+                height: 100%;
+                display: flex;
+                padding: $dist2 0;
+                @include flex(column,space-between,center,nowrap,"") ;
+                i{
+                    width: 2.75em;
+                    height: 2.75em;
+                    border-radius: 50%;
+                    color: white;
+                    background-color: lighten($primaryColor,15%);
+                    transition: all .4s linear;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        right: 50%;
+                        transform: translate(50%,-50%);
+                        font-size: $fontM - .2em;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@include mediaQ(1100px){
+    #suggestions{
+        .products{
+            .product{
+                width: calc((100% - (2 * 4em)) / 2);
+                height: 22em;
+            }
+        }
+        
+    }
+}
+@include resizeTablet('#suggestions') ;
+@include resizeMobile('#suggestions') ;
+@include mediaQ(500px){
+    #suggestions{
+        .products{
+            .product{
+                width: 95%;
+                height: 22em;
+            }
+        }
+        
+    }
+}
+@include mediaQ(450px){
+    #suggestion{width: 95%;}
+}

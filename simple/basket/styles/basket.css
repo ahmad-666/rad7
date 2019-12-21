@@ -1,0 +1,1316 @@
+#timelineWrapper {
+  height: auto;
+  margin: 3em auto;
+  padding: 1.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#timelineWrapper #timeline {
+  width: 90%;
+  height: auto;
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  position: relative;
+}
+
+#timelineWrapper #timeline::before {
+  content: '';
+  width: 100%;
+  height: .3em;
+  background-color: #e0e0e4;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+}
+
+#timelineWrapper #timeline .line {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: .4em;
+  background-color: #00BC9A;
+  right: 0;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#timelineWrapper #timeline .step {
+  position: relative;
+}
+
+#timelineWrapper #timeline .step p {
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 200%;
+  text-align: center;
+  top: -2em;
+  font-size: 1.6em;
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+#timelineWrapper #timeline .step .circle {
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  background-color: white;
+  border: 1.2px solid #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  position: relative;
+}
+
+#timelineWrapper #timeline .step .circle i {
+  opacity: 0;
+  font-size: 2.4em;
+  color: #fbfbfb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+#timelineWrapper #timeline .step.active p {
+  color: #4a4e60;
+  font-weight: 700;
+}
+
+#timelineWrapper #timeline .step.active .circle {
+  border: 1.2px solid transparent;
+  background-color: #00BC9A;
+}
+
+#timelineWrapper #timeline .step.active .circle i {
+  opacity: 1;
+}
+
+#timelineWrapper form#basket {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  overflow: hidden;
+}
+
+#timelineWrapper form#basket #timelineSlider {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  position: relative;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 1.5em 3em 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#timelineWrapper form#basket #timelineSlider .slide h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .content {
+  width: 100%;
+  height: auto;
+  margin-top: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .content p {
+  font-size: 1.6em;
+  color: #5d5d68;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper {
+  width: auto;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  cursor: pointer;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  padding: 0.65em 2.5em;
+  white-space: nowrap;
+  font-size: 1.6em;
+  color: #fbfbfb;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide:nth-child(2) {
+  margin-right: 3em;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide.prev {
+  background-color: #ea6161;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide.prev:hover {
+  border: 1.2px solid #ea6161;
+  color: #ea6161;
+  background-color: #fbfbfb;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide.next {
+  background-color: #00BC9A;
+}
+
+#timelineWrapper form#basket #timelineSlider .slide .btnWrapper .changeSlide.next:hover {
+  border: 1.2px solid #00BC9A;
+  color: #00BC9A;
+  background-color: #fbfbfb;
+}
+
+form#basket {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  padding: 1.5em;
+}
+
+form#basket h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#basket table {
+  width: 100%;
+  height: auto;
+  margin-top: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead, form#basket table tbody {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr, form#basket table tbody tr {
+  width: 100%;
+  height: auto;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td {
+  font-size: 10px;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr th:not(:first-child), form#basket table thead tr td:not(:first-child), form#basket table tbody tr th:not(:first-child), form#basket table tbody tr td:not(:first-child) {
+  margin-right: 1.5em;
+}
+
+form#basket table thead tr th h6, form#basket table thead tr td h6, form#basket table tbody tr th h6, form#basket table tbody tr td h6 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#basket table thead tr th.prodName, form#basket table thead tr td.prodName, form#basket table tbody tr th.prodName, form#basket table tbody tr td.prodName {
+  width: 100%;
+}
+
+form#basket table thead tr th.prodQuantity, form#basket table thead tr td.prodQuantity, form#basket table tbody tr th.prodQuantity, form#basket table tbody tr td.prodQuantity {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 10em;
+}
+
+form#basket table thead tr th.prodPrice, form#basket table thead tr td.prodPrice, form#basket table tbody tr th.prodPrice, form#basket table tbody tr td.prodPrice {
+  width: 50%;
+}
+
+form#basket table thead tr th.prodRemove, form#basket table thead tr td.prodRemove, form#basket table tbody tr th.prodRemove, form#basket table tbody tr td.prodRemove {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 5em;
+}
+
+form#basket table thead tr th.prodName, form#basket table tbody tr th.prodName {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr th.prodName h6, form#basket table tbody tr th.prodName h6 {
+  width: auto;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text, form#basket table tbody tr th.prodName .inputWrapper.text {
+  width: 20em;
+  height: 4em;
+  position: relative;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input, form#basket table tbody tr th.prodName .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input::-webkit-input-placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input:-moz-placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input::-moz-placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input:-ms-input-placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input::-ms-input-placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input::placeholder, form#basket table tbody tr th.prodName .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: .8em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1, form#basket table tbody tr th.prodName .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1:focus ~ label, form#basket table tbody tr th.prodName .inputWrapper.text input.style1:focus ~ label {
+  color: #ef6c00;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1:focus ~ .line, form#basket table tbody tr th.prodName .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2, form#basket table tbody tr th.prodName .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2:focus, form#basket table tbody tr th.prodName .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #ef6c00;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2:focus ~ label, form#basket table tbody tr th.prodName .inputWrapper.text input.style2:focus ~ label {
+  color: #ef6c00;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2:focus ~ .line, form#basket table tbody tr th.prodName .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1.error, form#basket table tbody tr th.prodName .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1.error ~ label, form#basket table tbody tr th.prodName .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1.error ~ .line, form#basket table tbody tr th.prodName .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2.error, form#basket table tbody tr th.prodName .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2.error ~ label, form#basket table tbody tr th.prodName .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text label, form#basket table tbody tr th.prodName .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text label .icon, form#basket table tbody tr th.prodName .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text label p, form#basket table tbody tr th.prodName .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style1 ~ label.top, form#basket table tbody tr th.prodName .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text input.style2 ~ label.top, form#basket table tbody tr th.prodName .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text .line, form#basket table tbody tr th.prodName .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #ef6c00;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text .msg, form#basket table tbody tr th.prodName .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text .msg p, form#basket table tbody tr th.prodName .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text .msg i, form#basket table tbody tr th.prodName .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#basket table thead tr th.prodName .inputWrapper.text .msg.show, form#basket table tbody tr th.prodName .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#basket table thead tr td.prodName, form#basket table tbody tr td.prodName {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr {
+  border-bottom: 1px solid #90909b;
+}
+
+form#basket table tbody tr {
+  -webkit-transition: background-color .3s linear;
+  -moz-transition: background-color .3s linear;
+  transition: background-color .3s linear;
+  background-color: transparent;
+}
+
+form#basket table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #90909b;
+}
+
+form#basket table tbody tr:hover {
+  background-color: #e0e0e4;
+}
+
+form#basket table tbody tr td.prodName a {
+  width: auto;
+  height: auto;
+}
+
+form#basket table tbody tr td.prodName a img {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+}
+
+form#basket table tbody tr td.prodName .info {
+  width: auto;
+  height: auto;
+  margin-right: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table tbody tr td.prodName .info p {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler {
+  position: relative;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .increase, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .decrease, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input {
+  margin-right: .3em;
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .increase:first-child, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .decrease:first-child, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input:first-child {
+  margin-right: 0;
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .increase, form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler .decrease {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #39393e;
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: #2d2d31;
+  font-size: 1.6em;
+  border: 1.2px solid #c6c6cb;
+}
+
+form#basket table tbody tr td.prodQuantity .inputWrapper.numberHandler input.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#basket table tbody tr td.prodPrice p {
+  color: #90909b;
+}
+
+form#basket table tbody tr td.prodPrice p:nth-child(1) {
+  font-size: 1.6em;
+}
+
+form#basket table tbody tr td.prodPrice p:nth-child(2) {
+  font-size: 1.4em;
+}
+
+form#basket table tbody tr td.prodPrice p:not(:first-child) {
+  margin-top: 0.75em;
+}
+
+form#basket table tbody tr td.prodRemove {
+  text-align: center;
+}
+
+form#basket table tbody tr td.prodRemove .removeRow {
+  cursor: pointer;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  color: #90909b;
+  position: relative;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+form#basket table tbody tr td.prodRemove .removeRow::before {
+  font-size: 2em;
+}
+
+form#basket table tbody tr td.prodRemove .removeRow:hover {
+  color: #ea6161;
+}
+
+form#basket table tbody tr.hide {
+  display: none;
+  -webkit-animation: hideRow .3s linear forwards;
+     -moz-animation: hideRow .3s linear forwards;
+          animation: hideRow .3s linear forwards;
+}
+
+@-webkit-keyframes hideRow {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes hideRow {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideRow {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+form#basket table tbody tr.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: showRow .3s linear forwards;
+     -moz-animation: showRow .3s linear forwards;
+          animation: showRow .3s linear forwards;
+}
+
+@-webkit-keyframes showRow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes showRow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes showRow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+form#basket table ~ .row {
+  width: 100%;
+  height: auto;
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table ~ .row #totalPrice {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table ~ .row #totalPrice p:nth-child(1) {
+  font-weight: 700;
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#basket table ~ .row #totalPrice p:nth-child(2) {
+  font-size: 1.8em;
+  color: #2d2d31;
+}
+
+form#basket table ~ .row button {
+  font-size: 1.6em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: white;
+  background-color: #ef6c00;
+  border: 1.2px solid transparent;
+  margin-right: 1.5em;
+}
+
+form#basket table ~ .row button:hover {
+  color: #ef6c00;
+  background-color: white;
+  border: 1.2px solid #ef6c00;
+}
+
+@media screen and (max-width: 950px) {
+  form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  form#basket {
+    padding: .3em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  form#basket table thead tr th,
+  form#basket table thead tr td,
+  form#basket table tbody tr th,
+  form#basket table tbody tr td {
+    font-size: 4px;
+  }
+}
+
+form#basket .slide#stage3 .trackCode {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  background-color: #ff943d;
+  padding: 1.5em 6em;
+}
+
+form#basket .slide#stage3 .trackCode p {
+  color: #fbfbfb;
+  font-size: 1.6em;
+}
+
+form#basket .slide#stage3 .trackCode p:not(:first-child) {
+  margin-top: 1.5em;
+}
+
+form#basket .slide#stage3 .thanks {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-top: 0.75em;
+  color: #2d2d31;
+}
+
+@media screen and (max-width: 950px) {
+  #timelineWrapper {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #timelineWrapper {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #timelineWrapper {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=basket.css.map */

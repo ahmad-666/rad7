@@ -1,0 +1,35 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../utilities/styles/timeline.scss' ;
+@import '../../utilities/styles/table.scss' ;
+form#basket{
+    .slide#stage3{
+        .trackCode{
+            width: auto;
+            height: auto;
+            border-radius: $dist3;
+            display: flex;
+            @include flex(column,flex-start,center,nowrap,"");
+            background-color: lighten($primaryColor,15%);
+            padding: $dist2 $dist4;
+            p{
+                color: $textWhite;
+                font-size: $fontM;
+                &:not(:first-child){margin-top: $dist2;}
+            }
+        }
+        .thanks{
+            font-size: $fontM;
+            font-weight: 700;
+            margin-top: $dist1;
+            color: $textDark;
+        }
+    }
+}
+@include resizeTablet('#timelineWrapper') ;
+@include resizeMobile('#timelineWrapper') ;
+@include mediaQ(450px){
+    #timelineWrapper{width: 95%;}
+}
+

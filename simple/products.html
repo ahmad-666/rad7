@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <meta name='description' content='فروشگاه اینترنتی راد هففتم' />
+        <meta name='keywords' content='rad7, shop, online shopping, chair, desk , راد هفتم , میز , صندلی , فروشگاه' />
+        <meta name='author' content='rad7 devs' />
+        <title>راد هفتم</title>
+        <link rel='icon' href='./assets/icons/logo-48x48.png' type='image/png' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='راد هفتم' />
+        <meta property='og:description' content='فروشگاه اینترنتی راد هفتم' />
+        <meta property='og:site_name' content='rad7' />
+        <meta property='og:url' content='https://rad7.ir/products.html' />
+        <meta property='og:image' content='./assets/icons/logo-512x512.png' type='image/png' />
+        <meta property='og:locale' content='fa_IR' />
+        <meta name='twitter:card' content='summery' />
+        <meta name='twitter:title' content='راد هفتم' />
+        <meta name='twitter:description' content='فروشگاه اینترنتی راد هفتم' />
+        <meta name='twitter:image' content='./assets/icons/logo-512x512.png' type='image/png' />
+        <link rel='manifest' href='./manifest.json' type='application/manifest+json' crossorigin="anonymous"/>
+        <script async src='https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js' integrity='sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc' crossorigin='anonymous'></script>
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black' />
+        <meta name='apple-mobile-web-app-title' content='PWA App' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-48x48.png' sizes='48x48' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-96x96.png' sizes='96x96' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-144x144.png' sizes='144x144' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-192x192.png' sizes='192x192' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-256x256.png' sizes='256x256' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-384x384.png' sizes='384x384' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-512x512.png' sizes='512x512' type='image/png' />
+        <meta name='msapplication-TileImage' content='./assets/icons/logo-144x144.png' />
+        <meta name='msapplication-TileColor' content='#fff' />
+        <meta name='theme-color' content='#ef6c00' />
+        <link rel="stylesheet" href="./libraries/nouislider.min.css">
+        <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
+        <link rel="stylesheet" href="./framework.css">
+        <link rel="stylesheet" href="./init.css">
+        <link rel="stylesheet" href="./utilities/styles/form.css">
+        <link rel="stylesheet" href="./index/styles/header.css">
+        <link rel="stylesheet" href="./products/styles/wrapper.css">
+        <link rel="stylesheet" href="./index/styles/footer.css">
+</head>
+<body class="bg">
+    <header>
+        <div id="topMenu">
+            <div class="right">
+                <a href="login.html" class="login hoverEffect">
+                    <i class="fas fa-user"></i>
+                    <p>ورود/ثبت نام</p>
+                </a>
+                <a href="basket.html" class="withBadge basketHover">
+                    <span class="badge">10</span>
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
+                <form novalidate id="searchForm" name="searchForm" method="GET" action="#!" enctype="text/plain">
+                    <i class="fas fa-search searchToggle"></i>
+                    <div class="inputWrapper withSubmit">
+                        <input type="text" id="search" name="search" class="validate" placeholder="نام کالا" required>
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="msg">
+                            <i class="fas fa-caret-up"></i>
+                            <p>باید مقداری را وارد کنید</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="left">
+                <a href="rules.html" class="hoverEffect">قوانین</a>
+                <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
+                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
+            </div>
+        </div>
+        <nav class="shadowBellow">
+            <ul class="desktop">
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="products.html">
+                        <p>محصول ۱</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="products.html">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="products.html">
+                        <p>محصول ۲</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="products.html">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="products.html">
+                        <p>محصول ۳</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="products.html">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="products.html">
+                        <p>محصول ۴</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="products.html">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="products.html">
+                        <p>محصول ۵</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="products.html">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="products.html">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="logo">
+                    <a href="index.html">
+                        <p>راد هفت</p>
+                        <img src="./assets/icons/logo.png" alt="logoImg">
+                    </a>
+                </li>
+                <li class="bars">
+                    <i class="fas fa-bars"></i>
+                    <ul class="mobile shadowBlurL fadeIn">
+                        <li class="logo">
+                            <a href="index.html">
+                                <img src="./assets/icons/logo.png" alt="logoImg">
+                                <p>راد هفت</p>
+                            </a>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۱</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="products.html">محصول ۱</a>
+                                <a href="products.html">محصول ۲</a>
+                                <a href="products.html">محصول ۳</a>
+                                <a href="products.html">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۲</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="products.html">محصول ۱</a>
+                                <a href="products.html">محصول ۲</a>
+                                <a href="products.html">محصول ۳</a>
+                                <a href="products.html">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۳</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="products.html">محصول ۱</a>
+                                <a href="products.html">محصول ۲</a>
+                                <a href="products.html">محصول ۳</a>
+                                <a href="products.html">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۴</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="products.html">محصول ۱</a>
+                                <a href="products.html">محصول ۲</a>
+                                <a href="products.html">محصول ۳</a>
+                                <a href="products.html">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۵</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="products.html">محصول ۱</a>
+                                <a href="products.html">محصول ۲</a>
+                                <a href="products.html">محصول ۳</a>
+                                <a href="products.html">محصول ۴</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="filterProductsWrapper">
+        <div id="filtersWrapper">
+            <div class="mobileFixFlexFixer">
+                <div class="currFilters">
+                    <div class="top">
+                        <h4>فیلتر های انتخابی</h4>
+                        <button id="clearFilters" class="btn small pulse">پاک کردن همه</button>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+                <form novalidate name="filters" id="filters" method="GET" action="#!" enctype="text/plain">
+                    <div class="filtersWrapper inputWrapper range">
+                        <input type="hidden" class="min">
+                        <input type="hidden" class="max">
+                        <h4>بازه ی قیمت</h4>
+                        <div class="ranger" data-min="0" data-max="10000" data-step="100"></div>
+                        <p class="text"></p>
+                    </div>
+                    <div class="filtersWrapper categories">
+                        <h4>دسته بندی محصولات</h4>
+                        <div class="withCollapse">
+                            <div class="mainCategory">
+                                <div class="inputWrapper checkboxes">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="desk" name="desk" class="style1" value="desk">
+                                        <label for="desk">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>میز </p>
+                                        </label>
+                                    </div>   
+                                </div>
+                                <i class="fas fa-angle-down collapseTrigger"></i>
+                            </div>          
+                            <div class="collapse">
+                                <div class="inputWrapper checkboxes">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk1" name="desk1" class="style1" value="desk1">
+                                        <label for="desk1">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p >میز نوع ۱</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk2" name="desk2" class="style1" value="desk2">
+                                        <label for="desk2">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>میز نوع ۲</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk3" name="desk3" class="style1" value="desk3">
+                                        <label for="desk3">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p >میز نوع ۳</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="desk4" name="desk4" class="style1" value="desk4">
+                                        <label for="desk4">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p >میز نوع ۴</p>
+                                        </label>
+                                    </div>                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="withCollapse">
+                            <div class="mainCategory">
+                                <div class="inputWrapper checkboxes">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="chair" name="chair" class="style1" value="checkbox1">
+                                        <label for="chair">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>صندلی</p>
+                                        </label>
+                                    </div>   
+                                </div>
+                                <i class="fas fa-angle-down collapseTrigger"></i>
+                            </div>          
+                            <div class="collapse">
+                                <div class="inputWrapper checkboxes">
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="chair1" name="chair1" class="style1" value="checkbox1">
+                                        <label for="chair1">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>صندلی نوع ۱</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="chair2" name="chair2" class="style1" value="checkbox1">
+                                        <label for="chair2">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>صندلی نوع ۲</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="chair3" name="chair3" class="style1" value="checkbox1">
+                                        <label for="chair3">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>صندلی نوع ۳</p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox subCategory">
+                                        <input type="checkbox" id="chair4" name="chair4" class="style1" value="checkbox1">
+                                        <label for="chair4">
+                                            <span class="rect">
+                                                <i class="fas fa-check center-xy"></i>
+                                            </span>
+                                            <p>صندلی نوع ۴</p>
+                                        </label>
+                                    </div>                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>    
+        </div>
+        <div id="productsWrapper">
+            <form novalidate name="sort" id="sort" method="GET" action="#!" enctype="text/plain">
+                <div class="inputWrapper select">
+                    <input type="hidden" id="sortHiddenInput" name="sortHiddenInput">
+                    <input type="text" id="sortInput" name="sortInput" class="style2 validate" required readonly>
+                    <label for="sortInput">
+                        <i class="fas fa-sort-amount-up icon"></i>
+                        <p>مرتب سازی بر اساس</p>
+                    </label>
+                    <i class="fas fa-angle-down arrow center-y"></i>
+                    <span class="line"></span>
+                    <ul>
+                        <li data-value="discount">بیشترین تخفیف</li>
+                        <li data-value="new">جدیدترین</li>
+                        <li data-value="minPrice">کمترین قیمت</li>
+                        <li data-value="maxPrice">بیشترین قیمت</li>
+                    </ul>
+                </div>
+            </form>
+            <div class="productsWrapper">
+                <div class="products">
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice separate3Num">12345678</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product1.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="product">
+                        <img src="./assets/imgs/product2.png" alt="productImg">
+                        <div class="info">
+                            <p class="name">نام محصول</p>
+                            <div class="price">
+                                <div class="row">
+                                    <p class="beforeDiscount">1.000.000تومان</p>
+                                    <span class="discountVal">50%</span>
+                                </div>
+                                <p class="finalPrice">500.000تومان</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <button class="showMore">
+                    <i class="fas fa-plus"></i>
+                    <p>محصولات بیشتر</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <div class="shape right"></div>
+            <div class="namad">
+                <a href="#!">
+                    <img src="./assets/icons/namad.png" alt="namadAlt">
+                </a>
+                <a href="#!">
+                    <img src="./assets/icons/namad.png" alt="namadAlt">
+                </a>
+            </div>
+            <div class="shape left"></div>
+        </div>
+        <div class="bottom">
+            <div class="col about">
+                <h4>درباره راد هفت</h4>
+                <a href="about.html">درباره ما</a>
+                <div class="address">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>سیدرضی ۵۷ - پلاک ۲۸۸</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-phone"></i>
+                    <p>051-38670000</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-envelope"></i>
+                    <p>something@gmail.com</p>
+                </div>
+            </div>
+            <div class="col more">
+                <h4>مطالب بیشتر</h4>
+                <a href="rules.html">قوانین</a>
+                <a href="faq.html">سوالات متداول</a>
+                <a href="guide.html">راهنمای خرید</a>
+                <a href="articles.html">وبلاگ</a>
+                <a href="app.html">آموزش نصب اپلیکشین</a>
+            </div>
+            <div class="col contact">
+                <h4>تماس با ما</h4>
+                <a href="report.html">ثبت شکایات</a>
+                <div class="socials">
+                    <p>راد هفت را در شبکه های اجتماعی دنبال کنید</p>
+                    <div class="wrapper">
+                        <a href="#!" class="social">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./libraries/wNumb.min.js"></script>
+    <script src="./libraries/nouislider.min.js"></script>
+    <script src="./libraries/fontfaceobserver.js"></script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./utilities/scripts/collapse.js"></script>
+    <script src="./utilities/scripts/filters.js"></script>
+    <script src="./utilities/scripts/form.js"></script>
+    <script src="./index/scripts/topMenu.js"></script>
+    <script src="./index/scripts/nav.js"></script>
+    <script src="./products/scripts/filters.js"></script>
+    <script src="./products/scripts/products.js"></script>
+    <script src="./products/scripts/ranger.js"></script>
+    <script src="./products/scripts/sort.js"></script>
+</body>
+</html>

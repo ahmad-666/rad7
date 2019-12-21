@@ -1,0 +1,106 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#app{
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $textDark;
+    }
+    .desc{
+        width: 100%;
+        height: auto;
+        margin-top: $dist2;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        .mob,.desktop{
+            width: auto;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            &:not(:first-child){margin-top: $dist2;}
+            h4{
+                font-size: $fontM;
+                color: $textDark;
+                font-weight: 700;
+            }
+            .approach{
+                width: auto;
+                height: auto;
+                &:not(:first-child){margin-top: $dist1;}
+                display: flex;
+                margin-right: $dist3;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                h6{
+                    font-size: $fontM;
+                    color: $textGrey;
+                }
+                .step{
+                    width: auto;
+                    height: auto;
+                    margin-top: $dist1;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    .top{
+                        width: auto;
+                        height: auto;
+                        p{
+                            width: auto;
+                            height: auto;
+                            font-size: $fontM;
+                            color: $textGrey;
+                        }
+                    }
+                    .bottom{
+                        margin-top: $dist1;
+                    }
+                    #mobImg1{
+                        width: 20em;
+                        height: 10em;
+                    }
+                    #mobImg2{
+                        width: 20em;
+                        height: 40em;
+                    }
+                    #mobImg3{
+                        width: 25em;
+                        height: 5em;
+                    }
+                    #desktopImg1{
+                        width: 65em;
+                        height: 5em;
+                    }
+                    #desktopImg2{
+                        width: 20em;
+                        height: 40em;
+                    }
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('#app') ;
+@include resizeMobile('#app') ;
+@include mediaQ(500px){
+    #app{
+        .desc{
+            .mob,.desktop{
+                .approach{
+                    .step{
+                        #desktopImg1{
+                            width: 100%;
+                            height: 5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaQ(450px){
+    #app{
+        width: 95%;
+    }
+}

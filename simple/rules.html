@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <meta name='description' content='فروشگاه اینترنتی راد هففتم' />
+        <meta name='keywords' content='rad7, shop, online shopping, chair, desk , راد هفتم , میز , صندلی , فروشگاه' />
+        <meta name='author' content='rad7 devs' />
+        <title>راد هفتم</title>
+        <link rel='icon' href='./assets/icons/logo-48x48.png' type='image/png' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='راد هفتم' />
+        <meta property='og:description' content='فروشگاه اینترنتی راد هفتم' />
+        <meta property='og:site_name' content='rad7' />
+        <meta property='og:url' content='https://rad7.ir/rules.html' />
+        <meta property='og:image' content='./assets/icons/logo-512x512.png' type='image/png' />
+        <meta property='og:locale' content='fa_IR' />
+        <meta name='twitter:card' content='summery' />
+        <meta name='twitter:title' content='راد هفتم' />
+        <meta name='twitter:description' content='فروشگاه اینترنتی راد هفتم' />
+        <meta name='twitter:image' content='./assets/icons/logo-512x512.png' type='image/png' />
+        <link rel='manifest' href='./manifest.json' type='application/manifest+json' crossorigin="anonymous"/>
+        <script async src='https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js' integrity='sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc' crossorigin='anonymous'></script>
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black' />
+        <meta name='apple-mobile-web-app-title' content='PWA App' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-48x48.png' sizes='48x48' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-96x96.png' sizes='96x96' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-144x144.png' sizes='144x144' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-192x192.png' sizes='192x192' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-256x256.png' sizes='256x256' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-384x384.png' sizes='384x384' type='image/png' />
+        <link rel='apple-touch-icon' href='./assets/icons/logo-512x512.png' sizes='512x512' type='image/png' />
+        <meta name='msapplication-TileImage' content='./assets/icons/logo-144x144.png' />
+        <meta name='msapplication-TileColor' content='#fff' />
+        <meta name='theme-color' content='#ef6c00' />
+        <link rel="stylesheet" href="./libraries/nouislider.min.css">
+        <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
+        <link rel="stylesheet" href="./framework.css">
+        <link rel="stylesheet" href="./init.css">
+        <link rel="stylesheet" href="./utilities/styles/form.css">
+        <link rel="stylesheet" href="./index/styles/header.css">
+        <link rel="stylesheet" href="./rules/styles/rules.css">
+        <link rel="stylesheet" href="./index/styles/footer.css">
+</head>
+<body class="bg">
+    <header>
+        <div id="topMenu">
+            <div class="right">
+                <a href="login.html" class="login hoverEffect">
+                    <i class="fas fa-user"></i>
+                    <p>ورود/ثبت نام</p>
+                </a>
+                <a href="basket.html" class="withBadge basketHover">
+                    <span class="badge">10</span>
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
+                <form novalidate id="searchForm" name="searchForm" method="GET" action="#!" enctype="text/plain">
+                    <i class="fas fa-search searchToggle"></i>
+                    <div class="inputWrapper withSubmit">
+                        <input type="text" id="search" name="search" class="validate" placeholder="نام کالا" required>
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="msg">
+                            <i class="fas fa-caret-up"></i>
+                            <p>باید مقداری را وارد کنید</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="left">
+                <a href="rules.html" class="hoverEffect">قوانین</a>
+                <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
+                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
+            </div>
+        </div>
+        <nav class="shadowBellow">
+            <ul class="desktop">
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۱</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۲</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۳</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۴</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdownTrigger withSmallMenu">
+                    <a href="#!">
+                        <p>محصول ۵</p>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown fadeIn shadowBellow">
+                        <li>
+                            <a href="#!">محصول ۱</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۲</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۳</a>
+                        </li>
+                        <li>
+                            <a href="#!">محصول ۴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="logo">
+                    <a href="index.html">
+                        <p>راد هفت</p>
+                        <img src="./assets/icons/logo.png" alt="logoImg">
+                    </a>
+                </li>
+                <li class="bars">
+                    <i class="fas fa-bars"></i>
+                    <ul class="mobile shadowBlurL fadeIn">
+                        <li class="logo">
+                            <a href="#!">
+                                <img src="./assets/icons/logo.png" alt="logoImg">
+                                <p>راد هفت</p>
+                            </a>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۱</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۲</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۳</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۴</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                        <li class="withCollapse">
+                            <div class="collapseTrigger">
+                                <p>محصول ۵</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="collapse">
+                                <a href="#!">محصول ۱</a>
+                                <a href="#!">محصول ۲</a>
+                                <a href="#!">محصول ۳</a>
+                                <a href="#!">محصول ۴</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="rules" class="containerStyle">
+        <h4>قوانین</h4>
+        <div class="desc">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci illo repellendus tenetur nulla rerum ipsam numquam nam cupiditate alias non, veritatis possimus maiores obcaecati. Soluta architecto labore maxime repellat nemo!
+                Laborum vitae numquam quas nihil officiis amet, quaerat voluptate nesciunt sunt illum quam animi eaque dolores accusamus obcaecati est, qui non enim, consequatur eius eum commodi. Nobis quia dolorem itaque?
+                Ad in, perspiciatis culpa facilis repellat illum recusandae sequi sint tenetur veniam quia deserunt cumque, voluptatum necessitatibus fugit, earum cupiditate. Sed cupiditate, ea adipisci sequi aspernatur quod quia reprehenderit. Facilis?
+                Sapiente accusamus quibusdam quasi totam nihil reprehenderit aut voluptatem, numquam placeat. Doloribus cum temporibus pariatur totam sunt eligendi nihil in ullam, aspernatur officiis rerum nobis deleniti eius repellendus. Magni, facilis?
+                Dignissimos molestiae, inventore, aliquam libero voluptates nisi eum dolores suscipit ipsam sint at alias sit quod delectus. Alias adipisci, quod repudiandae labore placeat saepe eveniet voluptatem itaque vero ab earum.
+                Debitis aspernatur corporis culpa cupiditate! Dignissimos voluptatum quisquam ad possimus, tempora facilis fugiat eos soluta deleniti ratione iste quod labore quam ab deserunt recusandae repudiandae esse, maiores impedit ullam unde!
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <div class="shape right"></div>
+            <div class="namad">
+                <a href="#!">
+                    <img src="./assets/icons/namad.png" alt="namadAlt">
+                </a>
+                <a href="#!">
+                    <img src="./assets/icons/namad.png" alt="namadAlt">
+                </a>
+            </div>
+            <div class="shape left"></div>
+        </div>
+        <div class="bottom">
+            <div class="col about">
+                <h4>درباره راد هفت</h4>
+                <a href="about.html">درباره ما</a>
+                <div class="address">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>سیدرضی ۵۷ - پلاک ۲۸۸</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-phone"></i>
+                    <p>051-38670000</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-envelope"></i>
+                    <p>something@gmail.com</p>
+                </div>            
+            </div>
+            <div class="col more">
+                <h4>مطالب بیشتر</h4>
+                <a href="rules.html">قوانین</a>
+                <a href="faq.html">سوالات متداول</a>
+                <a href="guide.html">راهنمای خرید</a>
+                <a href="articles.html">وبلاگ</a>
+                <a href="app.html">آموزش نصب اپلیکشین</a>
+            </div>
+            <div class="col contact">
+                <h4>تماس با ما</h4>
+                <a href="report.html">ثبت شکایات</a>
+                <div class="socials">
+                    <p>راد هفت را در شبکه های اجتماعی دنبال کنید</p>
+                    <div class="wrapper">
+                        <a href="#!" class="social">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#!" class="social">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </footer>   
+    <script src="./libraries/fontfaceobserver.js"></script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./utilities/scripts/collapse.js"></script>
+    <script src="./utilities/scripts/form.js"></script>
+    <script src="./index/scripts/topMenu.js"></script>
+    <script src="./index/scripts/nav.js"></script>
+</body>
+</html>

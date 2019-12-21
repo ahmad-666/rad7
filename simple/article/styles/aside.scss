@@ -1,0 +1,198 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    aside.sideBar{
+        flex-shrink: 0 ;
+        width: 30em ;
+        height: auto;
+        margin: $dist2 $dist3 0 0 ;
+        display: flex ;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        .imgWrapper.zoom{
+            img{transition: all .2s linear ;}
+            &:hover{
+                img{transform: scale(1.1) ;}
+            }      
+        }
+        #popular{
+            width: 100% ;
+            height: auto;
+            padding: 0 $dist1 ;
+            display: flex ;
+            @include flex(column,flex-start,center,nowrap,"") ;
+            h4{
+                width: 100% ;
+                font-size: $fontM ;
+                color: $textDark ;
+                font-weight: 700 ;
+            }
+            .articles{
+                width: 100%;
+                height: auto;
+                display: flex;
+                @include flex(column,flex-start,center,nowrap,"") ;
+            }
+            .article{
+                width: 100% ;
+                height: auto;
+                margin-top: $dist2 ;
+                display: flex ;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                .imgWrapper{
+                    width: 100% ;
+                    height: auto;
+                    overflow: hidden;
+                    border-radius: $dist2 ;
+                    display: flex ;
+                    img{
+                        width: 100% ;
+                        height: 15em;
+                    }
+                }
+                h6{
+                    @include multiEllipse(3,$dist2,$textDark) ;
+                    max-width: 100% ;
+                    font-size: $fontM  ;
+                    color: $textDark ;
+                }
+                p.date{
+                    font-size: $fontM - .2em ;
+                    color: darken($textGrey,10%) ;
+                    margin-top: .3em;
+                }
+            }
+        }
+        #similars{
+            width: 100% ;
+            height: auto;
+            padding: 0 $dist1 ;
+            margin-top: $dist3 ;
+            display: flex ;
+            @include flex(column,flex-start,center,nowrap,"") ;
+            h4{
+                width: 100% ;
+                font-size: $fontM ;
+                font-weight: 700 ;
+                color: $textDark ;          
+            }
+            .article{
+                width: 100% ;
+                height: auto;
+                margin-top: $dist2 ;
+                display: flex ;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                .imgWrapper{
+                    flex-shrink: 0 ;
+                    width: 10em ;
+                    height: auto;
+                    display: flex ;
+                    overflow: hidden;
+                    border-radius: $dist2 ;
+                    img{
+                        width: 100% ;
+                        height: 10em;
+                    }
+                }
+                .col{
+                    width: 100% ;
+                    height: auto;
+                    margin-right: $dist1 ;
+                    display: flex ;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;      
+                    h6{
+                        @include multiEllipse(3,$dist2,$textDark) ;
+                        width: 100% ;
+                        font-size: $fontM ;
+                        color: $textDark ;
+                    }
+                    .date{
+                        font-size: $fontM - .2em ;
+                        color: darken($textGrey,10%) ;
+                    }
+                }
+               
+            }
+        }
+    }  
+    
+}
+@include mediaQ(750px){
+    main{
+        aside.sideBar{
+            width: 100% ;
+            height: auto;
+            margin: 0 ;
+            margin-top: $dist3 ;
+            #popular{
+               .articles{
+                   @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                   .article{
+                       width: calc((100% - (3 * 3em)) / 3);
+                       margin: $dist2;
+                   }
+               }
+            }
+            #similars{
+                margin-top: $dist2 ;
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{
+                            width: 100% ;
+                            height: 20em;
+                        }
+                    }
+                }
+            }
+        }  
+        
+    }
+}
+@include mediaQ(580px){
+    main{
+        aside.sideBar{
+            #popular{
+               .articles{
+                   .article{width: calc((100% - (2 * 3em)) / 2) ;}
+               }
+            }
+            #similars{
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{height: 20em;}
+                    }
+                }
+            }
+        }  
+        
+    }
+}
+@include mediaQ(400px){
+    main{
+        aside.sideBar{
+            #popular{
+               .articles{
+                   .article{
+                       width: 100% ;
+                       .imgWrapper{
+                           img{
+                               height: 20em;
+                           }
+                       }
+                    }
+               }
+            }
+            #similars{
+                .article{
+                    .imgWrapper{
+                        width: 20em ;
+                        img{height: 20em;}
+                    }
+                }
+            }
+        }  
+        
+    }
+}

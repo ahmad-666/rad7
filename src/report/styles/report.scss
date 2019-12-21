@@ -1,10 +1,10 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-#report{
+#report,#contact,#comment{
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
-    .contact,.social,#admin{
+    .contact,.social,#admin,#commentForm{
         width: 100%;
         height: auto;
         &:not(:first-child){
@@ -62,7 +62,7 @@
     .social{
         .wrapper{
             display: flex;
-            @include flex(row,flex-start,center,wrap,flex-start) ;
+            @include flex(row,center,center,wrap,flex-start) ;
             a{
                 width: auto;
                 height: auto;
@@ -90,7 +90,7 @@
     }
 }
 @include mediaQ(1000px){
-    #report{
+    #report,#contact,#comment{
         .contact{
             .wrapper{
                 .item{
@@ -102,8 +102,12 @@
 }
 @include resizeTablet('#report') ;
 @include resizeMobile('#report') ;
+@include resizeTablet('#contact') ;
+@include resizeMobile('#contact') ;
+@include resizeTablet('#comment') ;
+@include resizeMobile('#comment') ;
 @include mediaQ(550px){
-    #report{
+    #report,#contact,#comment{
         .contact{
             .wrapper{
                 .item{
@@ -114,7 +118,7 @@
     }
 }
 @include mediaQ(450px){
-    #report{
+    #report,#contact,#comment{
         width: 95%;
     }
 }

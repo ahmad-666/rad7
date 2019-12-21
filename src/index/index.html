@@ -40,6 +40,10 @@
     <header>
         <div id="topMenu">
             <div class="right">
+                <a href="index.html" class="home hoverEffect">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
                 <a href="login.html" class="login hoverEffect">
                     <i class="fas fa-user"></i>
                     <p>ورود/ثبت نام</p>
@@ -64,8 +68,8 @@
             </div>
             <div class="left">
                 <a href="rules.html" class="hoverEffect">قوانین</a>
+                <a href="#!" class="smoothScroll" data-target="namad">نماد اعتماد</a>
                 <!-- <a href="contact.html" class="hoverEffect">ارتباط با ما</a> -->
-                <a href="report.html" class="hoverEffect">ثبت شکایات</a>
             </div>
         </div>
         <nav class="shadowBellow">
@@ -182,7 +186,7 @@
                         <li class="logo">
                             <a href="index.html">
                                 <img src="../assets/icons/logo.png" alt="logoImg">
-                                <p>راد هفت</p>
+                                <!-- <p>راد هفت</p> -->
                             </a>
                         </li>
                         <li class="withCollapse">
@@ -268,26 +272,26 @@
                 <div class="slide" data-color="white" data-bgColor="#263238" data-target="empty3">
                     <p class="name">نام محصول</p>
                     <p class="price">1.000.000 تومان</p>
-                    <a href="product.html">خرید</a>
+                    <a href="product.html">اطلاعات بیشتر</a>
                 </div>
                 <div class="slide empty"></div>
                 <div class="slide" data-color="white" data-bgColor="#b0bec5" data-target="empty2">
                     <p class="name">نام محصول</p>
                     <p class="price">1.000.000 تومان</p>
-                    <a href="product.html">خرید</a>
+                    <a href="product.html">اطلاعات بیشتر</a>
                 </div>
                 <div class="slide empty"></div>
                 <div class="slide" data-color="white" data-bgColor="#ef6c00" data-target="empty1">
                     <p class="name">نام محصول</p>
                     <p class="price">1.000.000 تومان</p>
-                    <a href="product.html">خرید</a>
+                    <a href="product.html">اطلاعات بیشتر</a>
                 </div>
                 <div class="slide empty"></div>
                 <!-- first we see this -->
                 <div class="slide" data-color="white" data-bgColor="#607d8b">
                     <p class="name">نام محصول</p>
                     <p class="price">1.000.000 تومان</p>
-                    <a href="product.html">خرید</a>
+                    <a href="product.html">اطلاعات بیشتر</a>
                 </div>
             </div>
         </div>
@@ -299,7 +303,7 @@
         </div>
     </div>
     <div id="products" class="containerStyle">
-        <h4>محصولات ما</h4>
+        <h4>دسته بندی محصولات</h4>
         <div class="grid">
             <div class="row">
                 <div class="col">
@@ -490,7 +494,7 @@
             </div>
             <div class="feature">
                 <img src="../assets/icons/support.png" alt="supportAlt">
-                <p>پشتیبانی ۲۴ساعته</p>
+                <p>پشتیبانی ویژه</p>
             </div>
         </div>
     </div>
@@ -502,7 +506,15 @@
                     <img src="../assets/imgs/slide1.jpg" alt="articleImg">
                     <div class="title">
                         <div class="blur"></div>
-                        <h4>عنوان مقاله</h4>
+                        <h4 class="ellipse">
+                            عنوان مقاله
+                            عنوان مقاله
+                            عنوان مقاله
+                            عنوان مقاله
+                            عنوان مقاله
+                            عنوان مقاله
+                            عنوان مقاله
+                        </h4>
                     </div>
                 </a>
             </div>
@@ -519,7 +531,7 @@
                         <img src="../assets/imgs/slide3.jpg" alt="articleImg">
                         <div class="title">
                             <div class="blur"></div>
-                            <h4>عنوان مقاله</h4>
+                            <h4 class="ellipse">عنوان مقاله</h4>
                         </div>
                     </a>
                 </div>
@@ -528,14 +540,14 @@
                         <img src="../assets/imgs/slide4.jpg" alt="articleImg">
                         <div class="title">
                             <div class="blur"></div>
-                            <h4>عنوان مقاله</h4>
+                            <h4 class="ellipse">عنوان مقاله</h4>
                         </div>
                     </a>
                     <a href="article.html" class="article">
                         <img src="../assets/imgs/slide1.jpg" alt="articleImg">
                         <div class="title">
                             <div class="blur"></div>
-                            <h4>عنوان مقاله</h4>
+                            <h4 class="ellipse">عنوان مقاله</h4>
                         </div>
                     </a>
                 </div>    
@@ -549,7 +561,7 @@
     <footer>
         <div class="top">
             <div class="shape right"></div>
-            <div class="namad">
+            <div class="namad" id="namad">
                 <a href="#!">
                     <img src="../assets/icons/namad.png" alt="namadAlt">
                 </a>
@@ -561,7 +573,7 @@
         </div>
         <div class="bottom">
             <div class="col about">
-                <h4>درباره راد هفت</h4>
+                <h4>در یک نگاه</h4>
                 <a href="about.html">درباره ما</a>
                 <div class="address">
                     <i class="fas fa-map-marked-alt"></i>
@@ -587,6 +599,8 @@
             <div class="col contact">
                 <h4>تماس با ما</h4>
                 <a href="report.html">ثبت شکایات</a>
+                <a href="contact.html">تماس با ما</a>
+                <a href="comment.html">ثبت نظر</a>
                 <div class="socials">
                     <p>راد هفت را در شبکه های اجتماعی دنبال کنید</p>
                     <div class="wrapper">
