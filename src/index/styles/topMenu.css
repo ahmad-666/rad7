@@ -1,0 +1,306 @@
+#topMenu {
+  width: 100%;
+  height: auto;
+  padding: 0.5em 1.5em;
+  background-color: #383b49;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#topMenu .right, #topMenu .left {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#topMenu .right > *, #topMenu .left > * {
+  color: #ffa256;
+}
+
+#topMenu .right:last-child, #topMenu .left:last-child {
+  margin-right: 3em;
+}
+
+#topMenu .right .hoverEffect, #topMenu .left .hoverEffect {
+  position: relative;
+}
+
+#topMenu .right .hoverEffect::before, #topMenu .left .hoverEffect::before {
+  content: '';
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+#topMenu .right .hoverEffect:hover::before, #topMenu .left .hoverEffect:hover::before {
+  width: 100%;
+}
+
+#topMenu .right .hoverEffect:hover, #topMenu .left .hoverEffect:hover {
+  color: #ef6c00;
+}
+
+#topMenu .right .basketHover:hover, #topMenu .left .basketHover:hover {
+  -webkit-animation: shake 0.5s linear 0s 1 forwards;
+     -moz-animation: shake 0.5s linear 0s 1 forwards;
+          animation: shake 0.5s linear 0s 1 forwards;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  25% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  75% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes shake {
+  0% {
+    -moz-transform: rotate(-25deg);
+         transform: rotate(-25deg);
+  }
+  25% {
+    -moz-transform: rotate(25deg);
+         transform: rotate(25deg);
+  }
+  50% {
+    -moz-transform: rotate(-25deg);
+         transform: rotate(-25deg);
+  }
+  75% {
+    -moz-transform: rotate(-25deg);
+         transform: rotate(-25deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+         transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(-25deg);
+       -moz-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  25% {
+    -webkit-transform: rotate(25deg);
+       -moz-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+       -moz-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  75% {
+    -webkit-transform: rotate(-25deg);
+       -moz-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+#topMenu .right > *:not(:first-child) {
+  margin-right: 4em;
+}
+
+#topMenu .right .login, #topMenu .right .home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#topMenu .right .login i, #topMenu .right .home i {
+  font-size: 1.6em;
+}
+
+#topMenu .right .login p, #topMenu .right .home p {
+  margin-right: .5em;
+  font-size: 1.6em;
+}
+
+#topMenu .right .withBadge {
+  position: relative;
+}
+
+#topMenu .right .withBadge i {
+  font-size: 2.4em;
+  -webkit-transform: translateY(0.05em);
+     -moz-transform: translateY(0.05em);
+      -ms-transform: translateY(0.05em);
+          transform: translateY(0.05em);
+}
+
+#topMenu .right .withBadge .badge {
+  z-index: 1;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: #ea6161;
+  position: absolute;
+  top: 0;
+  right: -1em;
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 1.2em;
+  color: white;
+}
+
+#topMenu .right #searchForm .searchToggle {
+  font-size: 2.4em;
+  cursor: pointer;
+  -webkit-transform: translateY(0.05em);
+     -moz-transform: translateY(0.05em);
+      -ms-transform: translateY(0.05em);
+          transform: translateY(0.05em);
+}
+
+#topMenu .left > *:not(:first-child) {
+  margin-right: 3em;
+}
+
+#topMenu .left a {
+  font-size: 1.6em;
+}
+
+#topMenu .left .smoothScroll {
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #ffa256;
+  background-color: transparent;
+  border: 1.2px solid transparent;
+  border: 1px solid #ffa256;
+  padding: 0 1.05em;
+  border-radius: 0.75em;
+}
+
+#topMenu .left .smoothScroll:hover {
+  color: white;
+  background-color: #ff780a;
+  border: 1.2px solid white;
+}
+
+@media screen and (max-width: 430px) {
+  #topMenu .right:last-child, #topMenu .left:last-child {
+    margin-right: 3em;
+  }
+  #topMenu .right > *:not(:first-child) {
+    margin-right: 2.5em;
+  }
+  #topMenu .left > *:not(:first-child) {
+    margin-right: 1.5em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #topMenu {
+    font-size: 5.5px;
+  }
+}
+/*# sourceMappingURL=topMenu.css.map */

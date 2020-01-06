@@ -1,0 +1,172 @@
+#whyUs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#whyUs h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+#whyUs .features {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+#whyUs .features .feature {
+  width: -webkit-calc((100% - (4 * 3em)) / 4);
+  width: -moz-calc((100% - (4 * 3em)) / 4);
+  width: calc((100% - (4 * 3em)) / 4);
+  height: auto;
+  margin: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  -webkit-transform: perspective(100em) translateZ(0);
+     -moz-transform: perspective(100em) translateZ(0);
+          transform: perspective(100em) translateZ(0);
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#whyUs .features .feature:hover {
+  -webkit-transform: perspective(100em) translateZ(6em);
+     -moz-transform: perspective(100em) translateZ(6em);
+          transform: perspective(100em) translateZ(6em);
+  z-index: 1;
+  -webkit-box-shadow: 0 0 1.5em 0.4em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 1.5em 0.4em rgba(70, 69, 85, 0.3);
+  background-color: #eeeef0;
+}
+
+#whyUs .features .feature:hover p {
+  color: #ef6c00;
+}
+
+#whyUs .features .feature img {
+  width: 10em;
+  height: 10em;
+}
+
+#whyUs .features .feature p {
+  margin-top: 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+}
+
+@media screen and (max-width: 950px) {
+  #whyUs {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #whyUs {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #whyUs .features .feature {
+    width: -webkit-calc((100% - (3 * 3em)) / 3);
+    width: -moz-calc((100% - (3 * 3em)) / 3);
+    width: calc((100% - (3 * 3em)) / 3);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #whyUs {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #whyUs .features .feature {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+  }
+}
+/*# sourceMappingURL=features.css.map */
