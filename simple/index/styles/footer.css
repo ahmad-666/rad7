@@ -206,7 +206,7 @@ footer .bottom .col {
 footer .bottom .col h4 {
   font-size: 1.6em;
   font-weight: 700;
-  color: white;
+  color: #ffa726;
 }
 
 footer .bottom .col > *:not(h4) {
@@ -264,6 +264,7 @@ footer .bottom .col.about .address {
 
 footer .bottom .col.about .address i {
   font-size: 1.6em;
+  color: #ffa726;
 }
 
 footer .bottom .col.about .address p {
@@ -369,14 +370,14 @@ footer .bottom .col.contact .socials .wrapper a i {
   -moz-transition: all .3s linear;
   transition: all .3s linear;
   color: white;
-  background-color: #0063b5;
+  background-color: #dd8707;
   border: 1.2px solid transparent;
 }
 
 footer .bottom .col.contact .socials .wrapper a i:hover {
-  color: #0063b5;
+  color: #dd8707;
   background-color: white;
-  border: 1.2px solid #0063b5;
+  border: 1.2px solid #dd8707;
 }
 
 footer .bottom .col.contact .socials .wrapper a i::before {

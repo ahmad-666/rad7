@@ -67,7 +67,7 @@ footer{
             h4{
                 font-size: $fontM;
                 font-weight: 700;
-                color: white;
+                color: rgb(255,167,38);
             }
             > *:not(h4){margin-top: $dist2 - .3em;}
             a{    
@@ -88,6 +88,7 @@ footer{
                 color: inherit;
                 i{
                     font-size: $fontM;
+                    color: rgb(255,167,38);
                 }
                 p{
                     font-size: $fontM - .2em ;
@@ -130,7 +131,7 @@ footer{
                             height: 4em;
                             border-radius: 50%;
                             position: relative;
-                            @include swapColor(white,darken($blueColor1,10%)) ;
+                            @include swapColor(white,darken(rgb(248, 161, 31),10%)) ;
                             &::before{
                                 position: absolute;
                                 top: 50%;

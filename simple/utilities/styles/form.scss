@@ -2048,6 +2048,9 @@ form#basket{
                     z-index: 2;
                 }
             }
+            .inputWrapper.text.basket {
+                width: calc(2.1 * ((100% - (4 * 3em)) / 4)) ;
+            }
             .inputWrapper.selectSearch {
                 width: calc((100% - (4 * 3em)) / 4);
                 height: 4em;
@@ -2259,6 +2262,9 @@ form#basket{
             .inputs{
                 .inputWrapper.text {width: calc((100% - (3 * 3em)) / 3);}
                 .inputWrapper.selectSearch {width: calc((100% - (3 * 3em)) / 3);}
+                .inputWrapper.text.basket {
+                    width: calc(2.1 * ((100% - (4 * 3em)) / 4)) ;
+                }
             }
         }
     }
@@ -2269,6 +2275,9 @@ form#basket{
             .inputs{
                 .inputWrapper.text {width: calc((100% - (2 * 3em)) / 2);}
                 .inputWrapper.selectSearch {width: calc((100% - (2 * 3em)) / 2);}
+                .inputWrapper.text.basket {
+                    width: 100% ;
+                }
             }
         }
     }
