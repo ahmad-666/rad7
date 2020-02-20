@@ -11,3 +11,6 @@ let manualFormObj = {
 new FormValidate(manualFormObj.reportForm,manualFormObj.submit,
     manualFormObj.inputs,manualFormObj.send,manualFormObj.modal) ;
     manualFormObj.labels.forEach(label=>new LabelHandler(label)) ;
+manualForm.querySelectorAll('.labelHandler').forEach(labelHandler => {
+    new LabelHandler(labelHandler) ;
+})
