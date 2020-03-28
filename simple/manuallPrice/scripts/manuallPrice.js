@@ -8,7 +8,7 @@ let manualFormObj = {
     send:true ,
     labels:manualForm.querySelectorAll('.labelHandler')
 }
-new FormValidate(manualFormObj.reportForm,manualFormObj.submit,
+new FormValidate(manualFormObj.manualForm,manualFormObj.submit,
     manualFormObj.inputs,manualFormObj.send,manualFormObj.modal) ;
     manualFormObj.labels.forEach(label=>new LabelHandler(label)) ;
 manualForm.querySelectorAll('.labelHandler').forEach(labelHandler => {
