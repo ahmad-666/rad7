@@ -43,7 +43,7 @@
     "mathsass": "^0.11.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
-    "postcss": "^7.0.21",
+    "postcss": "^8.2.10",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
